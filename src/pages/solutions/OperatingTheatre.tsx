@@ -6,6 +6,27 @@ import { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import operatingTheatreImg from "@/assets/operating_theatre.jpg";
 import trumpfLogo from "@/assets/partners/trumpf.png";
+import geLogo from "@/assets/partners/ge-healthcare.png";
+
+// Anesthesia images
+import carestation750 from "@/assets/products/carestation-750.jpg";
+import carestation600 from "@/assets/products/carestation-600.jpg";
+import nxt9100c from "@/assets/products/9100c-nxt.png";
+
+// Operating Lights images
+import trulight3000 from "@/assets/products/trulight-3000.jpg";
+import trulight5000 from "@/assets/products/trulight-5000.png";
+import heluxPro from "@/assets/products/helux-pro.jpg";
+
+// Operating Tables images
+import pst300 from "@/assets/products/pst-300.jpg";
+import pst500 from "@/assets/products/pst-500.jpg";
+import ts7000 from "@/assets/products/ts7000.jpg";
+import ts7500 from "@/assets/products/ts7500.jpg";
+
+// Booms & Pendants images
+import truportBoom from "@/assets/products/truport-boom.jpg";
+import fcsBoom from "@/assets/products/fcs-boom.jpg";
 
 interface Product {
   name: string;
@@ -28,23 +49,26 @@ const categories: Category[] = [
     id: "anesthesia",
     label: "Anesthesia",
     intro: "Every step you take to maintain life support matters in perioperative care. Discover how one integrated anesthesia care solution can support insightful decisions and individualized care. Our anesthesia delivery systems combine advanced clinical tools with intuitive interfaces for safe, efficient perioperative workflows.",
-    partnerLogo: "",
+    partnerLogo: geLogo,
     partnerAlt: "GE HealthCare",
     products: [
       {
         name: "Carestation™ 750 Anesthesia Delivery System",
-        description: "The Carestation 750 anesthesia workstation enhances perioperative care with advanced clinical tools for individualized therapy, including low-flow anesthesia and lung protective ventilation. Its intuitive interface provides easy access to key functions like Lung Recruitment, Maneuver and Pause Gas Flow, reducing stress in busy settings. A modular, ergonomic design streamlines workflows with self-guided checkout, simplifying case management and maintenance. Plus, 24/7 access to service, accessories, and training ensures continuous support when needed.",
-        link: "https://www.gehealthcare.com/products/anesthesia-delivery",
+        description: "The Carestation 750 anesthesia workstation enhances perioperative care with advanced clinical tools for individualized therapy, including low-flow anesthesia and lung protective ventilation. Its intuitive interface provides easy access to key functions like Lung Recruitment, Maneuver and Pause Gas Flow, reducing stress in busy settings. A modular, ergonomic design streamlines workflows with self-guided checkout, simplifying case management and maintenance.",
+        image: carestation750,
+        link: "https://www.gehealthcare.com/products/anesthesia-solutions/carestation-750",
       },
       {
         name: "Carestation 600 Series Anesthesia Delivery Systems",
         description: "The Carestation™ 600 Series (620/650/650c) is a compact, versatile, and easy-to-use anesthesia platform designed to tackle modern challenges with a sleek, space-saving design, intuitive interface for enhanced workflows, and scalable technology for diverse patient needs.",
-        link: "https://www.gehealthcare.com/products/anesthesia-delivery",
+        image: carestation600,
+        link: "https://www.gehealthcare.com/products/anesthesia-solutions/carestation-600-series",
       },
       {
         name: "9100c NXT Anesthesia Workstation",
         description: "The anesthesia workstation that gives you peace of mind. 9100c NXT is a precise anesthesia solution that gives you peace of mind by supporting an easy and trustful anesthesia delivery experience. It features reliable ventilation modes and comprehensive gas monitoring for safe patient care.",
-        link: "https://www.gehealthcare.com/products/anesthesia-delivery",
+        image: nxt9100c,
+        link: "https://www.gehealthcare.in/products/anesthesia-delivery/9100c-nxt",
       },
     ],
   },
@@ -58,17 +82,20 @@ const categories: Category[] = [
       {
         name: "Trumpf TruLight 3000 Operating Theatre Lights",
         description: "The Trumpf TruLight 3000 is a high-performance surgical light designed for various medical environments, including emergency rooms, trauma centres, ambulatory care, and intensive care units. It offers adaptive lighting, high efficiency, and durability while being highly adjustable to meet different surgical needs. Additionally, it supports needs-based communication, enhancing usability in complex medical settings.",
-        link: "https://www.trumpfmedical.com/products/surgical-lights",
+        image: trulight3000,
+        link: "https://www.hillrom.com/en/products/trulight_-3000-surgical-light/",
       },
       {
         name: "Trumpf TruLight 5000 Operating Theatre Lights",
         description: "The TruLight 5000 series combines comfort and power, delivering precision without compromise through advanced surgical LED lighting. Designed with innovation and user needs in mind, it offers high efficiency, flexibility, and energy savings while enhancing the surgical environment. Featuring Adaptive Light Control Plus technology, it ensures optimal illumination with a brightness of up to 160,000 lux, sterile control of lighting functions, and superior light distribution.",
-        link: "https://www.trumpfmedical.com/products/surgical-lights",
+        image: trulight5000,
+        link: "https://www.hillrom.com/en/products/trulight_-5000-surgical-light/",
       },
       {
         name: "Helux Pro Surgical Lights",
         description: "The Helux Pro Surgical Light is designed to provide consistent illumination with advanced features such as shadow elimination, deep cavity lighting, and a non-imbedded laminar airflow system to maintain high-quality operating conditions. It seamlessly integrates with ORI systems, allowing real-time image routing via third-party equipment. The sterile light control helps reduce cross-contamination, while an intensity indicator alerts the surgical team to overlapping light fields, enhancing patient safety.",
-        link: "https://www.trumpfmedical.com/products/surgical-lights",
+        image: heluxPro,
+        link: "https://www.hillrom.com/en/products/helux-pro-surgical-light/",
       },
     ],
   },
@@ -82,18 +109,26 @@ const categories: Category[] = [
       {
         name: "PST 300 Precision Surgical Table",
         description: "The versatile, easy-to-use table delivers a strong foundation, supporting the volume and variety of procedures your facility performs every day. So you can help more people. Perform more specialized procedures, spend more time with patients — and less time dealing with complex equipment. The PST 300 table does more of what matters most.",
+        image: pst300,
+        link: "https://www.hillrom.com/en/products/pst300-surgical-table/",
       },
       {
         name: "PST 500 Precision Surgical Table",
-        description: "The PST 500 Precision Surgical Table, developed by Baxter, is designed for versatility and stability in modern operating room environments. Built with advanced surgical table design, including a durable Patient Warming System, which helps maintain patient core temperature without the need for disposable blankets or devices. The table leverages a platform for patient positioning, ensuring stability for a wide range of surgical procedures.",
+        description: "The PST 500 Precision Surgical Table is designed for versatility and stability in modern operating room environments. Built with advanced surgical table design, including a durable Patient Warming System, which helps maintain patient core temperature. The table leverages a platform for patient positioning, ensuring stability for a wide range of surgical procedures.",
+        image: pst500,
+        link: "https://www.hillrom.com/en/products/pst-500-precision-surgical-table/",
       },
       {
         name: "TS7000 Operating Table",
         description: "Nothing should get between you and your patient during procedures. That's why the TS7000 Operating Table is designed with your priorities in mind: to be patient-friendly, reliable, flexible, and expandable. It offers column design, built-in feedback systems, and a diverse set of safety features that allow you to concentrate on the patient — not on the surgical table.",
+        image: ts7000,
+        link: "https://www.hillrom.com/en/products/ts7000dv-operating-table/",
       },
       {
         name: "TS7500 Operating Table",
         description: "The TS7500 OR System Table by Trumpf Medical is designed for flexibility and efficiency, adapting to evolving surgical needs across fluid disciplines. With large adjustment zones for robust and patient positioning, it ensures versatility in procedures. Advanced yet easy-to-handle drive and pressure functions enable reliable operation on any surface, while a simple modular system improves ergonomics in daily workflow.",
+        image: ts7500,
+        link: "https://www.hillrom.com/en/products/ts7500/",
       },
     ],
   },
@@ -107,14 +142,14 @@ const categories: Category[] = [
       {
         name: "TruPort™ Ceiling Supply Units",
         description: "Ceiling-mounted supply units providing organized access to medical gases, electrical power, and data connections. Modular design allows customization for specific department needs with smooth 360° rotation and easy-to-clean surfaces for optimal hygiene.",
+        image: truportBoom,
+        link: "https://www.hillrom.com/en/products/truport-supply-unit/",
       },
       {
-        name: "Equipment Boom Systems",
+        name: "FCS Equipment Boom Systems",
         description: "Heavy-duty boom systems designed to support monitors, ventilators, and other critical equipment. Spring-assisted arms allow effortless positioning while maintaining stability, keeping the surgical field clear and organized for efficient workflow.",
-      },
-      {
-        name: "Anesthesia Pendants",
-        description: "Purpose-built pendants for anesthesia workstations featuring integrated gas outlets, electrical connections, and shelving. Designed to keep anesthesia equipment within easy reach while minimizing floor clutter in the operating theatre.",
+        image: fcsBoom,
+        link: "https://www.hillrom.com/en/products/fcs-boom/",
       },
     ],
   },
