@@ -9,7 +9,9 @@ import geLogo from "@/assets/partners/ge-healthcare.png";
 
 // Product images
 import carescapeCanvas from "@/assets/products/carescape-canvas.jpg";
-import carescapeOne from "@/assets/products/patient-monitors.jpg";
+import carescapeOne from "@/assets/products/carescape-one.png";
+import b1x5mMonitor from "@/assets/products/b1x5m-monitor.png";
+import portraitVsm from "@/assets/products/portrait-vsm.png";
 import centralStation from "@/assets/products/carescape-central-station.jpg";
 
 interface Product {
@@ -48,10 +50,14 @@ const categories: Category[] = [
       {
         name: "B1X5M Patient Monitor Systems",
         description: "The B1x5M range of patient monitors deliver excellent performance for inpatient monitoring while providing exceptional value. It provides accurate and timely medical data, powering enhanced care for patients across care areas.",
+        image: b1x5mMonitor,
+        link: "https://www.gehealthcare.com/products/patient-monitoring/patient-monitors/b1x5m-patient-monitors",
       },
       {
         name: "Portrait™ VSM Vital Signs Monitor",
         description: "Building on the trusted DINAMAP legacy with innovative and future-focused capabilities, the Portrait VSM vital signs monitor provides measurements you can count on while increasing patient comfort and efficiency. Automated workflow and customization options simplify your patient admissions, routine spot checks and observations — giving you more time with patients.",
+        image: portraitVsm,
+        link: "https://www.gehealthcare.com/products/patient-monitoring/portrait-vsm",
       },
     ],
   },
