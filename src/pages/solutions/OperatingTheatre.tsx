@@ -7,6 +7,7 @@ import { ExternalLink } from "lucide-react";
 import operatingTheatreImg from "@/assets/operating_theatre.jpg";
 import trumpfLogo from "@/assets/partners/trumpf.png";
 import baxterTrumpfLogo from "@/assets/partners/baxter-trumpf.png";
+import baxterHillromLogo from "@/assets/partners/baxter-hillrom.png";
 import geLogo from "@/assets/partners/ge-healthcare.png";
 
 // Anesthesia images
@@ -137,8 +138,8 @@ const categories: Category[] = [
     id: "booms-pendants",
     label: "Equipment Booms & Pendants",
     intro: "Baxter's equipment booms and pendants are designed to enhance workflow efficiency in medical environments by providing flexible, space-saving solutions for managing essential equipment. These systems improve accessibility by organizing medical devices, power outlets, and gas supply lines, reducing clutter and enabling healthcare professionals to focus on patient care. With customizable configurations, smooth articulation, and durable construction, Baxter's booms and pendants support critical care settings such as operating rooms and intensive care units, ensuring safety, efficiency, and ease of use.",
-    partnerLogo: trumpfLogo,
-    partnerAlt: "Trumpf Medical",
+    partnerLogo: baxterHillromLogo,
+    partnerAlt: "Baxter | Hillrom | Welch Allyn",
     products: [
       {
         name: "TruPort™ Ceiling Supply Units",
