@@ -9,8 +9,8 @@ import trumpfLogo from "@/assets/partners/trumpf.png";
 import geLogo from "@/assets/partners/ge-healthcare.png";
 
 // Anesthesia images
-import carestation750 from "@/assets/products/carestation-750.jpg";
-import carestation600 from "@/assets/products/carestation-600.jpg";
+import carestation750 from "@/assets/products/carestation-750.png";
+import carestation600 from "@/assets/products/carestation-600.png";
 import nxt9100c from "@/assets/products/9100c-nxt.png";
 
 // Operating Lights images
