@@ -39,15 +39,15 @@ const categories: Category[] = [
   {
     id: "paper",
     label: "Sony Printing Paper",
-    intro: "Sony offers a comprehensive range of medical-grade printing paper and media specifically designed for use with Sony medical printers. These high-quality consumables ensure optimal print results with accurate colour reproduction and long-lasting image durability, essential for diagnostic documentation and patient records.",
+    intro: "Sony offers high-quality medical printing paper in both color and black & white formats, designed for use with its range of medical printers. The color printing paper provides vibrant and precise image reproduction, ideal for applications requiring detailed visualization, such as ultrasound and endoscopy.",
     products: [
       {
-        name: "UPP-210HD High Density Thermal Paper",
-        description: "High density black and white thermal printing paper for A4 size prints. Designed for use with Sony UP series printers, delivering sharp and detailed monochrome images with excellent contrast.",
+        name: "UPC Color Print Pack",
+        description: "The UPC21L color print pack is designed for use with a range of Sony medical printers, including the UP-27MD, UP-D25MD, UP-25MD, UP-D23MD, UP-21MD, and UP-20. It offers high-quality color printing, ensuring vibrant and accurate image reproduction essential for medical imaging applications.",
       },
       {
-        name: "UPC-21L Colour Print Pack",
-        description: "Colour print pack for Sony UP colour printers. Includes both ink ribbon and print paper for producing vibrant, high-resolution colour prints of medical images.",
+        name: "UPP-110HG Black and White high glossy print media",
+        description: "The UPP-110HG is a high-glossy, black-and-white thermal print media designed for Sony medical printers. Ideal for ultrasound and other medical imaging applications, this premium print media helps maintain sharpness, contrast, and smooth tonal gradations while reducing the risk of print curling. It is specifically compatible with Sony printers like UP-X898MD, D898MD, D898DC, 897MD, and D897.",
       },
     ],
   },
