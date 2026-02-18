@@ -5,7 +5,7 @@ import endoscopyImg from "@/assets/endoscopy.jpg";
 import radiologyConsImg from "@/assets/radiology.jpg";
 import icuImg from "@/assets/icu-monitoring.avif";
 import microscopyImg from "@/assets/microscopy.webp";
-import ceilingImg from "@/assets/ceiling_suspended.jpg";
+import csrImg from "@/assets/csr.jpg";
 import operatingTableImg from "@/assets/operating_table.jpg";
 
 const services = [
@@ -42,7 +42,7 @@ const services = [
   {
     title: "Renal Care",
     description: "Dialysis machines & renal care consumables",
-    image: ceilingImg,
+    image: csrImg,
     href: "/solutions/renal-care",
   },
   {
@@ -97,23 +97,24 @@ const ServicesSection = () => {
               key={service.title}
               href={service.href}
               variants={item}
-              className="group relative overflow-hidden rounded-xl bg-card border shadow-sm hover:shadow-xl transition-shadow duration-300"
+              className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="aspect-[4/3] overflow-hidden relative">
                 <img
                   src={service.image}
                   alt={service.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
-              </div>
-              <div className="p-5">
-                <h3 className="font-heading font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  {service.description}
-                </p>
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5 text-primary-foreground">
+                  <h3 className="font-heading font-semibold text-base mb-0.5">
+                    {service.title}
+                  </h3>
+                  <p className="text-xs text-primary-foreground/75 leading-snug">
+                    {service.description}
+                  </p>
+                </div>
               </div>
             </motion.a>
           ))}
