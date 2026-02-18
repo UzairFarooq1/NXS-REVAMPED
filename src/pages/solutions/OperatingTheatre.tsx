@@ -6,6 +6,7 @@ import { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import operatingTheatreImg from "@/assets/operating_theatre.jpg";
 import trumpfLogo from "@/assets/partners/trumpf.png";
+import baxterTrumpfLogo from "@/assets/partners/baxter-trumpf.png";
 import geLogo from "@/assets/partners/ge-healthcare.png";
 
 // Anesthesia images
@@ -76,8 +77,8 @@ const categories: Category[] = [
     id: "operating-lights",
     label: "Operating Lights",
     intro: "Trumpf Medical specializes in innovative medical technology, offering advanced surgical lights designed to enhance efficiency and patient care in operating rooms and intensive care units. With a focus on ergonomic design, flexibility, and cutting-edge technology, Trumpf Medical solutions improve workflow, optimize theatre space, and support precision in surgical and critical care environments.",
-    partnerLogo: trumpfLogo,
-    partnerAlt: "Trumpf Medical",
+    partnerLogo: baxterTrumpfLogo,
+    partnerAlt: "Baxter | Trumpf Medical",
     products: [
       {
         name: "Trumpf TruLight 3000 Operating Theatre Lights",
@@ -103,8 +104,8 @@ const categories: Category[] = [
     id: "operating-tables",
     label: "Operating Theatre Tables",
     intro: "Our operating tables are designed for versatile operation, and patient safety, meeting the demands of modern surgical environments. Featuring modular designs, ergonomic adjustments, and advanced positioning capabilities, these tables support a wide range of procedures, from general surgery to highly specialized interventions.",
-    partnerLogo: trumpfLogo,
-    partnerAlt: "Trumpf Medical",
+    partnerLogo: baxterTrumpfLogo,
+    partnerAlt: "Baxter | Trumpf Medical",
     products: [
       {
         name: "PST 300 Precision Surgical Table",
