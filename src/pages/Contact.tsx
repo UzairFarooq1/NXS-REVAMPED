@@ -9,9 +9,11 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
-  { icon: MapPin, label: "Address", value: "Enterprise Road, Industrial Area, Nairobi, Kenya" },
-  { icon: Phone, label: "Phone", value: "+254 20 260 6426", href: "tel:+254202606426" },
-  { icon: Mail, label: "Email", value: "info@nxsltd.com", href: "mailto:info@nxsltd.com" },
+  { icon: MapPin, label: "Address", value: "House Of Vanguard, #1 Crossway Lane, Chiromo Rd, Westlands, Nairobi, Kenya" },
+  { icon: Phone, label: "Phone (Line 1)", value: "+254 (0) 733 512 802", href: "tel:+254733512802" },
+  { icon: Phone, label: "Phone (Line 2)", value: "+254 (0) 703 700 766", href: "tel:+254703700766" },
+  { icon: Mail, label: "Kenya", value: "info@nxsltd.com", href: "mailto:info@nxsltd.com" },
+  { icon: Mail, label: "Uganda", value: "info@nxsltd.com", href: "mailto:info@nxsltd.com" },
   { icon: Clock, label: "Hours", value: "Mon – Fri: 8:00 AM – 5:00 PM" },
 ];
 

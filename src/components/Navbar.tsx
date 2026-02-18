@@ -43,9 +43,9 @@ const Navbar = () => {
       <div className="bg-primary text-primary-foreground text-sm py-2 hidden md:block">
         <div className="container flex justify-between items-center">
           <div className="flex items-center gap-6">
-            <a href="tel:+254202606426" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+            <a href="tel:+254733512802" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
               <Phone className="h-3.5 w-3.5" />
-              +254 20 260 6426
+              +254 (0) 733 512 802
             </a>
             <a href="mailto:info@nxsltd.com" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
               <Mail className="h-3.5 w-3.5" />

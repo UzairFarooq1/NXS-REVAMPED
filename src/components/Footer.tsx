@@ -67,12 +67,18 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2.5">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>Enterprise Road, Industrial Area, Nairobi, Kenya</span>
+                <span>House Of Vanguard, #1 Crossway Lane, Chiromo Rd, Westlands, Nairobi, Kenya</span>
               </li>
               <li>
-                <a href="tel:+254202606426" className="flex items-center gap-2.5 hover:text-background transition-colors">
+                <a href="tel:+254733512802" className="flex items-center gap-2.5 hover:text-background transition-colors">
                   <Phone className="h-4 w-4 flex-shrink-0" />
-                  +254 20 260 6426
+                  +254 (0) 733 512 802
+                </a>
+              </li>
+              <li>
+                <a href="tel:+254703700766" className="flex items-center gap-2.5 hover:text-background transition-colors">
+                  <Phone className="h-4 w-4 flex-shrink-0" />
+                  +254 (0) 703 700 766
                 </a>
               </li>
               <li>
