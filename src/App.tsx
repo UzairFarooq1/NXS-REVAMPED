@@ -15,6 +15,7 @@ import Endoscopy from "./pages/solutions/Endoscopy";
 import OperatingTheatre from "./pages/solutions/OperatingTheatre";
 import ICU from "./pages/solutions/ICU";
 import Neurology from "./pages/solutions/Neurology";
+import Cardiology from "./pages/solutions/Cardiology";
 import RenalCare from "./pages/solutions/RenalCare";
 import Microscopy from "./pages/solutions/Microscopy";
 import Consumables from "./pages/solutions/Consumables";
@@ -43,6 +44,7 @@ const App = () => (
           <Route path="/solutions/operating-theatre" element={<OperatingTheatre />} />
           <Route path="/solutions/icu" element={<ICU />} />
           <Route path="/solutions/neurology" element={<Neurology />} />
+          <Route path="/solutions/cardiology" element={<Cardiology />} />
           <Route path="/solutions/renal-care" element={<RenalCare />} />
           <Route path="/solutions/microscopy" element={<Microscopy />} />
           <Route path="/solutions/consumables" element={<Consumables />} />
