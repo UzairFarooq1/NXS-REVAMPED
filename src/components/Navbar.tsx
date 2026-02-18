@@ -19,6 +19,8 @@ const navItems = [
       { label: "Renal Care", href: "/solutions/renal-care" },
       { label: "Operating Microscopy", href: "/solutions/microscopy" },
       { label: "Radiology Consumables", href: "/solutions/consumables" },
+      { label: "Sony Printers", href: "/solutions/sony-printers" },
+      { label: "Contrast Media", href: "/solutions/contrast-media" },
     ],
   },
   { label: "Partners", href: "/partners" },
