@@ -18,6 +18,8 @@ import Neurology from "./pages/solutions/Neurology";
 import RenalCare from "./pages/solutions/RenalCare";
 import Microscopy from "./pages/solutions/Microscopy";
 import Consumables from "./pages/solutions/Consumables";
+import SonyPrinters from "./pages/solutions/SonyPrinters";
+import ContrastMedia from "./pages/solutions/ContrastMedia";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -44,6 +46,8 @@ const App = () => (
           <Route path="/solutions/renal-care" element={<RenalCare />} />
           <Route path="/solutions/microscopy" element={<Microscopy />} />
           <Route path="/solutions/consumables" element={<Consumables />} />
+          <Route path="/solutions/sony-printers" element={<SonyPrinters />} />
+          <Route path="/solutions/contrast-media" element={<ContrastMedia />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
