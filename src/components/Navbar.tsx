@@ -11,16 +11,18 @@ const navItems = [
     label: "Solutions",
     href: "#",
     children: [
-      { label: "Radiology / X-Ray", href: "/solutions/radiology" },
+      { label: "Radiology", href: "", isHeader: true },
+      { label: "Radiology Equipment", href: "/solutions/radiology" },
+      { label: "Radiology Consumables", href: "/solutions/consumables" },
+      { label: "Contrast Media", href: "/solutions/contrast-media" },
+      { label: "Sony Printers", href: "/solutions/sony-printers" },
+      { label: "", href: "", isDivider: true },
       { label: "Endoscopy", href: "/solutions/endoscopy" },
       { label: "Operating Theatre", href: "/solutions/operating-theatre" },
       { label: "ICU Monitoring", href: "/solutions/icu" },
       { label: "Neurology", href: "/solutions/neurology" },
       { label: "Renal Care", href: "/solutions/renal-care" },
       { label: "Operating Microscopy", href: "/solutions/microscopy" },
-      { label: "Radiology Consumables", href: "/solutions/consumables" },
-      { label: "Sony Printers", href: "/solutions/sony-printers" },
-      { label: "Contrast Media", href: "/solutions/contrast-media" },
     ],
   },
   { label: "Partners", href: "/partners" },
@@ -90,19 +92,27 @@ const Navbar = () => {
                 {item.children && (
                   <div className="absolute top-full left-0 mt-1 w-56 bg-card border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                     <div className="py-2">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.label}
-                          to={child.href}
-                          className={`block px-4 py-2.5 text-sm transition-colors ${
-                            location.pathname === child.href
-                              ? "text-primary bg-accent"
-                              : "text-foreground/70 hover:text-primary hover:bg-accent"
-                          }`}
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
+                      {item.children.map((child, idx) =>
+                        (child as any).isHeader ? (
+                          <span key={idx} className="block px-4 py-2 text-xs font-heading font-bold uppercase tracking-wider text-muted-foreground">
+                            {child.label}
+                          </span>
+                        ) : (child as any).isDivider ? (
+                          <div key={idx} className="my-1 border-t" />
+                        ) : (
+                          <Link
+                            key={child.label}
+                            to={child.href}
+                            className={`block px-4 py-2.5 text-sm transition-colors ${
+                              location.pathname === child.href
+                                ? "text-primary bg-accent"
+                                : "text-foreground/70 hover:text-primary hover:bg-accent"
+                            }`}
+                          >
+                            {child.label}
+                          </Link>
+                        )
+                      )}
                     </div>
                   </div>
                 )}
@@ -146,20 +156,28 @@ const Navbar = () => {
                   )}
                   {item.children && solutionsOpen && (
                     <div className="pl-6 space-y-1">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.label}
-                          to={child.href}
-                          onClick={() => setIsOpen(false)}
-                          className={`block px-3 py-2 text-sm transition-colors ${
-                            location.pathname === child.href
-                              ? "text-primary"
-                              : "text-foreground/60 hover:text-primary"
-                          }`}
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
+                      {item.children.map((child, idx) =>
+                        (child as any).isHeader ? (
+                          <span key={idx} className="block px-3 py-2 text-xs font-heading font-bold uppercase tracking-wider text-muted-foreground">
+                            {child.label}
+                          </span>
+                        ) : (child as any).isDivider ? (
+                          <div key={idx} className="my-1 border-t" />
+                        ) : (
+                          <Link
+                            key={child.label}
+                            to={child.href}
+                            onClick={() => setIsOpen(false)}
+                            className={`block px-3 py-2 text-sm transition-colors ${
+                              location.pathname === child.href
+                                ? "text-primary"
+                                : "text-foreground/60 hover:text-primary"
+                            }`}
+                          >
+                            {child.label}
+                          </Link>
+                        )
+                      )}
                     </div>
                   )}
                 </div>
