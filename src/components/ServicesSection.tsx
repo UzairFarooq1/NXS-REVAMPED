@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import radiologyImg from "@/assets/radiology_xray.jpg";
 import operatingTheatreImg from "@/assets/operating_theatre.jpg";
 import endoscopyImg from "@/assets/endoscopy.jpg";
@@ -9,61 +10,19 @@ import csrImg from "@/assets/csr.jpg";
 import operatingTableImg from "@/assets/operating_table.jpg";
 
 const services = [
-  {
-    title: "Radiology / X-Ray",
-    description: "Complete digital radiography & fluoroscopy systems",
-    image: radiologyImg,
-    href: "/solutions/radiology",
-  },
-  {
-    title: "Endoscopy",
-    description: "Advanced endoscopic solutions for GI & surgical procedures",
-    image: endoscopyImg,
-    href: "/solutions/endoscopy",
-  },
-  {
-    title: "Operating Theatre",
-    description: "LED surgical lights, tables & ceiling-suspended systems",
-    image: operatingTheatreImg,
-    href: "/solutions/operating-theatre",
-  },
-  {
-    title: "ICU Monitoring",
-    description: "Patient monitoring solutions for critical care",
-    image: icuImg,
-    href: "/solutions/icu",
-  },
-  {
-    title: "Operating Microscopy",
-    description: "Precision surgical microscopes for neurosurgery & ophthalmology",
-    image: microscopyImg,
-    href: "/solutions/microscopy",
-  },
-  {
-    title: "Renal Care",
-    description: "Dialysis machines & renal care consumables",
-    image: csrImg,
-    href: "/solutions/renal-care",
-  },
-  {
-    title: "Operating Tables",
-    description: "Electronic surgical tables including bariatric solutions",
-    image: operatingTableImg,
-    href: "/solutions/operating-theatre",
-  },
-  {
-    title: "Radiology Consumables",
-    description: "Protective wear, contrast media & imaging accessories",
-    image: radiologyConsImg,
-    href: "/solutions/consumables",
-  },
+  { title: "Radiology / X-Ray", description: "Complete digital radiography & fluoroscopy systems", image: radiologyImg, href: "/solutions/radiology" },
+  { title: "Endoscopy", description: "Advanced endoscopic solutions for GI & surgical procedures", image: endoscopyImg, href: "/solutions/endoscopy" },
+  { title: "Operating Theatre", description: "LED surgical lights, tables & ceiling-suspended systems", image: operatingTheatreImg, href: "/solutions/operating-theatre" },
+  { title: "ICU Monitoring", description: "Patient monitoring solutions for critical care", image: icuImg, href: "/solutions/icu" },
+  { title: "Operating Microscopy", description: "Precision surgical microscopes for neurosurgery & ophthalmology", image: microscopyImg, href: "/solutions/microscopy" },
+  { title: "Renal Care", description: "Dialysis machines & renal care consumables", image: csrImg, href: "/solutions/renal-care" },
+  { title: "Operating Tables", description: "Electronic surgical tables including bariatric solutions", image: operatingTableImg, href: "/solutions/operating-theatre" },
+  { title: "Radiology Consumables", description: "Protective wear, contrast media & imaging accessories", image: radiologyConsImg, href: "/solutions/consumables" },
 ];
 
 const container = {
   hidden: {},
-  show: {
-    transition: { staggerChildren: 0.08 },
-  },
+  show: { transition: { staggerChildren: 0.08 } },
 };
 
 const item = {
@@ -93,30 +52,26 @@ const ServicesSection = () => {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {services.map((service) => (
-            <motion.a
-              key={service.title}
-              href={service.href}
-              variants={item}
-              className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="aspect-[4/3] overflow-hidden relative">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-5 text-primary-foreground">
-                  <h3 className="font-heading font-semibold text-base mb-0.5">
-                    {service.title}
-                  </h3>
-                  <p className="text-xs text-primary-foreground/75 leading-snug">
-                    {service.description}
-                  </p>
+            <motion.div key={service.title} variants={item}>
+              <Link
+                to={service.href}
+                className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 block"
+              >
+                <div className="aspect-[4/3] overflow-hidden relative">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-5 text-primary-foreground">
+                    <h3 className="font-heading font-semibold text-base mb-0.5">{service.title}</h3>
+                    <p className="text-xs text-primary-foreground/75 leading-snug">{service.description}</p>
+                  </div>
                 </div>
-              </div>
-            </motion.a>
+              </Link>
+            </motion.div>
           ))}
         </motion.div>
       </div>

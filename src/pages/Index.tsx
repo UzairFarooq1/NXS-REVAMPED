@@ -1,24 +1,19 @@
-import Navbar from "@/components/Navbar";
+import Layout from "@/components/Layout";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
 import PartnersSection from "@/components/PartnersSection";
 import CTASection from "@/components/CTASection";
-import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <main>
-        <HeroSection />
-        <ServicesSection />
-        <AboutSection />
-        <PartnersSection />
-        <CTASection />
-      </main>
-      <Footer />
-    </div>
+    <Layout>
+      <HeroSection />
+      <ServicesSection />
+      <AboutSection />
+      <PartnersSection />
+      <CTASection />
+    </Layout>
   );
 };
 

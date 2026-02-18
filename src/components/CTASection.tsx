@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const CTASection = () => {
   return (
@@ -21,13 +22,17 @@ const CTASection = () => {
             and customized solutions for your healthcare needs.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-10">
-            <Button size="lg" className="font-heading font-semibold">
-              Request a Quote
-              <ArrowRight className="ml-2 h-5 w-5" />
+            <Button asChild size="lg" className="font-heading font-semibold">
+              <Link to="/contact">
+                Request a Quote
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
-            <Button size="lg" variant="outline" className="font-heading">
-              <Phone className="mr-2 h-5 w-5" />
-              +254 20 260 6426
+            <Button size="lg" variant="outline" className="font-heading" asChild>
+              <a href="tel:+254202606426">
+                <Phone className="mr-2 h-5 w-5" />
+                +254 20 260 6426
+              </a>
             </Button>
           </div>
 

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-slider-1.jpg";
 
 const HeroSection = () => {
@@ -35,12 +36,14 @@ const HeroSection = () => {
             Delivering world-class healthcare solutions across East Africa for over four decades.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-semibold">
-              Our Solutions
-              <ArrowRight className="ml-2 h-5 w-5" />
+            <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-semibold">
+              <Link to="/solutions/radiology">
+                Our Solutions
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
-            <Button size="lg" className="bg-primary-foreground/20 border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/30 font-heading backdrop-blur-sm">
-              Contact Us
+            <Button asChild size="lg" className="bg-primary-foreground/20 border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/30 font-heading backdrop-blur-sm">
+              <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
         </motion.div>
