@@ -39,7 +39,7 @@ const HeroSection = () => {
               Our Solutions
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-heading">
+            <Button size="lg" className="bg-primary-foreground/20 border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/30 font-heading backdrop-blur-sm">
               Contact Us
             </Button>
           </div>
