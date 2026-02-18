@@ -67,11 +67,11 @@ const categories: Category[] = [
   {
     id: "oral",
     label: "Oral Contrast Media",
-    intro: "Eskay Fine Chemicals provides oral contrast media solutions designed to enhance imaging of the gastrointestinal tract during diagnostic procedures. These formulations offer excellent patient tolerance and reliable imaging results for both routine and specialised examinations.",
+    intro: "Oral contrast plays a vital role in enhancing the visualisation of the gastrointestinal (GI) tract during diagnostic imaging procedures such as CT scans and X-rays. Microimage 250mg/100ml is a high-quality oral contrast agent specifically designed to improve the delineation of the stomach, duodenum, and small bowel.",
     products: [
       {
-        name: "Gastrografin (Oral & Rectal)",
-        description: "A water-soluble iodinated contrast medium used for oral and rectal administration. Ideal for GI tract imaging in patients where barium-based contrast is contraindicated. Provides clear delineation of the gastrointestinal tract with excellent safety profile.",
+        name: "Microimage 250mg/100ml",
+        description: "Microimage 250mg/100ml is a premium oral contrast agent designed for high-quality imaging of the gastrointestinal tract during X-ray and CT examinations. Its 250mg/100ml concentration ensures optimal contrast enhancement, aiding in the clear visualisation of the stomach, duodenum, and small bowel.",
       },
     ],
   },
