@@ -5,10 +5,19 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import radiologyImg from "@/assets/radiology.jpg";
+import sonyLogo from "@/assets/partners/sony-medical.png";
+
+// Product images
+import sonyUp27md from "@/assets/products/sony-up27md.jpg";
+import sonyUpD898md from "@/assets/products/sony-up-d898md.avif";
+import sonyUpc21l from "@/assets/products/sony-upc21l.webp";
+import sonyUpp110hg from "@/assets/products/sony-upp110hg.avif";
 
 interface Product {
   name: string;
   description: string;
+  image?: string;
+  link?: string;
 }
 
 interface Category {
@@ -24,15 +33,19 @@ const categories: Category[] = [
     id: "printers",
     label: "Sony Printers",
     intro: "Sony's medical printers are designed to meet the highest standards of quality and precision for healthcare environments. These printers offer high-resolution imaging and reliable performance for diagnostic purposes, ensuring clear and accurate prints of medical images. With a range of models that support various media and advanced connectivity, Sony printers are ideal for use in radiology, cardiology, and other medical imaging applications.",
-    moreLink: "https://pro.sony.com/bbsc/ssr/cat-medicalproducts/cat-medicalprinters/",
+    moreLink: "https://pro.sony/en_AO/products/medical-printers/up-27md",
     products: [
       {
         name: "UP-27MD Colour Printer",
         description: "The Sony UP-27MD is a compact, high-quality medical printer designed to deliver precise imaging outputs for a wide range of medical applications. It offers excellent image quality with high resolution, making it ideal for producing clear and detailed prints of diagnostic images. The printer features advanced connectivity and reliable performance, ensuring quick and efficient printing.",
+        image: sonyUp27md,
+        link: "https://pro.sony/en_AO/products/medical-printers/up-27md",
       },
       {
         name: "UP-D898MD Digital Black and White Thermal Printer",
         description: "The UP-D898MD is a compact A6 medical grade black and white digital printer. It's designed to be integrated into a wide range of compatible medical imaging environments such as digital ultrasound systems, mobile C-arms or cardiac catheterisation laboratory.",
+        image: sonyUpD898md,
+        link: "https://pro.sony/en_SG/products/medical-printers/up-d898md",
       },
     ],
   },
@@ -40,14 +53,19 @@ const categories: Category[] = [
     id: "paper",
     label: "Sony Printing Paper",
     intro: "Sony offers high-quality medical printing paper in both color and black & white formats, designed for use with its range of medical printers. The color printing paper provides vibrant and precise image reproduction, ideal for applications requiring detailed visualization, such as ultrasound and endoscopy.",
+    moreLink: "https://pro.sony/en_CY/products/medical-colour-print-media/upc-21l",
     products: [
       {
         name: "UPC Color Print Pack",
         description: "The UPC21L color print pack is designed for use with a range of Sony medical printers, including the UP-27MD, UP-D25MD, UP-25MD, UP-D23MD, UP-21MD, and UP-20. It offers high-quality color printing, ensuring vibrant and accurate image reproduction essential for medical imaging applications.",
+        image: sonyUpc21l,
+        link: "https://pro.sony/en_CY/products/medical-colour-print-media/upc-21l",
       },
       {
         name: "UPP-110HG Black and White high glossy print media",
         description: "The UPP-110HG is a high-glossy, black-and-white thermal print media designed for Sony medical printers. Ideal for ultrasound and other medical imaging applications, this premium print media helps maintain sharpness, contrast, and smooth tonal gradations while reducing the risk of print curling. It is specifically compatible with Sony printers like UP-X898MD, D898MD, D898DC, 897MD, and D897.",
+        image: sonyUpp110hg,
+        link: "https://pro.sony/en_ME/products/black-and-white-thermal-print-media/upp-110hg",
       },
     ],
   },
@@ -105,23 +123,51 @@ const SonyPrinters = () => {
                   {activeCategory.intro}
                 </p>
               </div>
+              <img
+                src={sonyLogo}
+                alt="Sony"
+                className="w-40 h-auto object-contain flex-shrink-0"
+              />
             </div>
 
-            <div className="space-y-12">
+            <div className="space-y-16">
               {activeCategory.products.map((product, i) => (
                 <motion.div
                   key={product.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
-                  className="bg-card border rounded-xl p-8"
+                  className={`flex flex-col ${
+                    i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                  } gap-8 items-center`}
                 >
-                  <h3 className="text-xl font-heading font-bold text-foreground mb-3">
-                    {product.name}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {product.description}
-                  </p>
+                  {product.image && (
+                    <div className="md:w-2/5 flex-shrink-0">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-auto rounded-xl object-contain max-h-72"
+                      />
+                    </div>
+                  )}
+                  <div className={product.image ? "md:w-3/5" : "w-full"}>
+                    <h3 className="text-xl font-heading font-bold text-foreground mb-3">
+                      {product.name}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      {product.description}
+                    </p>
+                    {product.link && (
+                      <a
+                        href={product.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
+                      >
+                        View on Sony <ExternalLink className="h-4 w-4" />
+                      </a>
+                    )}
+                  </div>
                 </motion.div>
               ))}
             </div>
