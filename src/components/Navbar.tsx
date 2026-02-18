@@ -21,6 +21,7 @@ const navItems = [
       { label: "Operating Theatre", href: "/solutions/operating-theatre" },
       { label: "ICU Monitoring", href: "/solutions/icu" },
       { label: "Neurology", href: "/solutions/neurology" },
+      { label: "Cardiology", href: "/solutions/cardiology" },
       { label: "Renal Care", href: "/solutions/renal-care" },
       { label: "Operating Microscopy", href: "/solutions/microscopy" },
     ],
