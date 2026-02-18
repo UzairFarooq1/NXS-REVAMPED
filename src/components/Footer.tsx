@@ -1,5 +1,23 @@
+import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 import logo from "@/assets/logo_main.png";
+
+const solutions = [
+  { label: "Radiology / X-Ray", href: "/solutions/radiology" },
+  { label: "Endoscopy", href: "/solutions/endoscopy" },
+  { label: "Operating Theatre", href: "/solutions/operating-theatre" },
+  { label: "ICU Monitoring", href: "/solutions/icu" },
+  { label: "Renal Care", href: "/solutions/renal-care" },
+  { label: "Operating Microscopy", href: "/solutions/microscopy" },
+];
+
+const company = [
+  { label: "About Us", href: "/about" },
+  { label: "Partners", href: "/partners" },
+  { label: "CSR", href: "/csr" },
+  { label: "News & Events", href: "/news" },
+  { label: "Contact", href: "/contact" },
+];
 
 const Footer = () => {
   return (
@@ -19,15 +37,13 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-background mb-4">Solutions</h4>
             <ul className="space-y-2.5 text-sm">
-              {["Radiology / X-Ray", "Endoscopy", "Operating Theatre", "ICU Monitoring", "Renal Care", "Operating Microscopy"].map(
-                (item) => (
-                  <li key={item}>
-                    <a href="#" className="hover:text-background transition-colors">
-                      {item}
-                    </a>
-                  </li>
-                )
-              )}
+              {solutions.map((item) => (
+                <li key={item.label}>
+                  <Link to={item.href} className="hover:text-background transition-colors">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -35,11 +51,11 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-background mb-4">Company</h4>
             <ul className="space-y-2.5 text-sm">
-              {["About Us", "Partners", "CSR", "News & Events", "Contact"].map((item) => (
-                <li key={item}>
-                  <a href="#" className="hover:text-background transition-colors">
-                    {item}
-                  </a>
+              {company.map((item) => (
+                <li key={item.label}>
+                  <Link to={item.href} className="hover:text-background transition-colors">
+                    {item.label}
+                  </Link>
                 </li>
               ))}
             </ul>

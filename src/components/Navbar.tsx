@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo_main.png";
@@ -29,6 +30,12 @@ const navItems = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const location = useLocation();
+
+  const isActive = (href: string) => {
+    if (href === "/") return location.pathname === "/";
+    return location.pathname.startsWith(href);
+  };
 
   return (
     <>
@@ -52,31 +59,47 @@ const Navbar = () => {
       {/* Main nav */}
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b shadow-sm">
         <div className="container flex items-center justify-between h-16 lg:h-20">
-          <a href="/" className="flex-shrink-0">
+          <Link to="/" className="flex-shrink-0">
             <img src={logo} alt="Nairobi X-Ray Supplies Ltd" className="h-10 lg:h-12 w-auto" />
-          </a>
+          </Link>
 
           {/* Desktop nav */}
           <div className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => (
               <div key={item.label} className="relative group">
-                <a
-                  href={item.href}
-                  className="px-3 py-2 text-sm font-medium font-heading text-foreground/80 hover:text-primary transition-colors"
-                >
-                  {item.label}
-                </a>
+                {item.children ? (
+                  <span
+                    className={`px-3 py-2 text-sm font-medium font-heading cursor-default transition-colors ${
+                      isActive("/solutions") ? "text-primary" : "text-foreground/80 hover:text-primary"
+                    }`}
+                  >
+                    {item.label}
+                  </span>
+                ) : (
+                  <Link
+                    to={item.href}
+                    className={`px-3 py-2 text-sm font-medium font-heading transition-colors ${
+                      isActive(item.href) ? "text-primary" : "text-foreground/80 hover:text-primary"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                )}
                 {item.children && (
                   <div className="absolute top-full left-0 mt-1 w-56 bg-card border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                     <div className="py-2">
                       {item.children.map((child) => (
-                        <a
+                        <Link
                           key={child.label}
-                          href={child.href}
-                          className="block px-4 py-2.5 text-sm text-foreground/70 hover:text-primary hover:bg-accent transition-colors"
+                          to={child.href}
+                          className={`block px-4 py-2.5 text-sm transition-colors ${
+                            location.pathname === child.href
+                              ? "text-primary bg-accent"
+                              : "text-foreground/70 hover:text-primary hover:bg-accent"
+                          }`}
                         >
                           {child.label}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </div>
@@ -101,28 +124,39 @@ const Navbar = () => {
             <div className="container py-4 space-y-1">
               {navItems.map((item) => (
                 <div key={item.label}>
-                  <a
-                    href={item.href}
-                    onClick={(e) => {
-                      if (item.children) {
-                        e.preventDefault();
-                        setSolutionsOpen(!solutionsOpen);
-                      }
-                    }}
-                    className="block px-3 py-2.5 text-sm font-medium font-heading text-foreground/80 hover:text-primary transition-colors"
-                  >
-                    {item.label}
-                  </a>
+                  {item.children ? (
+                    <button
+                      onClick={() => setSolutionsOpen(!solutionsOpen)}
+                      className="block w-full text-left px-3 py-2.5 text-sm font-medium font-heading text-foreground/80 hover:text-primary transition-colors"
+                    >
+                      {item.label}
+                    </button>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      onClick={() => setIsOpen(false)}
+                      className={`block px-3 py-2.5 text-sm font-medium font-heading transition-colors ${
+                        isActive(item.href) ? "text-primary" : "text-foreground/80 hover:text-primary"
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
                   {item.children && solutionsOpen && (
                     <div className="pl-6 space-y-1">
                       {item.children.map((child) => (
-                        <a
+                        <Link
                           key={child.label}
-                          href={child.href}
-                          className="block px-3 py-2 text-sm text-foreground/60 hover:text-primary transition-colors"
+                          to={child.href}
+                          onClick={() => setIsOpen(false)}
+                          className={`block px-3 py-2 text-sm transition-colors ${
+                            location.pathname === child.href
+                              ? "text-primary"
+                              : "text-foreground/60 hover:text-primary"
+                          }`}
                         >
                           {child.label}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   )}
