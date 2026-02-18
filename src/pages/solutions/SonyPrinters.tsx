@@ -86,7 +86,7 @@ const SonyPrinters = () => {
       {/* Tabs */}
       <section className="bg-muted/50 border-b">
         <div className="container">
-          <div className="flex overflow-x-auto -mb-px">
+          <div className="flex overflow-x-auto -mb-px justify-center">
             {categories.map((cat) => (
               <button
                 key={cat.id}
