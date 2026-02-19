@@ -7,13 +7,6 @@ import { ExternalLink } from "lucide-react";
 import icuImg from "@/assets/icu-monitoring.avif";
 import geHealthcareLogo from "@/assets/partners/ge-healthcare.png";
 
-// Category images
-import restingEcgImg from "@/assets/products/resting-ecg.jpg";
-import stressEcgImg from "@/assets/products/stress-ecg.jpg";
-import holterEcgImg from "@/assets/products/holter-ecg.jpg";
-import ambulatoryBpImg from "@/assets/products/ambulatory-bp.jpg";
-import museNxImg from "@/assets/products/muse-nx.jpg";
-
 // Product images
 import mac5Img from "@/assets/products/mac5.png";
 import mac7Img from "@/assets/products/mac7.png";
@@ -49,7 +42,7 @@ const categories: Category[] = [
     intro:
       "GE Healthcare's resting ECG systems deliver accurate, efficient, and user-friendly cardiac assessments, designed to meet the needs of healthcare providers across various settings. With advanced signal processing, these systems ensure high-quality ECG readings, aiding in the early detection of cardiac conditions. Features such as streamlined workflows, intuitive interfaces, and connectivity options enhance efficiency, while portable designs support flexibility in clinical environments.",
     moreLink: "https://www.gehealthcare.com/products/diagnostic-ecg",
-    categoryImage: restingEcgImg,
+    
     products: [
       {
         name: "MAC 5 Resting ECG",
@@ -77,7 +70,7 @@ const categories: Category[] = [
     intro:
       "At the heart of your practice, every heartbeat matters. Helping you unlock insights fast while ensuring seamless data flow throughout your enterprise is critical for cardiac patients. GE's scalable portfolio provides on-demand access to high-quality ECG data while integrating into workflows. Advanced tools support diverse CVD patients, empower confident diagnosis and help you promptly put patients on the right care pathway.",
     moreLink: "https://www.gehealthcare.com/products/diagnostic-ecg",
-    categoryImage: stressEcgImg,
+    
     products: [
       {
         name: "CASE Cardiac Assessment System",
@@ -99,7 +92,7 @@ const categories: Category[] = [
     intro:
       "GE Healthcare's Holter ECG solutions provide continuous, high-quality cardiac monitoring, enabling the detection of arrhythmias and other heart conditions over extended periods. Designed for patient comfort and ease of use, these systems deliver accurate data with advanced signal processing and noise reduction technology. Intuitive software streamlines data analysis, offering clear visualization and automated reporting for efficient diagnosis.",
     moreLink: "https://www.gehealthcare.com/products/diagnostic-ecg",
-    categoryImage: holterEcgImg,
+    
     products: [
       {
         name: "CardioDay Holter ECG",
@@ -121,7 +114,7 @@ const categories: Category[] = [
     intro:
       "GE Healthcare's Ambulatory ECG monitoring solutions deliver both clinical quality and workflow advantages. Clear, graphic data visualization enables quick, intuitive operation for fast and consistent reporting.",
     moreLink: "https://www.gehealthcare.com/products/diagnostic-ecg",
-    categoryImage: ambulatoryBpImg,
+    
     products: [
       {
         name: "Tonoport VI",
@@ -143,7 +136,7 @@ const categories: Category[] = [
     intro:
       "MUSE™ NX is a powerful cardiology data management system that seamlessly integrates with GE Healthcare's Resting ECG, Stress ECG, Holter ECG, and Ambulatory Blood Pressure (ABP) monitoring solutions. By centralizing and streamlining the storage, analysis, and retrieval of diagnostic data, MUSE™ NX enhances workflow efficiency and clinical decision-making. Its advanced algorithms and customizable reporting tools provide comprehensive insights into cardiovascular health, enabling healthcare providers to compare and track patient data over time.",
     moreLink: "https://www.gehealthcare.com/products/diagnostic-ecg",
-    categoryImage: museNxImg,
+    
     products: [
       {
         name: "MUSE™ NX Data Management System",
@@ -215,16 +208,6 @@ const Cardiology = () => {
               />
             </div>
 
-            {/* Category Image */}
-            {activeCategory.categoryImage && (
-              <div className="mb-14 rounded-xl overflow-hidden border">
-                <img
-                  src={activeCategory.categoryImage}
-                  alt={activeCategory.label}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-            )}
 
             {/* Products */}
             <div className="space-y-10">
