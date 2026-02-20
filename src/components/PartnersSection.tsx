@@ -1,19 +1,23 @@
 import { motion } from "framer-motion";
 import vanguardLogo from "@/assets/vanguard-logo.png";
-import trumpfLogo from "@/assets/partners/trumpf.png";
-import nihonKohdenLogo from "@/assets/partners/nihon-kohden.png";
+import shimadzuLogo from "@/assets/partners/shimadzu.jpg";
+import baxterGambroLogo from "@/assets/partners/baxter-gambro.png";
 import geHealthcareLogo from "@/assets/partners/ge-healthcare.png";
+import trumpfLogo from "@/assets/partners/trumpf.png";
 import leicaLogo from "@/assets/partners/leica.png";
-import sonyLogo from "@/assets/partners/sony.png";
-import niproLogo from "@/assets/partners/nipro.png";
+import eskayLogo from "@/assets/partners/eskay.jpg";
+import wegoLogo from "@/assets/partners/wego.png";
 
 const partners = [
+  { name: "Olympus", specialty: "Endoscopy & Surgical Equipment", logo: null },
+  { name: "Shimadzu", specialty: "Precision & Medical Instruments", logo: shimadzuLogo },
+  { name: "Baxter Gambro", specialty: "Renal Care & Critical Care", logo: baxterGambroLogo },
+  { name: "GE Healthcare", specialty: "Medical Imaging & Diagnostics", logo: geHealthcareLogo },
   { name: "Trumpf Medical", specialty: "Operating Theatre Solutions", logo: trumpfLogo },
-  { name: "Nihon Kohden", specialty: "Patient Monitoring & Neurology", logo: nihonKohdenLogo },
-  { name: "GE Healthcare", specialty: "Imaging & ICU Monitoring", logo: geHealthcareLogo },
-  { name: "Leica Microsystems", specialty: "Surgical Microscopy", logo: leicaLogo },
-  { name: "Sony Medical", specialty: "Medical Imaging & Printers", logo: sonyLogo },
-  { name: "Nipro", specialty: "Renal Care & Dialysis", logo: niproLogo },
+  { name: "Cochlear", specialty: "Hearing Implant Solutions", logo: null },
+  { name: "Leica", specialty: "Precision Optics & Imaging", logo: leicaLogo },
+  { name: "Eskay Fine Chemicals", specialty: "Contrast Media & Chemicals", logo: eskayLogo },
+  { name: "WEGO", specialty: "Renal Care & Hemodialysis", logo: wegoLogo },
 ];
 
 const PartnersSection = () => {
@@ -35,7 +39,7 @@ const PartnersSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6"
         >
           {partners.map((partner) => (
             <div
@@ -43,11 +47,15 @@ const PartnersSection = () => {
               className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/10 rounded-xl p-6 flex flex-col items-center justify-center gap-4 hover:bg-primary-foreground/15 transition-colors"
             >
               <div className="h-12 flex items-center justify-center">
-                <img
-                  src={partner.logo}
-                  alt={`${partner.name} logo`}
-                  className="max-h-12 w-auto object-contain brightness-0 invert opacity-90"
-                />
+                {partner.logo ? (
+                  <img
+                    src={partner.logo}
+                    alt={`${partner.name} logo`}
+                    className="max-h-12 w-auto object-contain brightness-0 invert opacity-90"
+                  />
+                ) : (
+                  <span className="text-lg font-heading font-bold opacity-90">{partner.name}</span>
+                )}
               </div>
               <div className="text-center">
                 <h3 className="font-heading font-semibold text-sm mb-1">{partner.name}</h3>
