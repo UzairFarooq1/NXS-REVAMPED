@@ -1,50 +1,69 @@
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import { motion } from "framer-motion";
-import trumpfLogo from "@/assets/partners/trumpf.png";
-import nihonKohdenLogo from "@/assets/partners/nihon-kohden.png";
+import shimadzuLogo from "@/assets/partners/shimadzu.jpg";
+import baxterGambroLogo from "@/assets/partners/baxter-gambro.png";
 import geHealthcareLogo from "@/assets/partners/ge-healthcare.png";
+import trumpfLogo from "@/assets/partners/trumpf.png";
 import leicaLogo from "@/assets/partners/leica.png";
-import sonyLogo from "@/assets/partners/sony.png";
-import niproLogo from "@/assets/partners/nipro.png";
+import eskayLogo from "@/assets/partners/eskay.jpg";
+import wegoLogo from "@/assets/partners/wego.png";
 import vanguardLogo from "@/assets/vanguard-logo.png";
 
 const partners = [
   {
-    name: "Trumpf Medical",
-    logo: trumpfLogo,
-    specialty: "Operating Theatre Solutions",
-    description: "World-leading manufacturer of surgical lights, operating tables, and ceiling-suspended supply systems for the modern operating theatre.",
+    name: "Olympus",
+    logo: null,
+    specialty: "Endoscopy & Surgical Equipment",
+    description: "A Japanese world leader of endoscopy and surgical equipment.",
   },
   {
-    name: "Nihon Kohden",
-    logo: nihonKohdenLogo,
-    specialty: "Patient Monitoring & Neurology",
-    description: "Japanese pioneer in patient monitoring systems, EEG, EMG, and clinical information systems for critical care and neurology departments.",
+    name: "Shimadzu",
+    logo: shimadzuLogo,
+    specialty: "Precision & Medical Instruments",
+    description: "A Japanese public company, manufacturing precision instruments, measuring instruments and medical equipment, based in Kyoto, Japan.",
+  },
+  {
+    name: "Baxter Gambro",
+    logo: baxterGambroLogo,
+    specialty: "Renal Care & Critical Care",
+    description: "A world leading health care company which primarily focuses on products to treat hemophilia, kidney disease, immune disorders and other chronic and acute medical conditions.",
   },
   {
     name: "GE Healthcare",
     logo: geHealthcareLogo,
-    specialty: "Imaging & ICU Monitoring",
-    description: "Global leader in medical imaging, patient monitoring, and healthcare IT solutions including CARESCAPE monitoring platforms.",
+    specialty: "Medical Imaging & Diagnostics",
+    description: "GE HealthCare is a global medical technology and diagnostics company headquartered in the United States specializing in medical imaging, patient monitoring, diagnostics, and digital health solutions.",
   },
   {
-    name: "Leica Microsystems",
+    name: "Trumpf Medical",
+    logo: trumpfLogo,
+    specialty: "Operating Theatre Solutions",
+    description: "A company that develops and manufactures medical equipment for operating rooms, intensive care units, and related clinical areas that provide the best-possible support for hospital staff and the efficient and safe care of patients.",
+  },
+  {
+    name: "Cochlear",
+    logo: null,
+    specialty: "Hearing Implant Solutions",
+    description: "A global biotechnology company that designs, manufactures and supplies the Nucleus cochlear implant, the Hybrid electro-acoustic implant and the Baha bone conduction implant.",
+  },
+  {
+    name: "Leica",
     logo: leicaLogo,
-    specialty: "Surgical Microscopy",
-    description: "Premium surgical microscopes for neurosurgery, ophthalmology, ENT, and spine surgery with advanced visualization technology.",
+    specialty: "Precision Optics & Imaging",
+    description: "Leica is a global leader in precision optics and imaging solutions, dedicated to revealing the invisible and empowering professionals in science, medicine, and industry. With a strong commitment to innovation, Leica continuously advances visualization and analysis technologies, helping customers make informed decisions and optimize workflows.",
   },
   {
-    name: "Sony Medical",
-    logo: sonyLogo,
-    specialty: "Medical Imaging & Printers",
-    description: "High-definition medical displays, printers, and recording solutions for surgical imaging and diagnostic applications.",
+    name: "Eskay Fine Chemicals",
+    logo: eskayLogo,
+    specialty: "Contrast Media & Speciality Chemicals",
+    description: "Eskay Speciality Chemicals, established in 2006, is located in the Special Economic Zone at Sachin, Surat, Gujarat. As an Export Oriented Unit (EOU) with a USFDA NDC number for all its products, the company is committed to maintaining high-quality standards.",
   },
   {
-    name: "Nipro",
-    logo: niproLogo,
-    specialty: "Renal Care & Dialysis",
-    description: "Specialist in dialysis equipment, medical devices, and pharmaceutical packaging for renal care departments worldwide.",
+    name: "WEGO",
+    logo: wegoLogo,
+    specialty: "Renal Care & Hemodialysis",
+    description: "A leading manufacturer of hemodialysis equipment, dialyzers, blood circuits, and fistula needles, providing comprehensive renal care solutions worldwide.",
   },
 ];
 
@@ -69,12 +88,16 @@ const Partners = () => {
                 transition={{ delay: i * 0.08 }}
                 className="bg-card border rounded-2xl p-8 text-center hover:shadow-lg transition-shadow"
               >
-                <div className="h-16 flex items-center justify-center mb-6">
-                  <img
-                    src={partner.logo}
-                    alt={`${partner.name} logo`}
-                    className="max-h-16 w-auto object-contain"
-                  />
+              <div className="h-16 flex items-center justify-center mb-6">
+                  {partner.logo ? (
+                    <img
+                      src={partner.logo}
+                      alt={`${partner.name} logo`}
+                      className="max-h-16 w-auto object-contain"
+                    />
+                  ) : (
+                    <span className="text-2xl font-heading font-bold text-primary">{partner.name}</span>
+                  )}
                 </div>
                 <h3 className="text-lg font-heading font-bold text-foreground mb-1">{partner.name}</h3>
                 <p className="text-sm font-heading font-semibold text-primary mb-3">{partner.specialty}</p>
