@@ -5,7 +5,8 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import csrImg from "@/assets/csr.jpg";
-import wegoLogo from "@/assets/partners/wego.svg";
+import wegoLogo from "@/assets/partners/wego.png";
+import baxterGambroLogo from "@/assets/partners/baxter-gambro.png";
 
 // Product images
 import mixLiteImg from "@/assets/products/mix-lite.jpg";
@@ -64,7 +65,7 @@ const categories: Category[] = [
       {
         name: "Hollow Fiber Dialyzers (Low Flux High Performance)",
         description:
-          "WEGO's polysulfone hollow fiber dialyzers feature a 40μm wall thickness with 200μm inner diameter. Available in F15 (1.5m²), F18 (1.8m²), and F20 (2.0m²) effective surface areas. Designed for enhanced phosphate clearance to address CKD-MBD, with radiation sterilization and polycarbonate housing.",
+          "WEGO's polysulfone hollow fiber dialyzers feature a 40μm wall thickness with 200μm inner diameter. Available in HF17 (1.7m²), HF19 (1.9m²), HF20 (2.0m²), and HF21 (2.1m²) effective surface areas. Designed for enhanced phosphate clearance to address CKD-MBD, with radiation sterilization and polycarbonate housing.",
         image: wegoDialyzerImg,
       },
       {
@@ -86,38 +87,18 @@ const categories: Category[] = [
     label: "CRRT",
     intro:
       "Baxter's Continuous Renal Replacement Therapy (CRRT) solutions are designed for critically ill patients with acute kidney injury (AKI), providing continuous, gentle, and effective blood purification. Baxter offers advanced CRRT machines, such as the Prismaflex and PrisMax systems, which deliver customizable therapy options, ensuring optimal fluid and toxin removal while maintaining hemodynamic stability. These systems support various treatment modalities, including CVVH, CVVHD, and CVVHDF, allowing healthcare professionals to tailor treatments based on patient needs.",
-    partnerName: "Baxter",
-    products: [
-      {
-        name: "PrisMax CRRT System",
-        description:
-          "Advanced CRRT platform offering continuous blood purification for critically ill patients with AKI. Features customizable therapy options across CVVH, CVVHD, and CVVHDF modalities with integrated safety features and hemodynamic stability monitoring.",
-      },
-      {
-        name: "Prismaflex CRRT System",
-        description:
-          "Proven CRRT system providing gentle, effective blood purification in intensive care settings. Supports multiple treatment modalities with intuitive operation and comprehensive alarm management for patient safety.",
-      },
-    ],
+    partnerLogo: baxterGambroLogo,
+    partnerName: "Baxter Gambro",
+    products: [],
   },
   {
     id: "peritoneal",
     label: "Peritoneal Dialysis",
     intro:
       "Baxter has been a pioneer in Peritoneal Dialysis (PD) since introducing the first PD solution in 1960, continuously advancing home dialysis solutions to improve patient outcomes. PD allows patients with End-Stage Renal Disease (ESRD) to maintain independence and a better quality of life while offering potentially improved clinical outcomes at a lower cost than hemodialysis. Baxter's comprehensive PD portfolio includes innovative solutions like Automated Peritoneal Dialysis (APD) with Remote Patient Management (RPM), enabling real-time monitoring to enhance care and reduce hospitalizations.",
-    partnerName: "Baxter",
-    products: [
-      {
-        name: "Automated Peritoneal Dialysis (APD)",
-        description:
-          "Advanced APD systems with Remote Patient Management (RPM) enabling real-time monitoring of home dialysis treatments. Supports overnight automated exchanges for patient convenience and improved clinical outcomes.",
-      },
-      {
-        name: "CAPD Solutions",
-        description:
-          "Continuous Ambulatory Peritoneal Dialysis solutions allowing patients to perform manual exchanges throughout the day. Provides independence and flexibility for End-Stage Renal Disease patients managing dialysis at home.",
-      },
-    ],
+    partnerLogo: baxterGambroLogo,
+    partnerName: "Baxter Gambro",
+    products: [],
   },
 ];
 
@@ -189,36 +170,37 @@ const RenalCare = () => {
               ) : null}
             </div>
 
-            {/* Products */}
-            <div className="space-y-10">
-              {activeCategory.products.map((product, i) => (
-                <motion.div
-                  key={product.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 }}
-                  className="bg-card border rounded-xl p-8 flex flex-col md:flex-row gap-6 items-center"
-                >
-                  {product.image && (
-                    <div className="w-full md:w-56 flex-shrink-0">
-                      <img
-                        src={product.image}
-                        alt={product.name}
-                        className="w-full h-auto object-contain rounded-lg max-h-48"
-                      />
+            {activeCategory.products.length > 0 && (
+              <div className="space-y-10">
+                {activeCategory.products.map((product, i) => (
+                  <motion.div
+                    key={product.name}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.1 }}
+                    className="bg-card border rounded-xl p-8 flex flex-col md:flex-row gap-6 items-center"
+                  >
+                    {product.image && (
+                      <div className="w-full md:w-56 flex-shrink-0">
+                        <img
+                          src={product.image}
+                          alt={product.name}
+                          className="w-full h-auto object-contain rounded-lg max-h-48"
+                        />
+                      </div>
+                    )}
+                    <div className="flex-1">
+                      <h3 className="text-xl font-heading font-bold text-foreground mb-3">
+                        {product.name}
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        {product.description}
+                      </p>
                     </div>
-                  )}
-                  <div className="flex-1">
-                    <h3 className="text-xl font-heading font-bold text-foreground mb-3">
-                      {product.name}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {product.description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+                  </motion.div>
+                ))}
+              </div>
+            )}
 
             {/* More info link */}
             {activeCategory.moreLink && (
