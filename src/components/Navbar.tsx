@@ -17,7 +17,7 @@ const navItems = [
       { label: "Contrast Media", href: "/solutions/contrast-media" },
       { label: "Sony Printers", href: "/solutions/sony-printers" },
       { label: "", href: "", isDivider: true },
-      { label: "Endoscopy", href: "/solutions/endoscopy" },
+      { label: "Endoscopy & MAS", href: "/solutions/endoscopy" },
       { label: "Operating Theatre", href: "/solutions/operating-theatre" },
       { label: "ICU Monitoring", href: "/solutions/icu" },
       { label: "Neurology", href: "/solutions/neurology" },
