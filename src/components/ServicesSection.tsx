@@ -1,23 +1,91 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import radiologyImg from "@/assets/radiology_xray.jpg";
+import radiologyImg from "@/assets/xray.webp";
 import operatingTheatreImg from "@/assets/operating_theatre.jpg";
 import endoscopyImg from "@/assets/endoscopy.jpg";
-import radiologyConsImg from "@/assets/radiology.jpg";
-import icuImg from "@/assets/icu-monitoring.avif";
+import radiologyConsImg from "@/assets/radiology_cons.jpg";
+import contrast from "@/assets/contrastmedia.jpg";
+import sony from "@/assets/sony.jpg";
+import icuImg from "@/assets/monitoring.avif";
+import cardio from "@/assets/products/cardioday.png";
 import microscopyImg from "@/assets/microscopy.webp";
-import csrImg from "@/assets/csr.jpg";
-import operatingTableImg from "@/assets/operating_table.jpg";
+import csrImg from "@/assets/maternal.avif";
+import renal from "@/assets/wego.jfif";
 
 const services = [
-  { title: "Radiology / X-Ray", description: "Complete digital radiography & fluoroscopy systems", image: radiologyImg, href: "/solutions/radiology" },
-  { title: "Endoscopy", description: "Advanced endoscopic solutions for GI & surgical procedures", image: endoscopyImg, href: "/solutions/endoscopy" },
-  { title: "Operating Theatre", description: "LED surgical lights, tables & ceiling-suspended systems", image: operatingTheatreImg, href: "/solutions/operating-theatre" },
-  { title: "ICU Monitoring", description: "Patient monitoring solutions for critical care", image: icuImg, href: "/solutions/icu" },
-  { title: "Operating Microscopy", description: "Precision surgical microscopes for neurosurgery & ophthalmology", image: microscopyImg, href: "/solutions/microscopy" },
-  { title: "Renal Care", description: "Dialysis machines & renal care consumables", image: csrImg, href: "/solutions/renal-care" },
-  { title: "Operating Tables", description: "Electronic surgical tables including bariatric solutions", image: operatingTableImg, href: "/solutions/operating-theatre" },
-  { title: "Radiology Consumables", description: "Protective wear, contrast media & imaging accessories", image: radiologyConsImg, href: "/solutions/consumables" },
+  {
+    title: "Radiology Equipment",
+    description:
+      "Digital radiography, fluoroscopy and advanced imaging equipment.",
+    image: radiologyImg,
+    href: "/solutions/radiology",
+  },
+  {
+    title: "Radiology Consumables",
+    description: "Protective wear, contrast media and imaging accessories.",
+    image: radiologyConsImg,
+    href: "/solutions/consumables",
+  },
+  {
+    title: "Contrast Media",
+    description:
+      "High-quality contrast agents to support accurate diagnostic imaging.",
+    image: contrast,
+    href: "/solutions/contrast-media",
+  },
+  {
+    title: "Sony Printers",
+    description:
+      "Medical-grade printing solutions for radiology and theatre environments.",
+    image: sony,
+    href: "/solutions/sony-printers",
+  },
+  {
+    title: "Endoscopy & MAS",
+    description:
+      "Endoscopic and minimally invasive surgery solutions for GI and surgical care.",
+    image: endoscopyImg,
+    href: "/solutions/endoscopy",
+  },
+  {
+    title: "Operating Theatre",
+    description:
+      "Integrated operating theatre lights, booms and anesthesia systems.",
+    image: operatingTheatreImg,
+    href: "/solutions/operating-theatre",
+  },
+  {
+    title: "ICU Monitoring",
+    description:
+      "Patient monitoring and critical care solutions for intensive care units.",
+    image: icuImg,
+    href: "/solutions/icu",
+  },
+  {
+    title: "Cardiology",
+    description: "Cardiovascular monitoring and diagnostic solutions.",
+    image: cardio,
+    href: "/solutions/cardiology",
+  },
+  {
+    title: "Renal Care",
+    description: "Dialysis systems and renal care consumables.",
+    image: renal,
+    href: "/solutions/renal-care",
+  },
+  {
+    title: "Operating Microscopy",
+    description:
+      "Precision surgical microscopes for neurosurgery and ophthalmology.",
+    image: microscopyImg,
+    href: "/solutions/microscopy",
+  },
+  {
+    title: "Maternal & Infant Care",
+    description: "Solutions focused on maternal health and neonatal care.",
+    image: csrImg,
+    href: "/solutions/maternal-infant-care",
+  },
 ];
 
 const container = {
@@ -66,8 +134,12 @@ const ServicesSection = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-5 text-primary-foreground">
-                    <h3 className="font-heading font-semibold text-base mb-0.5">{service.title}</h3>
-                    <p className="text-xs text-primary-foreground/75 leading-snug">{service.description}</p>
+                    <h3 className="font-heading font-semibold text-base mb-0.5">
+                      {service.title}
+                    </h3>
+                    <p className="text-xs text-primary-foreground/75 leading-snug">
+                      {service.description}
+                    </p>
                   </div>
                 </div>
               </Link>

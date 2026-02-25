@@ -20,11 +20,6 @@ import trulight3000 from "@/assets/products/trulight-3000.jpg";
 import trulight5000 from "@/assets/products/trulight-5000.png";
 import heluxPro from "@/assets/products/helux-pro.jpg";
 
-// Operating Tables images
-import pst300 from "@/assets/products/pst-300.jpg";
-import pst500 from "@/assets/products/pst-500.jpg";
-import ts7000 from "@/assets/products/ts7000.jpg";
-import ts7500 from "@/assets/products/ts7500.jpg";
 
 // Booms & Pendants images
 import truportBoom from "@/assets/products/truport-boom.jpg";
@@ -98,39 +93,6 @@ const categories: Category[] = [
         description: "The Helux Pro Surgical Light is designed to provide consistent illumination with advanced features such as shadow elimination, deep cavity lighting, and a non-imbedded laminar airflow system to maintain high-quality operating conditions. It seamlessly integrates with ORI systems, allowing real-time image routing via third-party equipment. The sterile light control helps reduce cross-contamination, while an intensity indicator alerts the surgical team to overlapping light fields, enhancing patient safety.",
         image: heluxPro,
         link: "https://www.hillrom.com/en/products/helux-pro-surgical-light/",
-      },
-    ],
-  },
-  {
-    id: "operating-tables",
-    label: "Operating Theatre Tables",
-    intro: "Our operating tables are designed for versatile operation, and patient safety, meeting the demands of modern surgical environments. Featuring modular designs, ergonomic adjustments, and advanced positioning capabilities, these tables support a wide range of procedures, from general surgery to highly specialized interventions.",
-    partnerLogo: baxterTrumpfLogo,
-    partnerAlt: "Baxter | Trumpf Medical",
-    products: [
-      {
-        name: "PST 300 Precision Surgical Table",
-        description: "The versatile, easy-to-use table delivers a strong foundation, supporting the volume and variety of procedures your facility performs every day. So you can help more people. Perform more specialized procedures, spend more time with patients — and less time dealing with complex equipment. The PST 300 table does more of what matters most.",
-        image: pst300,
-        link: "https://www.hillrom.com/en/products/pst300-surgical-table/",
-      },
-      {
-        name: "PST 500 Precision Surgical Table",
-        description: "The PST 500 Precision Surgical Table is designed for versatility and stability in modern operating room environments. Built with advanced surgical table design, including a durable Patient Warming System, which helps maintain patient core temperature. The table leverages a platform for patient positioning, ensuring stability for a wide range of surgical procedures.",
-        image: pst500,
-        link: "https://www.hillrom.com/en/products/pst-500-precision-surgical-table/",
-      },
-      {
-        name: "TS7000 Operating Table",
-        description: "Nothing should get between you and your patient during procedures. That's why the TS7000 Operating Table is designed with your priorities in mind: to be patient-friendly, reliable, flexible, and expandable. It offers column design, built-in feedback systems, and a diverse set of safety features that allow you to concentrate on the patient — not on the surgical table.",
-        image: ts7000,
-        link: "https://www.hillrom.com/en/products/ts7000dv-operating-table/",
-      },
-      {
-        name: "TS7500 Operating Table",
-        description: "The TS7500 OR System Table by Trumpf Medical is designed for flexibility and efficiency, adapting to evolving surgical needs across fluid disciplines. With large adjustment zones for robust and patient positioning, it ensures versatility in procedures. Advanced yet easy-to-handle drive and pressure functions enable reliable operation on any surface, while a simple modular system improves ergonomics in daily workflow.",
-        image: ts7500,
-        link: "https://www.hillrom.com/en/products/ts7500/",
       },
     ],
   },

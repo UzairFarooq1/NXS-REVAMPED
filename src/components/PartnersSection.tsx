@@ -7,16 +7,41 @@ import trumpfLogo from "@/assets/partners/trumpf.png";
 import leicaLogo from "@/assets/partners/leica.png";
 import eskayLogo from "@/assets/partners/eskay.jpg";
 import wegoLogo from "@/assets/partners/wego.png";
+import olympuslogo from "@/assets/partners/olympus.png";
 
 const partners = [
-  { name: "Olympus", specialty: "Endoscopy & Surgical Equipment", logo: null },
-  { name: "Shimadzu", specialty: "Precision & Medical Instruments", logo: shimadzuLogo },
-  { name: "Baxter Gambro", specialty: "Renal Care & Critical Care", logo: baxterGambroLogo },
-  { name: "GE Healthcare", specialty: "Medical Imaging & Diagnostics", logo: geHealthcareLogo },
-  { name: "Trumpf Medical", specialty: "Operating Theatre Solutions", logo: trumpfLogo },
+  {
+    name: "Olympus",
+    specialty: "Endoscopy & Surgical Equipment",
+    logo: olympuslogo,
+  },
+  {
+    name: "Shimadzu",
+    specialty: "Precision & Medical Instruments",
+    logo: shimadzuLogo,
+  },
+  {
+    name: "Baxter",
+    specialty: "Renal Care & Critical Care",
+    logo: baxterGambroLogo,
+  },
+  {
+    name: "GE Healthcare",
+    specialty: "Medical Imaging & Diagnostics",
+    logo: geHealthcareLogo,
+  },
+  {
+    name: "Trumpf Medical",
+    specialty: "Operating Theatre Solutions",
+    logo: trumpfLogo,
+  },
   { name: "Cochlear", specialty: "Hearing Implant Solutions", logo: null },
   { name: "Leica", specialty: "Precision Optics & Imaging", logo: leicaLogo },
-  { name: "Eskay Fine Chemicals", specialty: "Contrast Media & Chemicals", logo: eskayLogo },
+  {
+    name: "Eskay Fine Chemicals",
+    specialty: "Contrast Media & Chemicals",
+    logo: eskayLogo,
+  },
   { name: "WEGO", specialty: "Renal Care & Hemodialysis", logo: wegoLogo },
 ];
 
@@ -54,12 +79,18 @@ const PartnersSection = () => {
                     className="max-h-12 w-auto object-contain brightness-0 invert opacity-90"
                   />
                 ) : (
-                  <span className="text-lg font-heading font-bold opacity-90">{partner.name}</span>
+                  <span className="text-lg font-heading font-bold opacity-90">
+                    {partner.name}
+                  </span>
                 )}
               </div>
               <div className="text-center">
-                <h3 className="font-heading font-semibold text-sm mb-1">{partner.name}</h3>
-                <p className="text-xs text-primary-foreground/60">{partner.specialty}</p>
+                <h3 className="font-heading font-semibold text-sm mb-1">
+                  {partner.name}
+                </h3>
+                <p className="text-xs text-primary-foreground/60">
+                  {partner.specialty}
+                </p>
               </div>
             </div>
           ))}

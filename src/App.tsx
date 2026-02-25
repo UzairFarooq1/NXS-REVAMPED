@@ -10,11 +10,11 @@ import Partners from "./pages/Partners";
 import CSR from "./pages/CSR";
 import Contact from "./pages/Contact";
 import News from "./pages/News";
+import Solutions from "./pages/Solutions";
 import Radiology from "./pages/solutions/Radiology";
 import Endoscopy from "./pages/solutions/Endoscopy";
 import OperatingTheatre from "./pages/solutions/OperatingTheatre";
 import ICU from "./pages/solutions/ICU";
-import Neurology from "./pages/solutions/Neurology";
 import Cardiology from "./pages/solutions/Cardiology";
 import RenalCare from "./pages/solutions/RenalCare";
 import Microscopy from "./pages/solutions/Microscopy";
@@ -40,11 +40,11 @@ const App = () => (
           <Route path="/csr" element={<CSR />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/news" element={<News />} />
+          <Route path="/solutions" element={<Solutions />} />
           <Route path="/solutions/radiology" element={<Radiology />} />
           <Route path="/solutions/endoscopy" element={<Endoscopy />} />
           <Route path="/solutions/operating-theatre" element={<OperatingTheatre />} />
           <Route path="/solutions/icu" element={<ICU />} />
-          <Route path="/solutions/neurology" element={<Neurology />} />
           <Route path="/solutions/cardiology" element={<Cardiology />} />
           <Route path="/solutions/renal-care" element={<RenalCare />} />
           <Route path="/solutions/microscopy" element={<Microscopy />} />

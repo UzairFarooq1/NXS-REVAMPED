@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Shield, Users, Award, HeartPulse } from "lucide-react";
-import csrImg from "@/assets/csr.jpg";
+import csrImg from "@/assets/about.jpg";
 
 const stats = [
   { icon: Award, value: "44+", label: "Years of Service" },
@@ -31,7 +31,9 @@ const AboutSection = () => {
             </div>
             <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground px-8 py-5 rounded-xl shadow-lg hidden md:block">
               <p className="text-3xl font-heading font-bold">Since 1980</p>
-              <p className="text-sm text-primary-foreground/80">Trusted Excellence</p>
+              <p className="text-sm text-primary-foreground/80">
+                Trusted Excellence
+              </p>
             </div>
           </motion.div>
 
@@ -49,15 +51,17 @@ const AboutSection = () => {
               Nairobi X-Ray Supplies Ltd
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              A subsidiary of The Vanguard Group, Nairobi X-Ray Supplies Ltd (NXS) has been a premier
-              distributor of medical equipment in East Africa since 1980. We specialize in providing
-              comprehensive healthcare solutions across radiology, surgical, critical care, and
-              diagnostic domains.
+              A subsidiary of The Vanguard Group, Nairobi X-Ray Supplies Ltd
+              (NXS) has been a premier distributor of medical equipment in East
+              Africa since 1980. We specialize in providing comprehensive
+              healthcare solutions across radiology, surgical, critical care,
+              and diagnostic domains.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              With partnerships spanning world-renowned manufacturers, we deliver cutting-edge
-              technology, expert installation, training, and after-sales support to healthcare
-              facilities across the region.
+              With partnerships spanning world-renowned manufacturers, we
+              deliver cutting-edge technology, expert installation, training,
+              and after-sales support to healthcare facilities across the
+              region.
             </p>
 
             {/* Stats grid */}
@@ -71,8 +75,12 @@ const AboutSection = () => {
                     <stat.icon className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="text-xl font-heading font-bold text-foreground">{stat.value}</p>
-                    <p className="text-xs text-muted-foreground">{stat.label}</p>
+                    <p className="text-xl font-heading font-bold text-foreground">
+                      {stat.value}
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      {stat.label}
+                    </p>
                   </div>
                 </div>
               ))}
