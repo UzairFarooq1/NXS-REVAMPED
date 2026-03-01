@@ -1,9 +1,17 @@
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import { motion } from "framer-motion";
-import { Shield, Users, Award, HeartPulse, Target, Eye, CheckCircle } from "lucide-react";
-import csrImg from "@/assets/csr.jpg";
-import operatingTheatreImg from "@/assets/operating_theatre.jpg";
+import {
+  Shield,
+  Users,
+  Award,
+  HeartPulse,
+  Target,
+  Eye,
+  CheckCircle,
+} from "lucide-react";
+import csrImg from "@/assets/future.jpg";
+import operatingTheatreImg from "@/assets/NXS.webp";
 
 const stats = [
   { icon: Award, value: "44+", label: "Years of Service" },
@@ -41,7 +49,11 @@ const About = () => {
               transition={{ duration: 0.6 }}
             >
               <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <img src={csrImg} alt="NXS Team" className="w-full h-auto object-cover" />
+                <img
+                  src={csrImg}
+                  alt="NXS Team"
+                  className="w-full h-auto object-cover"
+                />
               </div>
             </motion.div>
 
@@ -58,20 +70,24 @@ const About = () => {
                 Nairobi X-Ray Supplies Ltd
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                A subsidiary of The Vanguard Group, Nairobi X-Ray Supplies Ltd (NXS) has been a premier
-                distributor of medical equipment in East Africa since 1980. We specialize in providing
-                comprehensive healthcare solutions across radiology, surgical, critical care, and
-                diagnostic domains.
+                A subsidiary of The Vanguard Group, Nairobi X-Ray Supplies Ltd
+                (NXS) has been a premier distributor of medical equipment in
+                East Africa since 1980. We specialize in providing comprehensive
+                healthcare solutions across radiology, surgical, critical care,
+                and diagnostic domains.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Our team of experienced biomedical engineers and healthcare consultants ensures seamless
-                deployment, from initial consultation and system design through installation, training,
+                Our team of experienced biomedical engineers and healthcare
+                consultants ensures seamless deployment, from initial
+                consultation and system design through installation, training,
                 and ongoing maintenance.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                With partnerships spanning world-renowned manufacturers including GE Healthcare, Trumpf Medical,
-                Nihon Kohden, Leica Microsystems, Sony Medical, and Nipro, we deliver cutting-edge technology
-                and expert support to healthcare facilities across the region.
+                With partnerships spanning world-renowned manufacturers
+                including GE Healthcare, Trumpf Medical, Nihon Kohden, Leica
+                Microsystems, Sony Medical, and Nipro, we deliver cutting-edge
+                technology and expert support to healthcare facilities across
+                the region.
               </p>
             </motion.div>
           </div>
@@ -91,10 +107,13 @@ const About = () => {
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
                 <Target className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-heading font-bold text-foreground mb-3">Our Mission</h3>
+              <h3 className="text-xl font-heading font-bold text-foreground mb-3">
+                Our Mission
+              </h3>
               <p className="text-muted-foreground leading-relaxed">
-                To provide world-class medical equipment and healthcare solutions that empower
-                healthcare facilities across East Africa to deliver exceptional patient care.
+                To provide world-class medical equipment and healthcare
+                solutions that empower healthcare facilities across East Africa
+                to deliver exceptional patient care.
               </p>
             </motion.div>
 
@@ -108,10 +127,13 @@ const About = () => {
               <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-5">
                 <Eye className="h-6 w-6 text-secondary" />
               </div>
-              <h3 className="text-xl font-heading font-bold text-foreground mb-3">Our Vision</h3>
+              <h3 className="text-xl font-heading font-bold text-foreground mb-3">
+                Our Vision
+              </h3>
               <p className="text-muted-foreground leading-relaxed">
-                To be the leading and most trusted partner for healthcare technology solutions
-                in Sub-Saharan Africa, driving innovation and accessibility in medical care.
+                To be the leading and most trusted partner for healthcare
+                technology solutions in Sub-Saharan Africa, driving innovation
+                and accessibility in medical care.
               </p>
             </motion.div>
           </div>
@@ -134,8 +156,12 @@ const About = () => {
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="h-6 w-6 text-primary" />
                 </div>
-                <p className="text-3xl font-heading font-bold text-foreground">{stat.value}</p>
-                <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
+                <p className="text-3xl font-heading font-bold text-foreground">
+                  {stat.value}
+                </p>
+                <p className="text-sm text-muted-foreground mt-1">
+                  {stat.label}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -146,7 +172,9 @@ const About = () => {
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">Why Choose NXS</h2>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
+              Why Choose NXS
+            </h2>
             <div className="w-16 h-1 bg-secondary mx-auto" />
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">

@@ -56,7 +56,7 @@ const HeroSection = () => {
           </motion.p>
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-6">
             Your Trusted Medical{" "}
-            <span className="text-secondary">Equipment</span> Partner
+            <span className="text-primary">Equipment</span> Partner
           </h1>
           <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-lg">
             Delivering world-class healthcare solutions across East Africa for
@@ -66,7 +66,7 @@ const HeroSection = () => {
             <Button
               asChild
               size="lg"
-              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-heading font-semibold"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-heading font-semibold"
             >
               <Link to="/solutions">
                 Our Solutions
