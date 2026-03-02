@@ -4,7 +4,7 @@ import CTASection from "@/components/CTASection";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { ExternalLink } from "lucide-react";
-import csrImg from "@/assets/csr.jpg";
+import csrImg from "@/assets/products/renalcare.jpg";
 import wegoLogo from "@/assets/partners/wego.png";
 import baxterGambroLogo from "@/assets/partners/baxter-gambro.png";
 

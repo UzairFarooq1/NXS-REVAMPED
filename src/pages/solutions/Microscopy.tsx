@@ -3,7 +3,7 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import microscopyImg from "@/assets/microscopy.webp";
+import microscopyImg from "@/assets/products/leicamicroscope.webp";
 import leicaLogo from "@/assets/partners/leica.png";
 
 // Ophthalmology microscope images
@@ -36,31 +36,37 @@ const categories: Category[] = [
   {
     id: "ophthalmology",
     label: "Ophthalmology Microscopes",
-    intro: "Leica ophthalmic surgical microscopes are designed for precision, efficiency, and versatility across a wide range of ophthalmic procedures, from routine cataract surgery to complex vitreoretinal and corneal procedures. Featuring high-resolution optics, advanced illumination systems, and ergonomic designs, Leica microscopes provide superior visualization, enhancing surgical precision and efficiency. Leica ophthalmic surgical microscopes support complex procedures, improving patient outcomes and optimizing workflow in modern operating rooms.",
+    intro:
+      "Leica ophthalmic surgical microscopes are designed for precision, efficiency, and versatility across a wide range of ophthalmic procedures, from routine cataract surgery to complex vitreoretinal and corneal procedures. Featuring high-resolution optics, advanced illumination systems, and ergonomic designs, Leica microscopes provide superior visualization, enhancing surgical precision and efficiency. Leica ophthalmic surgical microscopes support complex procedures, improving patient outcomes and optimizing workflow in modern operating rooms.",
     products: [
       {
         name: "Leica M220 F12",
-        description: "The Leica M220 F12 is a high-performance, one-of-a-kind ophthalmic surgical microscope designed for precision, efficiency, and value. Featuring a motorized 5-step APO-chromatic magnification changer and LED illumination without fibre optics cables for direct and instant Red Reflex, with a wider depth of focus to reduce refocusing, a paper-like detail on thin surfaces. The compact design offers a long-reach stand system, providing a high degree of positioning freedom in a cost-effective yet feature-rich platform. The Leica M220 F12 supports elegant cataract operations, encouraging flexibility and high-quality performance for years of ophthalmic procedures.",
+        description:
+          "The Leica M220 F12 is a high-performance, one-of-a-kind ophthalmic surgical microscope designed for precision, efficiency, and value. Featuring a motorized 5-step APO-chromatic magnification changer and LED illumination without fibre optics cables for direct and instant Red Reflex, with a wider depth of focus to reduce refocusing, a paper-like detail on thin surfaces. The compact design offers a long-reach stand system, providing a high degree of positioning freedom in a cost-effective yet feature-rich platform. The Leica M220 F12 supports elegant cataract operations, encouraging flexibility and high-quality performance for years of ophthalmic procedures.",
         image: leicaM220,
       },
       {
         name: "LEICA M620 F20",
-        description: "The Leica M620 F20 is an ideal microscope designed for precision and efficiency in anterior segment surgery. Featuring Leica FusionOptics for natural, sharp, high-contrast, and excellent depth of focus. The hands-on zoom maintains blur-free images in real time, even in challenging cases. The handrest on the boom increases stability, boosting confidence, and enhancing precision while the high-speed's centre of gravity control delivers extraordinary stability. Its accurate and clear LED illumination provides even, white light for natural colour rendering. The Leica M620 F20 delivers brighter visualisation in a more compact microscope that helps to reduce eye fatigue during long procedures.",
+        description:
+          "The Leica M620 F20 is an ideal microscope designed for precision and efficiency in anterior segment surgery. Featuring Leica FusionOptics for natural, sharp, high-contrast, and excellent depth of focus. The hands-on zoom maintains blur-free images in real time, even in challenging cases. The handrest on the boom increases stability, boosting confidence, and enhancing precision while the high-speed's centre of gravity control delivers extraordinary stability. Its accurate and clear LED illumination provides even, white light for natural colour rendering. The Leica M620 F20 delivers brighter visualisation in a more compact microscope that helps to reduce eye fatigue during long procedures.",
         image: leicaM620,
       },
       {
         name: "M844 F40",
-        description: "The Leica M844 F40 is designed for exceptional optical clarity, providing surgeons with a high-contrast image through its APO Optics apochromatic optics, with enhanced resolution and depth of focus. The Integrated QuadZoom system delivers brilliant and fine-detailed image clarity and consistent red-reflex illumination under a variety of conditions, in both dimmed- and high-ambient-light conditions. It combines Leica's outstanding FusionOptics technology, delivering superior brightness, colour fidelity, and contrast while operating at low light levels, enhancing safety for both patients and surgeons. The advanced depth-of-focus in retro-vitreal ophthalmic microscopy is outstanding, adding visibility of fine structures and surface detail on sensitive tissues.",
+        description:
+          "The Leica M844 F40 is designed for exceptional optical clarity, providing surgeons with a high-contrast image through its APO Optics apochromatic optics, with enhanced resolution and depth of focus. The Integrated QuadZoom system delivers brilliant and fine-detailed image clarity and consistent red-reflex illumination under a variety of conditions, in both dimmed- and high-ambient-light conditions. It combines Leica's outstanding FusionOptics technology, delivering superior brightness, colour fidelity, and contrast while operating at low light levels, enhancing safety for both patients and surgeons. The advanced depth-of-focus in retro-vitreal ophthalmic microscopy is outstanding, adding visibility of fine structures and surface detail on sensitive tissues.",
         image: leicaM844,
       },
       {
         name: "M822",
-        description: "The Leica M822 ophthalmic surgical microscope combines LED illumination with its elegant, ultra-bright LED and halogen optics. It provides a brighter and stable red reflex for enhanced visualisation during cataract or retinal operations. The SPOT Optic luminaire system provides a clean, high-resolution, and high-contrast surgical image with a superior depth of field. Designed for efficiency and elegance with its M822 offers clean, comfortable solutions with focus, power-on, and manual zoom and macro controls. Together with the FusionOptics vision tech, surgeons get constant comfort at lowest light levels, providing better contrast and resolution as well as stronger safety protection of the patient's retina. Additionally, the M822 also features a 3D/4K 2D recording, a 4K Open Architecture video processing sensor and wide accessories/disposables for documentation.",
+        description:
+          "The Leica M822 ophthalmic surgical microscope combines LED illumination with its elegant, ultra-bright LED and halogen optics. It provides a brighter and stable red reflex for enhanced visualisation during cataract or retinal operations. The SPOT Optic luminaire system provides a clean, high-resolution, and high-contrast surgical image with a superior depth of field. Designed for efficiency and elegance with its M822 offers clean, comfortable solutions with focus, power-on, and manual zoom and macro controls. Together with the FusionOptics vision tech, surgeons get constant comfort at lowest light levels, providing better contrast and resolution as well as stronger safety protection of the patient's retina. Additionally, the M822 also features a 3D/4K 2D recording, a 4K Open Architecture video processing sensor and wide accessories/disposables for documentation.",
         image: leicaM822,
       },
       {
         name: "Proveo 8 Ophthalmic Surgical Microscope",
-        description: "The Leica Proveo 8 ophthalmic surgical microscope is designed for precision, efficiency, and seamless workflow in both anterior and posterior eye procedures. Featuring a comprehensive CoAx 4 coaxial illumination for perfectly stable red reflex. The Integrated Image Guided Systems (IOLcompass guidance) provides a steady, high-resolution, current real-time image for the precise alignment of IOLs. Leica's advanced depth-of-field with a 3D/4K 2D coverage, a change of view and a variable field-of-view system, ensures smooth and accurate surgical process with FusionOptics. Proveo 8 delivers ultra-stable performance and versatility, offering cutting-edge digital solution for optimal patient outcomes.",
+        description:
+          "The Leica Proveo 8 ophthalmic surgical microscope is designed for precision, efficiency, and seamless workflow in both anterior and posterior eye procedures. Featuring a comprehensive CoAx 4 coaxial illumination for perfectly stable red reflex. The Integrated Image Guided Systems (IOLcompass guidance) provides a steady, high-resolution, current real-time image for the precise alignment of IOLs. Leica's advanced depth-of-field with a 3D/4K 2D coverage, a change of view and a variable field-of-view system, ensures smooth and accurate surgical process with FusionOptics. Proveo 8 delivers ultra-stable performance and versatility, offering cutting-edge digital solution for optimal patient outcomes.",
         image: leicaProveo8,
       },
     ],
@@ -68,26 +74,31 @@ const categories: Category[] = [
   {
     id: "surgical",
     label: "Surgical Microscopes",
-    intro: "Leica surgical microscopes are designed for precision and versatility across multiple specialties, including ENT (ear, nose, and throat), neurosurgery, and dental procedures. Featuring high-resolution optics, advanced illumination systems, and ergonomic designs, Leica microscopes provide superior visualization, enhancing surgical precision and efficiency. Leica surgical microscopes support complex procedures, improving patient outcomes and optimizing workflow in modern operating rooms.",
+    intro:
+      "Leica surgical microscopes are designed for precision and versatility across multiple specialties, including ENT (ear, nose, and throat), neurosurgery, and dental procedures. Featuring high-resolution optics, advanced illumination systems, and ergonomic designs, Leica microscopes provide superior visualization, enhancing surgical precision and efficiency. Leica surgical microscopes support complex procedures, improving patient outcomes and optimizing workflow in modern operating rooms.",
     products: [
       {
         name: "M320 microscope",
-        description: "The Leica M320 is a compact and versatile surgical microscope designed to deliver exceptional optical performance in a variety of surgical applications. Featuring high-definition optics, built-in FusionOptics, and an ergonomic design, it offers superior visualization for ENT, dental, and routine surgical procedures. The M320 combines ease of use with a long reach stand system, the ability to handle complex procedures, integration with media capture and documentation systems, and compatibility with various surgical discipline-specific accessories.",
+        description:
+          "The Leica M320 is a compact and versatile surgical microscope designed to deliver exceptional optical performance in a variety of surgical applications. Featuring high-definition optics, built-in FusionOptics, and an ergonomic design, it offers superior visualization for ENT, dental, and routine surgical procedures. The M320 combines ease of use with a long reach stand system, the ability to handle complex procedures, integration with media capture and documentation systems, and compatibility with various surgical discipline-specific accessories.",
         image: leicaM320,
       },
       {
         name: "M525 F20",
-        description: "The Leica M525 F20 is a multi-purpose surgical microscope combining cost-efficiency and convenience. Features, such as the fluorescence module Leica FL800, BrightCare, HD documentation, and others, make it the ideal microscope for procedures in Neurosurgery, Spine, Otolaryngology, and Plastic Reconstructive Surgery. The system provides quality and reliability in every respect: the optics, design, engineering, materials, components, operation, ergonomics and use.",
+        description:
+          "The Leica M525 F20 is a multi-purpose surgical microscope combining cost-efficiency and convenience. Features, such as the fluorescence module Leica FL800, BrightCare, HD documentation, and others, make it the ideal microscope for procedures in Neurosurgery, Spine, Otolaryngology, and Plastic Reconstructive Surgery. The system provides quality and reliability in every respect: the optics, design, engineering, materials, components, operation, ergonomics and use.",
         image: leicaM525,
       },
       {
         name: "PROvido with FusionOptics",
-        description: "The PROvido multidisciplinary surgical microscope is designed to provide enhanced visibility and seamless workflow for demanding surgical procedures. Featuring a groundbreaking FusionOptics technology, it combines an extended depth of field with high-resolution optics for a natural, crisp view. The handrest increases stability, boosting confidence and enhancing precision while the high-speed's centre of gravity control delivers extraordinary stability. The PROvido offers gentle patient-eye-care benefits, superior visualization with constant comfort and the ability to reach your surgical best with ease. With the SpeedSwitch system for quick mounting, and an optional light guided FusionOptics Multiplier, it provides efficient, effective ergonomic workstation with customized optical solutions.",
+        description:
+          "The PROvido multidisciplinary surgical microscope is designed to provide enhanced visibility and seamless workflow for demanding surgical procedures. Featuring a groundbreaking FusionOptics technology, it combines an extended depth of field with high-resolution optics for a natural, crisp view. The handrest increases stability, boosting confidence and enhancing precision while the high-speed's centre of gravity control delivers extraordinary stability. The PROvido offers gentle patient-eye-care benefits, superior visualization with constant comfort and the ability to reach your surgical best with ease. With the SpeedSwitch system for quick mounting, and an optional light guided FusionOptics Multiplier, it provides efficient, effective ergonomic workstation with customized optical solutions.",
         image: leicaProvido,
       },
       {
         name: "ARveo 8",
-        description: "The ARveo 8 digital visualization microscope from Leica Microsystems is a breakthrough in neurosurgical digital technology, delivering enhanced AR (augmented reality) visualization capabilities. It features AI-powered 3D visualizations, MRI data overlays, and advanced image-guided visualization tools for brain tumour surgery. Leica Microsystems IT-based intelligent microscope ecosystems is designed for neurosurgery, spine surgery and oncology, developing cutting-edge digital solution for optimal patient outcomes.",
+        description:
+          "The ARveo 8 digital visualization microscope from Leica Microsystems is a breakthrough in neurosurgical digital technology, delivering enhanced AR (augmented reality) visualization capabilities. It features AI-powered 3D visualizations, MRI data overlays, and advanced image-guided visualization tools for brain tumour surgery. Leica Microsystems IT-based intelligent microscope ecosystems is designed for neurosurgery, spine surgery and oncology, developing cutting-edge digital solution for optimal patient outcomes.",
         image: leicaArveo8,
       },
     ],

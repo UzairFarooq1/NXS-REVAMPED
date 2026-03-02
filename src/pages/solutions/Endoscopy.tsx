@@ -4,7 +4,7 @@ import CTASection from "@/components/CTASection";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { ExternalLink } from "lucide-react";
-import endoscopyImg from "@/assets/endoscopy.jpg";
+import endoscopyImg from "@/assets/products/endoscopy.jfif";
 import olympusLogo from "@/assets/partners/olympus.png";
 
 // Category images
@@ -39,51 +39,60 @@ const categories: Category[] = [
   {
     id: "flexible-endoscopy",
     label: "Flexible Endoscopy",
-    intro: "Olympus is the world recognised leader in the flexible endoscopy market. With a custom built workshop to cater to all minor repairs within the country, NXS together with Olympus have maintained the worldwide standards of Olympus Technology, Quality and Service.",
+    intro:
+      "Olympus is the world recognised leader in the flexible endoscopy market. With a custom built workshop to cater to all minor repairs within the country, NXS together with Olympus have maintained the worldwide standards of Olympus Technology, Quality and Service.",
     image: flexibleEndoscope,
   },
   {
     id: "endotherapy-accessories",
     label: "Endotherapy Accessories",
-    intro: "The right tools for the right job. With single use options, NXS with Olympus offer a large range of accessories for flexible endoscopy.",
+    intro:
+      "The right tools for the right job. With single use options, NXS with Olympus offer a large range of accessories for flexible endoscopy.",
     image: endotherapyAccessories,
   },
   {
     id: "laparoscopy",
     label: "Laparoscopy",
-    intro: "Minimal Invasive Surgery, Laparoscopy and Integrated OR's are the tools for the modern surgeon. With a wide array of imaging solutions, software, state of the art instruments and ancillary products from insufflators to unique diathermy and ultrasound scalpels.",
+    intro:
+      "Minimal Invasive Surgery, Laparoscopy and Integrated OR's are the tools for the modern surgeon. With a wide array of imaging solutions, software, state of the art instruments and ancillary products from insufflators to unique diathermy and ultrasound scalpels.",
     image: laparoscopyOr,
     link: "#",
   },
   {
     id: "urology-gynaecology",
     label: "Urology & Gynaecology",
-    intro: "Innovative solutions designed to meet diverse urological and gynaecological needs. Our range includes laser machines, saline (bipolar) resection systems, flexible cystoscopes and ureteroscopes, as well as Narrow Band Imaging (NBI) technology for enhanced bladder tumour detection. In addition, we provide a complete stone management consumable portfolio.\n\nComplementing our urology solutions, we also offer a full range of rigid and flexible hysteroscopes, alongside a broader selection of laparoscopic equipment and instrumentation, ensuring a complete, high-performance suite for minimally invasive surgical (MIS) procedures in gynaecology.",
+    intro:
+      "Innovative solutions designed to meet diverse urological and gynaecological needs. Our range includes laser machines, saline (bipolar) resection systems, flexible cystoscopes and ureteroscopes, as well as Narrow Band Imaging (NBI) technology for enhanced bladder tumour detection. In addition, we provide a complete stone management consumable portfolio.\n\nComplementing our urology solutions, we also offer a full range of rigid and flexible hysteroscopes, alongside a broader selection of laparoscopic equipment and instrumentation, ensuring a complete, high-performance suite for minimally invasive surgical (MIS) procedures in gynaecology.",
     image: urologyGynaecology,
   },
   {
     id: "surgical-energy",
     label: "Surgical Energy",
-    intro: "Specialised units for Flexible Endoscopy to all inclusive Surgical Tissue Management Systems for the surgical environment. Olympus and NXS have the complete electrosurgical platform for every requirement.",
+    intro:
+      "Specialised units for Flexible Endoscopy to all inclusive Surgical Tissue Management Systems for the surgical environment. Olympus and NXS have the complete electrosurgical platform for every requirement.",
     products: [
       {
         name: "Thunderbeat",
-        description: "The world's first device combining both bipolar energy and ultrasonic energy in a single instrument. This dual-energy approach enhances vessel sealing, precise dissection, and coagulation in a single step, reducing surgery time and minimizing thermal spread to surrounding tissues.",
+        description:
+          "The world's first device combining both bipolar energy and ultrasonic energy in a single instrument. This dual-energy approach enhances vessel sealing, precise dissection, and coagulation in a single step, reducing surgery time and minimizing thermal spread to surrounding tissues.",
         image: thunderbeat,
       },
       {
         name: "PowerSeal",
-        description: "An innovative bipolar vessel-sealing instrument designed for consistent and reliable sealing of large vessels and tissue bundles. It provides strong hemostasis with minimal thermal spread, ensuring safe and effective tissue management in laparoscopic and open surgeries.",
+        description:
+          "An innovative bipolar vessel-sealing instrument designed for consistent and reliable sealing of large vessels and tissue bundles. It provides strong hemostasis with minimal thermal spread, ensuring safe and effective tissue management in laparoscopic and open surgeries.",
         image: powerseal,
       },
       {
         name: "Sonicbeat",
-        description: "An advanced ultrasonic dissector that delivers high-speed cutting and coagulation with minimal thermal damage. It enhances surgical precision, reduces blood loss, and improves efficiency in procedures requiring delicate tissue handling.",
+        description:
+          "An advanced ultrasonic dissector that delivers high-speed cutting and coagulation with minimal thermal damage. It enhances surgical precision, reduces blood loss, and improves efficiency in procedures requiring delicate tissue handling.",
         image: sonicbeat,
       },
       {
         name: "HiCura + HiQ+",
-        description: "Hand instruments that offer superior ergonomics, durability, and precision for laparoscopic procedures, improving outcomes in minimally invasive surgery.",
+        description:
+          "Hand instruments that offer superior ergonomics, durability, and precision for laparoscopic procedures, improving outcomes in minimally invasive surgery.",
         image: hicura,
       },
     ],
@@ -91,7 +100,8 @@ const categories: Category[] = [
   {
     id: "ent",
     label: "ENT",
-    intro: "FESS to Stroboscopy, Rigid scopes and Flexible scopes are available from Olympus. NBI compatible systems are making a breakthrough in ENT detection and surgical assistance.",
+    intro:
+      "FESS to Stroboscopy, Rigid scopes and Flexible scopes are available from Olympus. NBI compatible systems are making a breakthrough in ENT detection and surgical assistance.",
     image: entOverview,
     link: "#",
   },

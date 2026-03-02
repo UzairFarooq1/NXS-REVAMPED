@@ -4,7 +4,7 @@ import CTASection from "@/components/CTASection";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { ExternalLink } from "lucide-react";
-import radiologyImg from "@/assets/radiology.jpg";
+import radiologyImg from "@/assets/products/radcons.webp";
 import zittronLogo from "@/assets/partners/zittron.png";
 
 // Product images
@@ -36,11 +36,13 @@ const categories: Category[] = [
   {
     id: "goggles",
     label: "Lead Goggles",
-    intro: "Zittron offers a comprehensive range of lead goggles designed for superior radiation protection, comfort, and durability. Whether you need advanced eye shielding for medical, industrial, or research applications, Zittron provides high-quality, innovative goggles that ensure maximum safety while maintaining a lightweight and ergonomic design. Using state-of-the-art materials and precision manufacturing, Zittron delivers reliable eye protection tailored to your specific needs.",
+    intro:
+      "Zittron offers a comprehensive range of lead goggles designed for superior radiation protection, comfort, and durability. Whether you need advanced eye shielding for medical, industrial, or research applications, Zittron provides high-quality, innovative goggles that ensure maximum safety while maintaining a lightweight and ergonomic design. Using state-of-the-art materials and precision manufacturing, Zittron delivers reliable eye protection tailored to your specific needs.",
     products: [
       {
         name: "Zittron Radiation Protection Eyewear",
-        description: "Zittron's collection of eyewear offers a blend of elegance and functionality. These eyeglasses are not only stylish but also lightweight, making them comfortable to wear. They are designed to accommodate prescription lenses, although certain limitations apply to curved frames. The lenses have undergone rigorous testing in accordance with IEC 61331-1:2014 standards by LMG, achieving a protection level of 0.8mm Pb with a tolerance of 5%.",
+        description:
+          "Zittron's collection of eyewear offers a blend of elegance and functionality. These eyeglasses are not only stylish but also lightweight, making them comfortable to wear. They are designed to accommodate prescription lenses, although certain limitations apply to curved frames. The lenses have undergone rigorous testing in accordance with IEC 61331-1:2014 standards by LMG, achieving a protection level of 0.8mm Pb with a tolerance of 5%.",
         image: zittronEyewear,
       },
     ],
@@ -48,16 +50,19 @@ const categories: Category[] = [
   {
     id: "double-apron",
     label: "Double Sided Apron",
-    intro: "The Double Sided Apron, also referred to as a Wrap, is a favoured choice for X-ray-assisted procedures, offering comprehensive protection to healthcare professionals in the room. It guarantees protection from scattered radiation with a minimum of 0.35mm Pb shielding in the front and 0.25mm Pb in the back, in compliance with the IEC 61331-3:2014 standards.",
+    intro:
+      "The Double Sided Apron, also referred to as a Wrap, is a favoured choice for X-ray-assisted procedures, offering comprehensive protection to healthcare professionals in the room. It guarantees protection from scattered radiation with a minimum of 0.35mm Pb shielding in the front and 0.25mm Pb in the back, in compliance with the IEC 61331-3:2014 standards.",
     products: [
       {
         name: "Double Sided Apron Model - Merge",
-        description: "The Zittron Double-Sided Apron Model – Merge offers superior radiation protection with a balanced weight distribution for enhanced comfort during extended use. Designed for medical, industrial, and research applications, this apron provides full front and back coverage, ensuring maximum safety without compromising mobility.",
+        description:
+          "The Zittron Double-Sided Apron Model – Merge offers superior radiation protection with a balanced weight distribution for enhanced comfort during extended use. Designed for medical, industrial, and research applications, this apron provides full front and back coverage, ensuring maximum safety without compromising mobility.",
         image: apronMerge,
       },
       {
         name: "Double Sided Apron Model - Cross",
-        description: "The Zittron Double-Sided Apron Model – Cross is designed for maximum radiation protection with an ergonomic cross-back design that evenly distributes weight, reducing strain during extended wear. Ideal for medical, industrial, and research applications, this apron provides full front and back coverage while ensuring comfort and mobility.",
+        description:
+          "The Zittron Double-Sided Apron Model – Cross is designed for maximum radiation protection with an ergonomic cross-back design that evenly distributes weight, reducing strain during extended wear. Ideal for medical, industrial, and research applications, this apron provides full front and back coverage while ensuring comfort and mobility.",
         image: apronCross,
       },
     ],
@@ -65,16 +70,19 @@ const categories: Category[] = [
   {
     id: "coat-apron",
     label: "Coat Apron",
-    intro: "Frontal Coat Apron is a traditional protective garment primarily used in the X-ray room but its application can extend to lengthy surgical procedures. This type of apron shields the front area of the body, spanning from the shoulders to just below the knees and is crafted in accordance with the IEC 61331-3:2014 standards. It is classified as an open-front apron with a minimum protection level of 0.25mm Pb available with either velcro or buckle closure.",
+    intro:
+      "Frontal Coat Apron is a traditional protective garment primarily used in the X-ray room but its application can extend to lengthy surgical procedures. This type of apron shields the front area of the body, spanning from the shoulders to just below the knees and is crafted in accordance with the IEC 61331-3:2014 standards. It is classified as an open-front apron with a minimum protection level of 0.25mm Pb available with either velcro or buckle closure.",
     products: [
       {
         name: "Coat Apron Model - Buckle Closure",
-        description: "The Zittron Coat Apron Model – Buckle Closure offers superior radiation protection with a convenient and secure buckle fastening system for a snug and adjustable fit. Designed for medical, industrial, and research applications, this apron provides full front and partial back coverage while ensuring ease of movement and comfort during extended wear.",
+        description:
+          "The Zittron Coat Apron Model – Buckle Closure offers superior radiation protection with a convenient and secure buckle fastening system for a snug and adjustable fit. Designed for medical, industrial, and research applications, this apron provides full front and partial back coverage while ensuring ease of movement and comfort during extended wear.",
         image: coatBuckle,
       },
       {
         name: "Coat Apron Model - Reversible",
-        description: "Zittron introduces the first Reversible Apron. A frontal apron which can be worn from both sides. Reversible Apron makes the apron more hygienic and more user friendly. It enhances the life of the product substantially because of dual side use.",
+        description:
+          "Zittron introduces the first Reversible Apron. A frontal apron which can be worn from both sides. Reversible Apron makes the apron more hygienic and more user friendly. It enhances the life of the product substantially because of dual side use.",
         image: coatRev,
       },
     ],
@@ -82,16 +90,19 @@ const categories: Category[] = [
   {
     id: "thyroid",
     label: "Thyroid Shield",
-    intro: "Protective thyroid shields come in two distinct variations, each of which can be equipped with either Velcro or magnet closures. These shields constitute an indispensable component of the comprehensive set of protective apparel essential for healthcare personnel. They must meet a minimum requirement of 0.5mm Pb in accordance with the IEC 61331-3:2014 standards.",
+    intro:
+      "Protective thyroid shields come in two distinct variations, each of which can be equipped with either Velcro or magnet closures. These shields constitute an indispensable component of the comprehensive set of protective apparel essential for healthcare personnel. They must meet a minimum requirement of 0.5mm Pb in accordance with the IEC 61331-3:2014 standards.",
     products: [
       {
         name: "Reversible Model - Universal",
-        description: "The Zittron Reversible Model – Universal is designed for maximum flexibility, allowing dual-sided wear for enhanced durability and hygiene. This innovative apron provides superior radiation protection while maintaining a lightweight, ergonomic fit for all-day comfort.",
+        description:
+          "The Zittron Reversible Model – Universal is designed for maximum flexibility, allowing dual-sided wear for enhanced durability and hygiene. This innovative apron provides superior radiation protection while maintaining a lightweight, ergonomic fit for all-day comfort.",
         image: thyroidUniversal,
       },
       {
         name: "Reversible Model - Sleek",
-        description: "The Zittron Reversible Model – Sleek combines cutting-edge radiation protection with a modern, ergonomic design. Engineered for dual-sided use, this apron enhances durability, hygiene, and versatility while maintaining a lightweight and comfortable fit.",
+        description:
+          "The Zittron Reversible Model – Sleek combines cutting-edge radiation protection with a modern, ergonomic design. Engineered for dual-sided use, this apron enhances durability, hygiene, and versatility while maintaining a lightweight and comfortable fit.",
         image: thyroidSleek,
       },
     ],
@@ -99,11 +110,13 @@ const categories: Category[] = [
   {
     id: "gonad",
     label: "Gonad Shield",
-    intro: "The Zittron Gonad Shield is designed to provide essential radiation protection for reproductive health during medical imaging procedures. Crafted from high-quality, lead-equivalent materials, it ensures maximum shielding while maintaining comfort and ease of use. Ideal for patients of all ages, the ergonomic design offers secure coverage without restricting movement.",
+    intro:
+      "The Zittron Gonad Shield is designed to provide essential radiation protection for reproductive health during medical imaging procedures. Crafted from high-quality, lead-equivalent materials, it ensures maximum shielding while maintaining comfort and ease of use. Ideal for patients of all ages, the ergonomic design offers secure coverage without restricting movement.",
     products: [
       {
         name: "Gonad Shield",
-        description: "Gonad Shields are available in a single design suitable for both genders, meeting the mandatory protection standards with a level of 1.0mm Pb.",
+        description:
+          "Gonad Shields are available in a single design suitable for both genders, meeting the mandatory protection standards with a level of 1.0mm Pb.",
         image: gonadShield,
       },
     ],
@@ -111,11 +124,13 @@ const categories: Category[] = [
   {
     id: "lead-glass",
     label: "Lead Glass",
-    intro: "Lead glass is a specialized radiation-shielding material designed to protect healthcare professionals and patients from harmful ionizing radiation in medical imaging environments. It offers high transparency while effectively blocking X-ray and gamma-ray exposure, making it ideal for use in observation windows, protective barriers, and radiation therapy rooms. With excellent optical clarity and durability, lead glass ensures safety without compromising visibility.",
+    intro:
+      "Lead glass is a specialized radiation-shielding material designed to protect healthcare professionals and patients from harmful ionizing radiation in medical imaging environments. It offers high transparency while effectively blocking X-ray and gamma-ray exposure, making it ideal for use in observation windows, protective barriers, and radiation therapy rooms. With excellent optical clarity and durability, lead glass ensures safety without compromising visibility.",
     products: [
       {
         name: "X-Ray Protective Lead Glass",
-        description: "High-quality lead glass panels for use in observation windows, protective barriers, and radiation therapy rooms. Available in various sizes and thicknesses to suit different installation requirements.",
+        description:
+          "High-quality lead glass panels for use in observation windows, protective barriers, and radiation therapy rooms. Available in various sizes and thicknesses to suit different installation requirements.",
         image: leadGlass1,
       },
     ],
