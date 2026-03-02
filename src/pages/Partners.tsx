@@ -28,11 +28,11 @@ const partners = [
       "A Japanese public company, manufacturing precision instruments, measuring instruments and medical equipment, based in Kyoto, Japan.",
   },
   {
-    name: "Baxter Gambro",
-    logo: baxterGambroLogo,
-    specialty: "Renal Care & Critical Care",
+    name: "WEGO",
+    logo: wegoLogo,
+    specialty: "Renal Care & Hemodialysis",
     description:
-      "A world leading health care company which primarily focuses on products to treat hemophilia, kidney disease, immune disorders and other chronic and acute medical conditions.",
+      "A leading manufacturer of hemodialysis equipment, dialyzers, blood circuits, and fistula needles, providing comprehensive renal care solutions worldwide.",
   },
   {
     name: "GE Healthcare",
@@ -70,11 +70,11 @@ const partners = [
       "Eskay Speciality Chemicals, established in 2006, is located in the Special Economic Zone at Sachin, Surat, Gujarat. As an Export Oriented Unit (EOU) with a USFDA NDC number for all its products, the company is committed to maintaining high-quality standards.",
   },
   {
-    name: "WEGO",
-    logo: wegoLogo,
-    specialty: "Renal Care & Hemodialysis",
+    name: "Baxter Gambro",
+    logo: baxterGambroLogo,
+    specialty: "Renal Care & Critical Care",
     description:
-      "A leading manufacturer of hemodialysis equipment, dialyzers, blood circuits, and fistula needles, providing comprehensive renal care solutions worldwide.",
+      "A world leading health care company which primarily focuses on products to treat hemophilia, kidney disease, immune disorders and other chronic and acute medical conditions.",
   },
 ];
 

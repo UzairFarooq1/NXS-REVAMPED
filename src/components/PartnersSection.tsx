@@ -8,6 +8,7 @@ import leicaLogo from "@/assets/partners/leica.png";
 import eskayLogo from "@/assets/partners/eskay.jpg";
 import wegoLogo from "@/assets/partners/wego.png";
 import olympuslogo from "@/assets/partners/olympus.png";
+import cochlearlogo from "@/assets/partners/cochlear.jpeg";
 
 const partners = [
   {
@@ -20,11 +21,8 @@ const partners = [
     specialty: "Precision & Medical Instruments",
     logo: shimadzuLogo,
   },
-  {
-    name: "Baxter",
-    specialty: "Renal Care & Critical Care",
-    logo: baxterGambroLogo,
-  },
+  { name: "WEGO", specialty: "Renal Care & Hemodialysis", logo: wegoLogo },
+
   {
     name: "GE Healthcare",
     specialty: "Medical Imaging & Diagnostics",
@@ -35,14 +33,22 @@ const partners = [
     specialty: "Operating Theatre Solutions",
     logo: trumpfLogo,
   },
-  { name: "Cochlear", specialty: "Hearing Implant Solutions", logo: null },
+  {
+    name: "Cochlear",
+    specialty: "Hearing Implant Solutions",
+    logo: cochlearlogo,
+  },
   { name: "Leica", specialty: "Precision Optics & Imaging", logo: leicaLogo },
   {
     name: "Eskay Fine Chemicals",
     specialty: "Contrast Media & Chemicals",
     logo: eskayLogo,
   },
-  { name: "WEGO", specialty: "Renal Care & Hemodialysis", logo: wegoLogo },
+  {
+    name: "Baxter",
+    specialty: "Renal Care & Critical Care",
+    logo: baxterGambroLogo,
+  },
 ];
 
 const PartnersSection = () => {
@@ -76,7 +82,7 @@ const PartnersSection = () => {
                   <img
                     src={partner.logo}
                     alt={`${partner.name} logo`}
-                    className="max-h-12 w-auto object-contain brightness-0 invert opacity-90"
+                    className="max-h-12 w-auto object-contain"
                   />
                 ) : (
                   <span className="text-lg font-heading font-bold opacity-90">
