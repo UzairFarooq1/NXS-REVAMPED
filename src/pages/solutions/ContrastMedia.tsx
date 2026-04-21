@@ -15,6 +15,7 @@ import microgad from "@/assets/products/microgad.png";
 import microhex350 from "@/assets/products/microhex-350.png";
 import microhex300 from "@/assets/products/microhex-300.png";
 import microimage from "@/assets/products/microimage.png";
+import microvein320 from "@/assets/products/microvein-320mg-100ml.png";
 
 interface Product {
   name: string;
@@ -35,24 +36,28 @@ const categories: Category[] = [
   {
     id: "barium",
     label: "Barium Solutions and Powders",
-    intro: "Eskay Fine Chemicals, a pioneering manufacturer of high-quality Barium Sulphate formulations for radiological imaging. With their decades of expertise and commitment to excellence, Eskay's Microbar products align perfectly with our mission to provide cutting-edge radiology solutions that enhance diagnostic accuracy and patient care.",
+    intro:
+      "Eskay Fine Chemicals, a pioneering manufacturer of high-quality Barium Sulphate formulations for radiological imaging. With their decades of expertise and commitment to excellence, Eskay's Microbar products align perfectly with our mission to provide cutting-edge radiology solutions that enhance diagnostic accuracy and patient care.",
     moreLink: "http://www.microbar.co.in/product.html",
     products: [
       {
         name: "Microbar Powder 3.5kg",
-        description: "Microbar is a white, heavy powder with a sweet vanilla flavor, formulated using coarse particles of Barium Sulphate for optimal radiological imaging. It is highly palatable, resistant to flocculation, and cost-effective, making it ideal for routine upper GI tract examinations and follow-through studies. Available in 3.5 kg HDPE jars, the recommended dosage is 175 gm of powder mixed with 150 ml of water.",
+        description:
+          "Microbar is a white, heavy powder with a sweet vanilla flavor, formulated using coarse particles of Barium Sulphate for optimal radiological imaging. It is highly palatable, resistant to flocculation, and cost-effective, making it ideal for routine upper GI tract examinations and follow-through studies. Available in 3.5 kg HDPE jars, the recommended dosage is 175 gm of powder mixed with 150 ml of water.",
         image: microbarPowder,
         link: "http://www.microbar.co.in/powder.htm",
       },
       {
         name: "Microbar Suspension 1 Litre bottle",
-        description: "Microbar Suspension is the only liquid preparation designed for routine upper GI tract and follow-through examinations, offering a smooth, creamy suspension of coarse Barium Sulphate particles. Its non-gritty texture, excellent flow, and perfect adhesion ensure accurate diagnosis, while its fruity flavor and pink-colored formulation enhance patient comfort.",
+        description:
+          "Microbar Suspension is the only liquid preparation designed for routine upper GI tract and follow-through examinations, offering a smooth, creamy suspension of coarse Barium Sulphate particles. Its non-gritty texture, excellent flow, and perfect adhesion ensure accurate diagnosis, while its fruity flavor and pink-colored formulation enhance patient comfort.",
         image: microbarSuspension,
         link: "http://www.microbar.co.in/suspension.htm",
       },
       {
         name: "Microbar for ENEMA (Disposable Kit) 400 gm / 454 gm bags",
-        description: "Microbar Enema Bag is a ready-to-use, disposable system designed for speed, convenience, and accuracy in large bowel X-ray diagnosis. It contains 400 gm/454 gm of Barium Sulphate powder, formulated with coarse particles for enhanced imaging.",
+        description:
+          "Microbar Enema Bag is a ready-to-use, disposable system designed for speed, convenience, and accuracy in large bowel X-ray diagnosis. It contains 400 gm/454 gm of Barium Sulphate powder, formulated with coarse particles for enhanced imaging.",
         image: microbarEnema,
         link: "http://www.microbar.co.in/enema.htm",
       },
@@ -61,12 +66,14 @@ const categories: Category[] = [
   {
     id: "mri",
     label: "MRI Contrast Media",
-    intro: "Eskay Fine Chemicals extends its expertise in radiological contrast agents with a specialised range of MRI Contrast Media, designed to enhance soft tissue visualisation and diagnostic accuracy.",
+    intro:
+      "Eskay Fine Chemicals extends its expertise in radiological contrast agents with a specialised range of MRI Contrast Media, designed to enhance soft tissue visualisation and diagnostic accuracy.",
     moreLink: "https://www.sk1932.com/eskay-speciality-chemicals",
     products: [
       {
         name: "Microgad 20ml",
-        description: "Microgad 20ml is a high-quality Gadolinium Based Contrast Agent (GBCA) designed for enhanced MRI Imaging, providing superior tissue differentiation and diagnostic accuracy. Its high relaxivity and low osmolality ensure patient safety and minimal adverse reactions, making it ideal for brain, spine, and vascular imaging. Manufactured under strict WHO-GMP standards.",
+        description:
+          "Microgad 20ml is a high-quality Gadolinium Based Contrast Agent (GBCA) designed for enhanced MRI Imaging, providing superior tissue differentiation and diagnostic accuracy. Its high relaxivity and low osmolality ensure patient safety and minimal adverse reactions, making it ideal for brain, spine, and vascular imaging. Manufactured under strict WHO-GMP standards.",
         image: microgad,
       },
     ],
@@ -74,17 +81,26 @@ const categories: Category[] = [
   {
     id: "ct",
     label: "CT Contrast Media",
-    intro: "Eskay Fine Chemicals offers high-quality CT Contrast Media, designed to provide exceptional vascular and tissue enhancement for Computed Tomography (CT) Imaging. Our Iodinated Contrast Agents ensure high radiodensity, rapid distribution, and excellent biocompatibility.",
+    intro:
+      "Eskay Fine Chemicals offers high-quality CT Contrast Media, designed to provide exceptional vascular and tissue enhancement for Computed Tomography (CT) Imaging. Our Iodinated Contrast Agents ensure high radiodensity, rapid distribution, and excellent biocompatibility.",
     moreLink: "https://www.sk1932.com/eskay-speciality-chemicals",
     products: [
       {
         name: "Microhex 350mg/100ml",
-        description: "Microhex 350mg/100ml is a high-quality oral contrast agent formulated for enhanced imaging of the gastrointestinal tract during CT and X-ray examinations. With its optimised concentration of Iohexol, it ensures excellent contrast enhancement, providing clear differentiation of the GI tract for accurate diagnostics.",
+        description:
+          "Microhex 350mg/100ml is a high-quality oral contrast agent formulated for enhanced imaging of the gastrointestinal tract during CT and X-ray examinations. With its optimised concentration of Iohexol, it ensures excellent contrast enhancement, providing clear differentiation of the GI tract for accurate diagnostics.",
         image: microhex350,
       },
       {
+        name: "Microvein 320mg/100ml",
+        description:
+          "Microvein 320mg/100ml is a non-ionic radiographic contrast medium for CT imaging, designed to provide strong vascular enhancement immediately following rapid intravascular injection. It offers excellent diagnostic visibility with improved renal tolerability.",
+        image: microvein320,
+      },
+      {
         name: "Microhex 300mg/50ml",
-        description: "Microhex 300mg/50ml is a non-ionic iodinated contrast media used in CT imaging for enhanced visualization of vascular structures and body tissues. It provides high radiopacity with excellent tolerability, ensuring clear and detailed diagnostic images.",
+        description:
+          "Microhex 300mg/50ml is a non-ionic iodinated contrast media used in CT imaging for enhanced visualization of vascular structures and body tissues. It provides high radiopacity with excellent tolerability, ensuring clear and detailed diagnostic images.",
         image: microhex300,
       },
     ],
@@ -92,11 +108,13 @@ const categories: Category[] = [
   {
     id: "oral",
     label: "Oral Contrast Media",
-    intro: "Oral contrast plays a vital role in enhancing the visualisation of the gastrointestinal (GI) tract during diagnostic imaging procedures such as CT scans and X-rays. Microimage 250mg/100ml is a high-quality oral contrast agent specifically designed to improve the delineation of the stomach, duodenum, and small bowel.",
+    intro:
+      "Oral contrast plays a vital role in enhancing the visualisation of the gastrointestinal (GI) tract during diagnostic imaging procedures such as CT scans and X-rays. Microimage 250mg/100ml is a high-quality oral contrast agent specifically designed to improve the delineation of the stomach, duodenum, and small bowel.",
     products: [
       {
         name: "Microimage 250mg/100ml",
-        description: "Microimage 250mg/100ml is a premium oral contrast agent designed for high-quality imaging of the gastrointestinal tract during X-ray and CT examinations. Its 250mg/100ml concentration ensures optimal contrast enhancement, aiding in the clear visualisation of the stomach, duodenum, and small bowel.",
+        description:
+          "Microimage 250mg/100ml is a premium oral contrast agent designed for high-quality imaging of the gastrointestinal tract during X-ray and CT examinations. Its 250mg/100ml concentration ensures optimal contrast enhancement, aiding in the clear visualisation of the stomach, duodenum, and small bowel.",
         image: microimage,
       },
     ],

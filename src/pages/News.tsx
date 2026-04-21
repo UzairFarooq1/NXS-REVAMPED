@@ -2,51 +2,65 @@ import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import { motion } from "framer-motion";
 import { Calendar, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import news from "@/assets/news.jpg";
 
 const newsItems = [
   {
-    date: "2025-01-15",
-    title: "NXS Introduces Sony Medical Printing Solutions",
+    date: "2026-04-21",
+    title: "NXS Engineers Participate in Endoscopy Skills Training",
     excerpt:
-      "Nairobi X-Ray Supplies is proud to announce the introduction of the latest Sony medical printers including the UPC-21 series for endoscopy and ultrasound documentation.",
-    category: "Product Launch",
+      "At the Surgical Society of Kenya Annual Conference pre-workshop, our engineer joined hands-on endoscopy training alongside clinical leaders, reinforcing our commitment to delivering the best service through continuous engineer training.",
+    category: "Training",
+    link: "/news/endoscopy-training-society-of-kenya-2026",
   },
   {
-    date: "2024-11-20",
-    title: "GE CARESCAPE ONE Platform Now Available",
+    date: "2026-01-20",
+    title: "The Gift of Hearing: 56 Cochlear Recipients Switched On",
     excerpt:
-      "The next-generation GE CARESCAPE ONE monitoring platform is now available through NXS, offering advanced patient monitoring with seamless connectivity.",
-    category: "Product Launch",
-  },
-  {
-    date: "2024-09-10",
-    title: "Trumpf Medical LED Lighting Upgrade Programme",
-    excerpt:
-      "NXS launches a comprehensive operating theatre lighting upgrade programme, helping hospitals transition from halogen to energy-efficient Trumpf LED surgical lights.",
-    category: "Programme",
-  },
-  {
-    date: "2024-07-05",
-    title: "Annual Biomedical Engineering Workshop",
-    excerpt:
-      "NXS successfully hosted its annual biomedical engineering workshop, training over 50 hospital technicians on maintenance best practices for medical equipment.",
+      "NXS and Cochlear, together with audiology teams from Kenyatta National Hospital and Moi Teaching and Referral Hospital, completed switch-on for 56 recipients supported by Lalaa Asmaa Foundation and Kenya's First Lady's charitable initiative.",
     category: "Event",
+    link: "/news/cochlear-switch-on-56-recipients",
   },
   {
-    date: "2024-05-18",
-    title: "Leica M530 OH6 Installed at Leading Neurosurgery Centre",
+    date: "2025-11-27",
+    title: "Olympus and NXS Advance Bronchoscopy Training at KNH",
     excerpt:
-      "NXS completed the installation of the Leica M530 OH6 surgical microscope at a leading neurosurgery centre in Nairobi, enhancing fluorescence-guided surgery capabilities.",
-    category: "Installation",
+      "Guided by our long-standing mindset of innovation through education and training, Olympus Corporation (OMETA) and NXS supported a three-day bronchoscopy and EBUS programme at Kenyatta National Hospital, strengthening local clinical and engineering capability for better patient outcomes.",
+    category: "Training",
+    link: "/news/bronchoscopy-ebus-training-knh-2025",
   },
   {
-    date: "2024-03-22",
-    title: "Partnership with Nipro Expands Renal Care Coverage",
+    date: "2025-10-11",
+    title: "NXS and WEGO Showcase MIX Dialysis Innovation at KRACON 2025",
     excerpt:
-      "NXS expands its renal care offering through a strengthened partnership with Nipro, increasing dialysis equipment availability across East Africa.",
-    category: "Partnership",
+      "In partnership with WEGO Blood Purification Business Group, NXS participated in the Kenya Renal Association Annual Scientific Conference in Mombasa, where the next-generation MIX Series Dialysis Machine drew strong interest for its patient-centered and efficiency-focused design.",
+    category: "Conference",
+    link: "/news/wego-kracon-2025",
+  },
+  {
+    date: "2026-06-12",
+    title: "Cochlear Introduces the Nucleus Nexa Smart Implant System",
+    excerpt:
+      "Cochlear has introduced the Nucleus Nexa System, described as the world's first and only smart cochlear implant system, combining internal memory, connected care, and future-ready firmware updates to support long-term hearing outcomes.",
+    category: "Innovation",
+    link: "/news/cochlear-nucleus-nexa-system",
+  },
+  {
+    date: "2025-06-9",
+    title: "First Spiration Valve Recipient in Africa Treated in Nairobi",
+    excerpt:
+      "NXS and Olympus Medical Systems EMEA reached a major milestone with Africa's first Spiration Valve recipient, while supporting a week of charitable pulmonology interventional surgeries in Nairobi through expert collaboration and on-site technical support.",
+    category: "Milestone",
+    link: "/news/spiration-valve-first-recipient-africa",
+  },
+  {
+    date: "2025-04-11",
+    title: "NXS Showcases GE Critical Care Monitoring at CCSK 2025",
+    excerpt:
+      "At the CCSK Conference, NXS presented GE HealthCare's advanced monitoring portfolio, including CARESCAPE Canvas and B155M systems, with hands-on demonstrations focused on faster clinical decisions and improved patient outcomes.",
+    category: "Conference",
+    link: "/news/ccsk-ge-monitoring-2025",
   },
 ];
 
@@ -94,12 +108,12 @@ const News = () => {
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   {item.excerpt}
                 </p>
-                <Button
-                  variant="link"
-                  className="p-0 h-auto font-heading font-semibold text-primary"
+                <Link
+                  to={item.link}
+                  className="inline-flex items-center gap-1 text-sm font-heading font-semibold text-primary hover:text-primary/80 transition-colors"
                 >
-                  Read More <ArrowRight className="ml-1 h-4 w-4" />
-                </Button>
+                  Read More <ArrowRight className="h-4 w-4" />
+                </Link>
               </motion.article>
             ))}
           </div>

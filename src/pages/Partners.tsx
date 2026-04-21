@@ -78,6 +78,9 @@ const partners = [
   },
 ];
 
+const hasWhiteLogoBackground = (name: string) =>
+  ["WEGO", "GE Healthcare", "Leica"].includes(name);
+
 const Partners = () => {
   return (
     <Layout>
@@ -105,7 +108,11 @@ const Partners = () => {
                     <img
                       src={partner.logo}
                       alt={`${partner.name} logo`}
-                      className="max-h-16 w-auto object-contain"
+                      className={`max-h-16 w-auto object-contain ${
+                        hasWhiteLogoBackground(partner.name)
+                          ? "bg-white rounded-md p-1"
+                          : ""
+                      }`}
                     />
                   ) : (
                     <span className="text-2xl font-heading font-bold text-primary">

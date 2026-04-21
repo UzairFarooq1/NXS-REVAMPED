@@ -51,6 +51,9 @@ const partners = [
   },
 ];
 
+const hasWhiteLogoBackground = (name: string) =>
+  ["WEGO", "GE Healthcare", "Leica"].includes(name);
+
 const PartnersSection = () => {
   return (
     <section className="py-20 bg-primary text-primary-foreground">
@@ -82,7 +85,11 @@ const PartnersSection = () => {
                   <img
                     src={partner.logo}
                     alt={`${partner.name} logo`}
-                    className="max-h-12 w-auto object-contain"
+                    className={`max-h-12 w-auto object-contain ${
+                      hasWhiteLogoBackground(partner.name)
+                        ? "bg-white rounded-md p-1"
+                        : ""
+                    }`}
                   />
                 ) : (
                   <span className="text-lg font-heading font-bold opacity-90">
