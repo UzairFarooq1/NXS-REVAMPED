@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import { motion } from "framer-motion";
-import { Heart, GraduationCap, Leaf, Users } from "lucide-react";
+import { Heart, GraduationCap, Leaf, Users, Globe } from "lucide-react";
 import csrImg from "@/assets/csr.jfif";
 
 const initiatives = [
@@ -27,7 +27,7 @@ const initiatives = [
     icon: Users,
     title: "Community Engagement",
     description:
-      "Partnering with local organizations for health awareness campaigns, medical camps, and community wellness programs across East Africa.",
+      "Partnering with local and international organizations such as Global FICCS to support health outreach, education programs, and sustainable community development initiatives.",
   },
 ];
 
@@ -40,6 +40,7 @@ const CSR = () => {
         backgroundImage={csrImg}
       />
 
+      {/* Intro Section */}
       <section className="py-20">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center mb-14">
@@ -47,13 +48,15 @@ const CSR = () => {
               Our Commitment to Society
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              At NXS, we believe that healthcare is a fundamental right. Our CSR
-              initiatives focus on expanding healthcare access, building local
-              expertise, and contributing to the well-being of communities
-              across East Africa.
+              At NXS, we believe that healthcare and education are fundamental
+              pillars of thriving communities. Our CSR initiatives focus on
+              expanding healthcare access, building local expertise, and
+              fostering sustainable partnerships that create long-term impact
+              across East Africa and beyond.
             </p>
           </div>
 
+          {/* Initiatives Grid */}
           <div className="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {initiatives.map((item, i) => (
               <motion.div
@@ -79,7 +82,54 @@ const CSR = () => {
         </div>
       </section>
 
+      {/* Global FICCS Section */}
       <section className="py-20 bg-muted/50">
+        <div className="container">
+          <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <Globe className="h-6 w-6 text-primary" />
+                <h2 className="text-3xl font-heading font-bold text-foreground">
+                  Partnership with Global FICCS
+                </h2>
+              </div>
+
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Global FICCS is a non-profit organization dedicated to
+                empowering individuals and communities through healthcare and
+                education both locally and internationally. At the core of their
+                mission is creating opportunities through creativity,
+                collaboration, and strategic partnerships.
+              </p>
+
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Their work spans two major divisions: healthcare and education
+                projects, as well as community outreach initiatives. These
+                programs are designed to promote sustainable systems that enable
+                communities to care for themselves today and in the future.
+              </p>
+
+              <p className="text-muted-foreground leading-relaxed">
+                Through our collaboration with Global FICCS, we aim to
+                strengthen community networks, support healthcare practitioners,
+                and drive meaningful, lasting change across the regions we
+                serve.
+              </p>
+            </div>
+
+            <div className="rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src={csrImg}
+                alt="Global FICCS Partnership"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Existing Impact Section */}
+      {/* <section className="py-20">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
             <div className="rounded-2xl overflow-hidden shadow-xl">
@@ -94,21 +144,21 @@ const CSR = () => {
                 Making a Difference
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Over the decades, NXS has supported numerous healthcare
-                facilities across Kenya, Uganda, Tanzania, and the broader East
-                African region. Our commitment extends beyond providing
-                equipment—we invest in people, processes, and communities.
+                Over the years, NXS has supported numerous healthcare facilities
+                across Kenya, Uganda, Tanzania, and the broader East African
+                region. Our commitment extends beyond providing equipment—we
+                invest in people, processes, and partnerships.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                From sponsoring medical training programs to donating
-                refurbished equipment to rural clinics, every initiative is
-                driven by our belief that better healthcare technology leads to
-                better patient outcomes and healthier communities.
+                From sponsoring medical training programs to donating equipment
+                to rural healthcare facilities, every initiative is driven by
+                our belief that better healthcare and education lead to
+                stronger, healthier communities.
               </p>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </Layout>
   );
 };

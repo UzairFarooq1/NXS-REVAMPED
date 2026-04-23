@@ -75,6 +75,7 @@ const categories: Category[] = [
         description:
           "Microgad 20ml is a high-quality Gadolinium Based Contrast Agent (GBCA) designed for enhanced MRI Imaging, providing superior tissue differentiation and diagnostic accuracy. Its high relaxivity and low osmolality ensure patient safety and minimal adverse reactions, making it ideal for brain, spine, and vascular imaging. Manufactured under strict WHO-GMP standards.",
         image: microgad,
+        link: "https://www.sk1932.com/eskay-speciality-chemicals",
       },
     ],
   },
@@ -90,18 +91,21 @@ const categories: Category[] = [
         description:
           "Microhex 350mg/100ml is a high-quality oral contrast agent formulated for enhanced imaging of the gastrointestinal tract during CT and X-ray examinations. With its optimised concentration of Iohexol, it ensures excellent contrast enhancement, providing clear differentiation of the GI tract for accurate diagnostics.",
         image: microhex350,
+        link: "https://www.sk1932.com/eskay-speciality-chemicals",
       },
       {
         name: "Microvein 320mg/100ml",
         description:
           "Microvein 320mg/100ml is a non-ionic radiographic contrast medium for CT imaging, designed to provide strong vascular enhancement immediately following rapid intravascular injection. It offers excellent diagnostic visibility with improved renal tolerability.",
         image: microvein320,
+        link: "https://www.sk1932.com/eskay-speciality-chemicals",
       },
       {
         name: "Microhex 300mg/50ml",
         description:
           "Microhex 300mg/50ml is a non-ionic iodinated contrast media used in CT imaging for enhanced visualization of vascular structures and body tissues. It provides high radiopacity with excellent tolerability, ensuring clear and detailed diagnostic images.",
         image: microhex300,
+        link: "https://www.sk1932.com/eskay-speciality-chemicals",
       },
     ],
   },
@@ -116,6 +120,7 @@ const categories: Category[] = [
         description:
           "Microimage 250mg/100ml is a premium oral contrast agent designed for high-quality imaging of the gastrointestinal tract during X-ray and CT examinations. Its 250mg/100ml concentration ensures optimal contrast enhancement, aiding in the clear visualisation of the stomach, duodenum, and small bowel.",
         image: microimage,
+        link: "https://www.sk1932.com/eskay-speciality-chemicals",
       },
     ],
   },
@@ -214,7 +219,7 @@ const ContrastMedia = () => {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
                       >
-                        View Details <ExternalLink className="h-4 w-4" />
+                        More info <ExternalLink className="h-4 w-4" />
                       </a>
                     )}
                   </div>
@@ -224,14 +229,14 @@ const ContrastMedia = () => {
 
             {activeCategory.moreLink && (
               <div className="mt-12 text-center">
-                <a
+                {/* <a
                   href={activeCategory.moreLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-heading font-semibold hover:bg-primary/90 transition-colors"
                 >
-                  More Info <ExternalLink className="h-4 w-4" />
-                </a>
+                  More info <ExternalLink className="h-4 w-4" />
+                </a> */}
               </div>
             )}
           </motion.div>

@@ -126,13 +126,14 @@ const categories: Category[] = [
     label: "Lead Glass",
     intro:
       "Lead glass is a specialized radiation-shielding material designed to protect healthcare professionals and patients from harmful ionizing radiation in medical imaging environments. It offers high transparency while effectively blocking X-ray and gamma-ray exposure, making it ideal for use in observation windows, protective barriers, and radiation therapy rooms. With excellent optical clarity and durability, lead glass ensures safety without compromising visibility.",
+
     products: [
-      {
-        name: "X-Ray Protective Lead Glass",
-        description:
-          "High-quality lead glass panels for use in observation windows, protective barriers, and radiation therapy rooms. Available in various sizes and thicknesses to suit different installation requirements.",
-        image: leadGlass1,
-      },
+      // {
+      //   name: "X-Ray Protective Lead Glass",
+      //   description:
+      //     "High-quality lead glass panels for use in observation windows, protective barriers, and radiation therapy rooms. Available in various sizes and thicknesses to suit different installation requirements.",
+      //   image: leadGlass1,
+      // },
     ],
   },
 ];
@@ -189,11 +190,13 @@ const Consumables = () => {
                   {activeCategory.intro}
                 </p>
               </div>
-              <img
-                src={zittronLogo}
-                alt="Zittron"
-                className="w-40 h-auto object-contain flex-shrink-0"
-              />
+              {activeCategory.id !== "lead-glass" && (
+                <img
+                  src={zittronLogo}
+                  alt="Zittron"
+                  className="w-40 h-auto object-contain flex-shrink-0"
+                />
+              )}
             </div>
 
             {activeCategory.products.length > 0 && (
@@ -224,6 +227,14 @@ const Consumables = () => {
                       <p className="text-muted-foreground leading-relaxed">
                         {product.description}
                       </p>
+                      <a
+                        href="https://zittron.co/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
+                      >
+                        More info <ExternalLink className="h-4 w-4" />
+                      </a>
                     </div>
                   </motion.div>
                 ))}
@@ -231,14 +242,14 @@ const Consumables = () => {
             )}
 
             <div className="mt-12 text-center">
-              <a
+              {/* <a
                 href="https://zittron.co/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-heading font-semibold hover:bg-primary/90 transition-colors"
               >
                 Visit Zittron <ExternalLink className="h-4 w-4" />
-              </a>
+              </a> */}
             </div>
           </motion.div>
         </div>

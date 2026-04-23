@@ -49,18 +49,21 @@ const categories: Category[] = [
         description:
           "The MAC 5 was designed so you can focus on patient care. Even when confronting high patient volumes and complex cases, your team now has the power to care for more patients, more efficiently and effectively than ever.",
         image: mac5Img,
+        link: "https://www.gehealthcare.com/products/diagnostic-ecg",
       },
       {
         name: "MAC 7 Resting ECG",
         description:
           "MAC 7 features bidirectional communication with MUSE™, CardioSoft™, your EMR and other cardiology systems. It also enables data exchange in multiple data formats such as DICOM, HL7, PDF and XML. As a result, your ADT, patient data, orders and test results can transfer effortlessly—all to support a seamless ECG workflow and comprehensive patient record.",
         image: mac7Img,
+        link: "https://www.gehealthcare.com/products/diagnostic-ecg",
       },
       {
         name: "MAC VU360 Resting ECG",
         description:
           "Infinitely smart, integrated, and secure to help deliver high ECG quality and speed—even in challenging situations. Delivering quality and speed with a 360 degree view of your world, MAC VU 360™ is designed to provide the high-quality resting ECG workstation that you need.",
         image: macVu360Img,
+        link: "https://www.gehealthcare.com/products/diagnostic-ecg",
       },
     ],
   },
@@ -77,12 +80,14 @@ const categories: Category[] = [
         description:
           "Get a broader perspective of heart health with an ergonomic workstation designed for today. Connect to a range of devices, workstations, and imaging systems for the flexibility you need. The wireless design, bi-directional connectivity and advanced decision-support tools enhance productivity, support accurate diagnosis, and improve patient care.",
         image: caseEcgImg,
+        link: "https://www.gehealthcare.com/products/diagnostic-ecg",
       },
       {
         name: "CardioSoft Cardiac Testing System",
         description:
           "Get a broader perspective of heart health with broader measurements to give you a better picture, broader flexibility to test a wider variety of patients and broader connectivity that allows you to streamline care collaboration every step of the way.",
         image: cardiosoftStressImg,
+        link: "https://www.gehealthcare.com/products/diagnostic-ecg",
       },
     ],
   },
@@ -99,12 +104,14 @@ const categories: Category[] = [
         description:
           "Managing Holter volume can be challenging for many ECG departments. Is there a way to maintain your high quality standards while still achieving high throughput, day in and day out? The answer is yes – with the latest generation of CardioDay® Holter ECG from GE Health Care. CardioDay delivers a powerful combination of clinical quality and workflow advantages you won't find elsewhere.",
         image: cardiodayImg,
+        link: "https://www.gehealthcare.com/products/diagnostic-ecg",
       },
       {
         name: "SEER 1000",
         description:
           "The SEER™ 1000 Holter ECG system from GE Healthcare combines simplicity, reliability, and advanced technology to ensure accurate, high-quality cardiac monitoring. A custom app provides visual guidance for lead placement and signal quality checks, reducing the risk of poor data collection. Its slim, lightweight design allows patients to go about their daily activities while seamlessly capturing essential cardiac data, empowering healthcare providers with reliable insights for better clinical decisions.",
         image: seer1000Img,
+        link: "https://www.gehealthcare.com/products/diagnostic-ecg",
       },
     ],
   },
@@ -121,12 +128,14 @@ const categories: Category[] = [
         description:
           "The Tonoport VI Ambulatory Blood Pressure (ABP) monitor from GE Healthcare provides reliable, continuous blood pressure monitoring to support accurate hypertension diagnosis and management. Designed for patient comfort and ease of use, its lightweight, compact design allows for uninterrupted daily activities while capturing precise readings over 24 hours. Advanced data analysis and seamless integration with GE's CardioSoft™ software ensure efficient workflow and accurate reporting, enabling healthcare providers to make informed treatment decisions with confidence.",
         image: tonoportViImg,
+        link: "https://www.gehealthcare.com/products/diagnostic-ecg",
       },
       {
         name: "CardioSoft™ Cardiac Testing System",
         description:
           "The CardioSoft™ cardiac testing system seamlessly integrates with the Tonoport VI Ambulatory Blood Pressure (ABP) monitor, providing a comprehensive solution for cardiovascular assessment. This integration enables efficient data management, allowing clinicians to analyze blood pressure trends alongside other cardiac parameters for a more complete patient profile. With advanced reporting tools and intuitive workflows, CardioSoft™ enhances diagnostic accuracy and streamlines hypertension monitoring, helping healthcare providers make informed treatment decisions with greater confidence.",
         image: cardiosoftAbpImg,
+        link: "https://www.gehealthcare.com/products/diagnostic-ecg",
       },
     ],
   },
@@ -143,6 +152,7 @@ const categories: Category[] = [
         description:
           "MUSE™ NX centralizes cardiology data management, integrating with Resting ECG, Stress ECG, Holter ECG, and Ambulatory Blood Pressure monitoring. Its advanced algorithms and customizable reporting tools provide comprehensive cardiovascular insights, enabling providers to compare and track patient data over time for better clinical outcomes.",
         image: museNxSystemImg,
+        link: "https://www.gehealthcare.com/products/diagnostic-ecg",
       },
     ],
   },
@@ -209,31 +219,42 @@ const Cardiology = () => {
             </div>
 
             {/* Products */}
-            <div className="space-y-10">
+            <div className="space-y-16">
               {activeCategory.products.map((product, i) => (
                 <motion.div
                   key={product.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
-                  className="bg-card border rounded-xl p-8 flex flex-col md:flex-row gap-6 items-center"
+                  className={`flex flex-col ${
+                    i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                  } gap-8 items-center`}
                 >
                   {product.image && (
-                    <div className="w-full md:w-56 flex-shrink-0">
+                    <div className="md:w-2/5 flex-shrink-0">
                       <img
                         src={product.image}
                         alt={product.name}
-                        className="w-full h-auto object-contain rounded-lg max-h-48"
+                        className="w-full h-auto rounded-xl object-contain max-h-72"
                       />
                     </div>
                   )}
-                  <div className="flex-1">
+
+                  <div className={product.image ? "md:w-3/5" : "w-full"}>
                     <h3 className="text-xl font-heading font-bold text-foreground mb-3">
                       {product.name}
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
                       {product.description}
                     </p>
+                    <a
+                      href={product.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
+                    >
+                      More info <ExternalLink className="h-4 w-4" />
+                    </a>
                   </div>
                 </motion.div>
               ))}
@@ -242,7 +263,7 @@ const Cardiology = () => {
             {/* More info link */}
             {activeCategory.moreLink && (
               <div className="mt-12 text-center">
-                <a
+                {/* <a
                   href={activeCategory.moreLink}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -250,7 +271,7 @@ const Cardiology = () => {
                 >
                   View Full {activeCategory.label} Range{" "}
                   <ExternalLink className="h-4 w-4" />
-                </a>
+                </a> */}
               </div>
             )}
           </motion.div>

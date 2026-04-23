@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import vanguardLogo from "@/assets/vanguard-logo.png";
-import shimadzuLogo from "@/assets/partners/shimadzu.jpg";
+import shimadzuLogo from "@/assets/partners/shimadzu.png";
 import baxterGambroLogo from "@/assets/partners/baxter-gambro.png";
 import geHealthcareLogo from "@/assets/partners/ge-healthcare.png";
 import trumpfLogo from "@/assets/partners/trumpf.png";
@@ -52,7 +52,7 @@ const partners = [
 ];
 
 const hasWhiteLogoBackground = (name: string) =>
-  ["WEGO", "GE Healthcare", "Leica"].includes(name);
+  ["WEGO", "GE Healthcare", "Leica", "Shimadzu", "Olympus"].includes(name);
 
 const PartnersSection = () => {
   return (

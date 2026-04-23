@@ -8,6 +8,7 @@ import endoscopyImg from "@/assets/products/endoscopy.jfif";
 import olympusLogo from "@/assets/partners/olympus.png";
 
 // Category images
+import pulmonology from "@/assets/products/pulmonology.jpg";
 import flexibleEndoscope from "@/assets/products/olympus-flexible-endoscope.jpg";
 import endotherapyAccessories from "@/assets/products/endotherapy-accessories.jpg";
 import laparoscopyOr from "@/assets/products/laparoscopy-or.jpg";
@@ -24,6 +25,7 @@ interface SurgicalProduct {
   name: string;
   description: string;
   image: string;
+  link: string;
 }
 
 interface Category {
@@ -42,6 +44,15 @@ const categories: Category[] = [
     intro:
       "Olympus is the world recognised leader in the flexible endoscopy market. With a custom built workshop to cater to all minor repairs within the country, NXS together with Olympus have maintained the worldwide standards of Olympus Technology, Quality and Service.",
     image: flexibleEndoscope,
+    link: "https://www.olympus-europa.com/medical/en/Home/",
+  },
+  {
+    id: "Pulmonology",
+    label: "Pulmonology",
+    intro:
+      "Olympus is a globally recognized leader in advanced medical technologies, offering innovative pulmonology solutions for the diagnosis and treatment of respiratory conditions. Through cutting-edge systems such as the EVIS X1 bronchoscopy platform, EBUS-TBNA and peripheral bronchoscopy solutions, as well as specialized pediatric tools, Olympus continues to set high standards in minimally invasive care. Together with NXS, these technologies are supported with a commitment to excellence in quality, service, and continuous learning through initiatives like the Lung-Term Learning program, ensuring healthcare professionals stay at the forefront of modern pulmonology practice.",
+    image: pulmonology,
+    link: "https://www.olympus-europa.com/medical/en/Home/",
   },
   {
     id: "endotherapy-accessories",
@@ -49,6 +60,7 @@ const categories: Category[] = [
     intro:
       "The right tools for the right job. With single use options, NXS with Olympus offer a large range of accessories for flexible endoscopy.",
     image: endotherapyAccessories,
+    link: "https://www.olympus-europa.com/medical/en/Home/",
   },
   {
     id: "laparoscopy",
@@ -56,7 +68,7 @@ const categories: Category[] = [
     intro:
       "Minimal Invasive Surgery, Laparoscopy and Integrated OR's are the tools for the modern surgeon. With a wide array of imaging solutions, software, state of the art instruments and ancillary products from insufflators to unique diathermy and ultrasound scalpels.",
     image: laparoscopyOr,
-    link: "#",
+    link: "https://www.olympus-europa.com/medical/en/Home/",
   },
   {
     id: "urology-gynaecology",
@@ -64,6 +76,7 @@ const categories: Category[] = [
     intro:
       "Innovative solutions designed to meet diverse urological and gynaecological needs. Our range includes laser machines, saline (bipolar) resection systems, flexible cystoscopes and ureteroscopes, as well as Narrow Band Imaging (NBI) technology for enhanced bladder tumour detection. In addition, we provide a complete stone management consumable portfolio.\n\nComplementing our urology solutions, we also offer a full range of rigid and flexible hysteroscopes, alongside a broader selection of laparoscopic equipment and instrumentation, ensuring a complete, high-performance suite for minimally invasive surgical (MIS) procedures in gynaecology.",
     image: urologyGynaecology,
+    link: "https://www.olympus-europa.com/medical/en/Home/",
   },
   {
     id: "surgical-energy",
@@ -76,24 +89,28 @@ const categories: Category[] = [
         description:
           "The world's first device combining both bipolar energy and ultrasonic energy in a single instrument. This dual-energy approach enhances vessel sealing, precise dissection, and coagulation in a single step, reducing surgery time and minimizing thermal spread to surrounding tissues.",
         image: thunderbeat,
+        link: "https://www.olympus-europa.com/medical/en/Home/",
       },
       {
         name: "PowerSeal",
         description:
           "An innovative bipolar vessel-sealing instrument designed for consistent and reliable sealing of large vessels and tissue bundles. It provides strong hemostasis with minimal thermal spread, ensuring safe and effective tissue management in laparoscopic and open surgeries.",
         image: powerseal,
+        link: "https://www.olympus-europa.com/medical/en/Home/",
       },
       {
         name: "Sonicbeat",
         description:
           "An advanced ultrasonic dissector that delivers high-speed cutting and coagulation with minimal thermal damage. It enhances surgical precision, reduces blood loss, and improves efficiency in procedures requiring delicate tissue handling.",
         image: sonicbeat,
+        link: "https://www.olympus-europa.com/medical/en/Home/",
       },
       {
         name: "HiCura + HiQ+",
         description:
           "Hand instruments that offer superior ergonomics, durability, and precision for laparoscopic procedures, improving outcomes in minimally invasive surgery.",
         image: hicura,
+        link: "https://www.olympus-europa.com/medical/en/Home/",
       },
     ],
   },
@@ -103,7 +120,7 @@ const categories: Category[] = [
     intro:
       "FESS to Stroboscopy, Rigid scopes and Flexible scopes are available from Olympus. NBI compatible systems are making a breakthrough in ENT detection and surgical assistance.",
     image: entOverview,
-    link: "#",
+    link: "https://www.olympus-europa.com/medical/en/Home/",
   },
 ];
 
@@ -162,6 +179,7 @@ const Endoscopy = () => {
                 {activeCategory.link && (
                   <a
                     href={activeCategory.link}
+                    target="blank"
                     className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors mt-4"
                   >
                     More Info <ExternalLink className="h-4 w-4" />
@@ -213,6 +231,16 @@ const Endoscopy = () => {
                       <p className="text-muted-foreground leading-relaxed">
                         {product.description}
                       </p>
+                      {product.link && (
+                        <a
+                          href={product.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
+                        >
+                          More info <ExternalLink className="h-4 w-4" />
+                        </a>
+                      )}
                     </div>
                   </motion.div>
                 ))}

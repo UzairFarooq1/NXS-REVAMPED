@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-import leadGlass1 from "@/assets/products/mix-maestro.jpg";
+import leadGlass1 from "@/assets/products/wego-machine.jpeg";
 import leadGlass2 from "@/assets/products/carestation-600.jpg";
 import leicaArveo8 from "@/assets/products/urology-gynaecology.jpg";
 

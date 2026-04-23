@@ -31,7 +31,7 @@ const CTASection = () => {
             <Button size="lg" variant="outline" className="font-heading" asChild>
               <a href="tel:+254733512802">
                 <Phone className="mr-2 h-5 w-5" />
-                +254 (0) 733 512 802
+                +254 (0) 703 700 766
               </a>
             </Button>
           </div>

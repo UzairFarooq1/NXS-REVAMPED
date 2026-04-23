@@ -14,7 +14,7 @@ import csrImg from "@/assets/future.jpg";
 import operatingTheatreImg from "@/assets/NXS.webp";
 
 const stats = [
-  { icon: Award, value: "44+", label: "Years of Service" },
+  { icon: Award, value: "45", label: "Years of Service" },
   { icon: HeartPulse, value: "1000+", label: "Solutions Delivered" },
   { icon: Users, value: "500+", label: "Healthcare Facilities" },
   { icon: Shield, value: "15+", label: "Global Partners" },
@@ -70,7 +70,7 @@ const About = () => {
                 Nairobi X-Ray Supplies Ltd
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                A subsidiary of The Vanguard Group, Nairobi X-Ray Supplies Ltd
+                A part of The Vanguard Group, Nairobi X-Ray Supplies Ltd
                 (NXS) has been a premier distributor of medical equipment in
                 East Africa since 1980. We specialize in providing comprehensive
                 healthcare solutions across radiology, surgical, critical care,

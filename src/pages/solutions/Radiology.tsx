@@ -252,7 +252,7 @@ const Radiology = () => {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
                     >
-                      View on Shimadzu <ExternalLink className="h-4 w-4" />
+                      More info <ExternalLink className="h-4 w-4" />
                     </a>
                   </div>
                 </motion.div>
@@ -261,7 +261,7 @@ const Radiology = () => {
 
             {/* More info link */}
             <div className="mt-12 text-center">
-              <a
+              {/* <a
                 href={activeCategory.moreLink}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -269,7 +269,7 @@ const Radiology = () => {
               >
                 View Full {activeCategory.label} Range{" "}
                 <ExternalLink className="h-4 w-4" />
-              </a>
+              </a> */}
             </div>
           </motion.div>
         </div>

@@ -19,28 +19,28 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone (Line 1)",
-    value: "+254 (0) 733 512 802",
-    href: "tel:+254733512802",
-  },
-  {
-    icon: Phone,
-    label: "Phone (Line 2)",
     value: "+254 (0) 703 700 766",
     href: "tel:+254703700766",
   },
   {
-    icon: Mail,
-    label: "Kenya",
-    value: "info@nxsltd.com",
-    href: "mailto:info@nxsltd.com",
+    icon: Phone,
+    label: "Phone (Line 2)",
+    value: "+254 (0) 733 512 802",
+    href: "tel:+254733512802",
   },
   {
     icon: Mail,
-    label: "Uganda",
+    label: "Email",
     value: "info@nxsltd.com",
     href: "mailto:info@nxsltd.com",
   },
-  { icon: Clock, label: "Hours", value: "Mon – Fri: 8:30 AM – 5:30 PM" },
+
+  {
+    icon: Clock,
+    label: "Hours",
+    value: "Mon – Fri: 8:30 AM – 5:30 PM",
+    value2: "Sat: 9:00 AM – 1:00 PM",
+  },
 ];
 
 const Contact = () => {
@@ -105,6 +105,11 @@ const Contact = () => {
                           {item.value}
                         </p>
                       )}
+                      {item.value2 ? (
+                        <p className="text-sm text-muted-foreground">
+                          {item.value2}
+                        </p>
+                      ) : null}
                     </div>
                   </div>
                 ))}
@@ -169,14 +174,22 @@ const Contact = () => {
                       <label className="text-sm font-medium text-foreground mb-1.5 block">
                         Subject *
                       </label>
-                      <Input
+
+                      <select
                         required
                         value={formData.subject}
                         onChange={(e) =>
                           setFormData({ ...formData, subject: e.target.value })
                         }
-                        placeholder="How can we help?"
-                      />
+                        className="w-full border rounded-md px-3 py-2 text-sm bg-background"
+                      >
+                        {/* <option value="">Select a subject</option> */}
+                        <option value="Quotation Request">
+                          Quotation Request
+                        </option>
+                        <option value="Service">Service</option>
+                        <option value="Other">Other</option>
+                      </select>
                     </div>
                   </div>
                   <div>

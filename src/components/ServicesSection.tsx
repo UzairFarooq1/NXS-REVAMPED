@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import radiologyImg from "@/assets/xray.webp";
-import operatingTheatreImg from "@/assets/operating_theatre.jpg";
-import endoscopyImg from "@/assets/endoscopy.jpg";
+import radiologyImg from "@/assets/products/radiology.jpg";
+import operatingTheatreImg from "@/assets/products/trulight-5000.png";
+import endoscopyImg from "@/assets/endoscopyTower.jpg";
 import radiologyConsImg from "@/assets/radiology_cons.jpg";
 import contrast from "@/assets/contrastmedia.jpg";
 import sony from "@/assets/sony.jpg";
@@ -11,6 +11,7 @@ import cardio from "@/assets/products/cardioday.png";
 import microscopyImg from "@/assets/microscopy.webp";
 import csrImg from "@/assets/maternal.avif";
 import renal from "@/assets/wego.jfif";
+import cochlear from "@/assets/cochlearkid.png";
 
 const services = [
   {
@@ -22,7 +23,7 @@ const services = [
   },
   {
     title: "Radiology Consumables",
-    description: "Protective wear, contrast media and imaging accessories.",
+    description: "Protective wear and imaging accessories.",
     image: radiologyConsImg,
     href: "/solutions/consumables",
   },
@@ -34,7 +35,7 @@ const services = [
     href: "/solutions/contrast-media",
   },
   {
-    title: "Sony Printers",
+    title: "Printers",
     description:
       "Medical-grade printing solutions for radiology and theatre environments.",
     image: sony,
@@ -72,6 +73,12 @@ const services = [
     description: "Dialysis systems and renal care consumables.",
     image: renal,
     href: "/solutions/renal-care",
+  },
+  {
+    title: "Hearing Solutions",
+    description: "Cochlear Implants and Processors",
+    image: cochlear,
+    href: "/solutions/cochlear",
   },
   {
     title: "Operating Microscopy",

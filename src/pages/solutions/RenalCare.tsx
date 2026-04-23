@@ -19,6 +19,7 @@ interface Product {
   name: string;
   description: string;
   image?: string;
+  link?: string;
 }
 
 interface Category {
@@ -45,12 +46,14 @@ const categories: Category[] = [
         description:
           "The MIX Maestro combines ease of operation with powerful functionality. Its Dynamic Substitution Fluid Adjustment System intelligently calculates and adjusts substitution fluid volume, enhancing toxin clearance efficiency. The ADAS (Automated Dialysis Assistance System) automatically performs online priming, blood drawing, blood return, and fluid discharge, significantly reducing clinical workload.",
         image: mixMaestroImg,
+        link: "https://www.wego-healthcare.com/en/",
       },
       {
         name: "MIX Lite Dialysis System",
         description:
           "Guided by the philosophy of 'Quality Illuminates Life,' the MIX Lite delivers simplistic yet extraordinary performance. Features include multi-touch technology, dual arterial pressure monitoring, multiple treatment profiles, and data communication capabilities. Optional modules include online clearance monitoring (Kt/V), automatic blood pressure monitoring, and online blood volume monitoring.",
         image: mixLiteImg,
+        link: "https://www.wego-healthcare.com/en/",
       },
     ],
   },
@@ -67,39 +70,42 @@ const categories: Category[] = [
         description:
           "WEGO's polysulfone hollow fiber dialyzers feature a 40μm wall thickness with 200μm inner diameter. Available in HF17 (1.7m²), HF19 (1.9m²), HF20 (2.0m²), and HF21 (2.1m²) effective surface areas. Designed for enhanced phosphate clearance to address CKD-MBD, with radiation sterilization and polycarbonate housing.",
         image: wegoDialyzerImg,
+        link: "https://www.wego-healthcare.com/en/",
       },
       {
         name: "A.V. Fistula Needle Sets",
         description:
           "Available in 15G, 16G, and 17G gauges with 25mm and 32mm needle lengths. Features rotary wing design for easy manipulation and improved blood flow through multi-directional shunting. Available with back eye, clamp, and 300mm tube length in both fixed and rotary wing configurations.",
         image: wegoFistulaNeedleImg,
+        link: "https://www.wego-healthcare.com/en/",
       },
       {
         name: "Extracorporeal Blood Circuits",
         description:
           "Over ten models compatible with most dialysis machines on the market. Features include a wide range of accessories such as infusion lines, pre-fill connectors, and waste bags. Double lateral branch waste bag design standardizes pre-fill operations. CE certified and CFDA approved.",
         image: wegoBloodCircuitImg,
+        link: "https://www.wego-healthcare.com/en/",
       },
     ],
   },
-  {
-    id: "crrt",
-    label: "CRRT",
-    intro:
-      "Baxter's Continuous Renal Replacement Therapy (CRRT) solutions are designed for critically ill patients with acute kidney injury (AKI), providing continuous, gentle, and effective blood purification. Baxter offers advanced CRRT machines, such as the Prismaflex and PrisMax systems, which deliver customizable therapy options, ensuring optimal fluid and toxin removal while maintaining hemodynamic stability. These systems support various treatment modalities, including CVVH, CVVHD, and CVVHDF, allowing healthcare professionals to tailor treatments based on patient needs.",
-    partnerLogo: baxterGambroLogo,
-    partnerName: "Baxter Gambro",
-    products: [],
-  },
-  {
-    id: "peritoneal",
-    label: "Peritoneal Dialysis",
-    intro:
-      "Baxter has been a pioneer in Peritoneal Dialysis (PD) since introducing the first PD solution in 1960, continuously advancing home dialysis solutions to improve patient outcomes. PD allows patients with End-Stage Renal Disease (ESRD) to maintain independence and a better quality of life while offering potentially improved clinical outcomes at a lower cost than hemodialysis. Baxter's comprehensive PD portfolio includes innovative solutions like Automated Peritoneal Dialysis (APD) with Remote Patient Management (RPM), enabling real-time monitoring to enhance care and reduce hospitalizations.",
-    partnerLogo: baxterGambroLogo,
-    partnerName: "Baxter Gambro",
-    products: [],
-  },
+  // {
+  //   id: "crrt",
+  //   label: "CRRT",
+  //   intro:
+  //     "Baxter's Continuous Renal Replacement Therapy (CRRT) solutions are designed for critically ill patients with acute kidney injury (AKI), providing continuous, gentle, and effective blood purification. Baxter offers advanced CRRT machines, such as the Prismaflex and PrisMax systems, which deliver customizable therapy options, ensuring optimal fluid and toxin removal while maintaining hemodynamic stability. These systems support various treatment modalities, including CVVH, CVVHD, and CVVHDF, allowing healthcare professionals to tailor treatments based on patient needs.",
+  //   partnerLogo: baxterGambroLogo,
+  //   partnerName: "Baxter Gambro",
+  //   products: [],
+  // },
+  // {
+  //   id: "peritoneal",
+  //   label: "Peritoneal Dialysis",
+  //   intro:
+  //     "Baxter has been a pioneer in Peritoneal Dialysis (PD) since introducing the first PD solution in 1960, continuously advancing home dialysis solutions to improve patient outcomes. PD allows patients with End-Stage Renal Disease (ESRD) to maintain independence and a better quality of life while offering potentially improved clinical outcomes at a lower cost than hemodialysis. Baxter's comprehensive PD portfolio includes innovative solutions like Automated Peritoneal Dialysis (APD) with Remote Patient Management (RPM), enabling real-time monitoring to enhance care and reduce hospitalizations.",
+  //   partnerLogo: baxterGambroLogo,
+  //   partnerName: "Baxter Gambro",
+  //   products: [],
+  // },
 ];
 
 const RenalCare = () => {
@@ -170,37 +176,46 @@ const RenalCare = () => {
               ) : null}
             </div>
 
-            {activeCategory.products.length > 0 && (
-              <div className="space-y-10">
-                {activeCategory.products.map((product, i) => (
-                  <motion.div
-                    key={product.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: i * 0.1 }}
-                    className="bg-card border rounded-xl p-8 flex flex-col md:flex-row gap-6 items-center"
-                  >
-                    {product.image && (
-                      <div className="w-full md:w-56 flex-shrink-0">
-                        <img
-                          src={product.image}
-                          alt={product.name}
-                          className="w-full h-auto object-contain rounded-lg max-h-48"
-                        />
-                      </div>
-                    )}
-                    <div className="flex-1">
-                      <h3 className="text-xl font-heading font-bold text-foreground mb-3">
-                        {product.name}
-                      </h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {product.description}
-                      </p>
+            <div className="space-y-16">
+              {activeCategory.products.map((product, i) => (
+                <motion.div
+                  key={product.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  className={`flex flex-col ${
+                    i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                  } gap-8 items-center`}
+                >
+                  {product.image && (
+                    <div className="md:w-2/5 flex-shrink-0">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-auto rounded-xl object-contain max-h-72"
+                      />
                     </div>
-                  </motion.div>
-                ))}
-              </div>
-            )}
+                  )}
+
+                  <div className={product.image ? "md:w-3/5" : "w-full"}>
+                    <h3 className="text-xl font-heading font-bold text-foreground mb-3">
+                      {product.name}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {product.description}
+                    </p>
+                    <a
+                      href={product.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
+                    >
+                      More info <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
 
             {/* More info link */}
             {activeCategory.moreLink && (

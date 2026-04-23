@@ -15,15 +15,19 @@ const navItems = [
       { label: "Radiology Equipment", href: "/solutions/radiology" },
       { label: "Radiology Consumables", href: "/solutions/consumables" },
       { label: "Contrast Media", href: "/solutions/contrast-media" },
-      { label: "Sony Printers", href: "/solutions/sony-printers" },
+      { label: "Printers", href: "/solutions/sony-printers" },
       { label: "", href: "", isDivider: true },
       { label: "Endoscopy & MAS", href: "/solutions/endoscopy" },
       { label: "Operating Theatre", href: "/solutions/operating-theatre" },
       { label: "ICU Monitoring", href: "/solutions/icu" },
       { label: "Cardiology", href: "/solutions/cardiology" },
       { label: "Renal Care", href: "/solutions/renal-care" },
+      { label: "Hearing Solutions", href: "/solutions/cochlear" },
       { label: "Operating Microscopy", href: "/solutions/microscopy" },
-      { label: "Maternal & Infant Care", href: "/solutions/maternal-infant-care" },
+      {
+        label: "Maternal & Infant Care",
+        href: "/solutions/maternal-infant-care",
+      },
     ],
   },
   { label: "Partners", href: "/partners" },
@@ -48,16 +52,24 @@ const Navbar = () => {
       <div className="bg-primary text-primary-foreground text-sm py-2 hidden md:block">
         <div className="container flex justify-between items-center">
           <div className="flex items-center gap-6">
-            <a href="tel:+254733512802" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+            <a
+              href="tel:+254733512802"
+              className="flex items-center gap-1.5 hover:opacity-80 transition-opacity"
+            >
               <Phone className="h-3.5 w-3.5" />
-              +254 (0) 733 512 802
+              +254 (0) 703 700 766
             </a>
-            <a href="mailto:info@nxsltd.com" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+            <a
+              href="mailto:info@nxsltd.com"
+              className="flex items-center gap-1.5 hover:opacity-80 transition-opacity"
+            >
               <Mail className="h-3.5 w-3.5" />
               info@nxsltd.com
             </a>
           </div>
-          <span className="text-primary-foreground/70">Part of The Vanguard Group</span>
+          <span className="text-primary-foreground/70">
+            Part of The Vanguard Group
+          </span>
         </div>
       </div>
 
@@ -65,7 +77,11 @@ const Navbar = () => {
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b shadow-sm">
         <div className="container flex items-center justify-between h-16 lg:h-20">
           <Link to="/" className="flex-shrink-0">
-            <img src={logo} alt="Nairobi X-Ray Supplies Ltd" className="h-10 lg:h-12 w-auto" />
+            <img
+              src={logo}
+              alt="Nairobi X-Ray Supplies Ltd"
+              className="h-10 lg:h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop nav */}
@@ -75,7 +91,9 @@ const Navbar = () => {
                 {item.children ? (
                   <span
                     className={`px-3 py-2 text-sm font-medium font-heading cursor-default transition-colors ${
-                      isActive("/solutions") ? "text-primary" : "text-foreground/80 hover:text-primary"
+                      isActive("/solutions")
+                        ? "text-primary"
+                        : "text-foreground/80 hover:text-primary"
                     }`}
                   >
                     {item.label}
@@ -84,7 +102,9 @@ const Navbar = () => {
                   <Link
                     to={item.href}
                     className={`px-3 py-2 text-sm font-medium font-heading transition-colors ${
-                      isActive(item.href) ? "text-primary" : "text-foreground/80 hover:text-primary"
+                      isActive(item.href)
+                        ? "text-primary"
+                        : "text-foreground/80 hover:text-primary"
                     }`}
                   >
                     {item.label}
@@ -95,7 +115,10 @@ const Navbar = () => {
                     <div className="py-2">
                       {item.children.map((child, idx) =>
                         (child as any).isHeader ? (
-                          <span key={idx} className="block px-4 py-2 text-xs font-heading font-bold uppercase tracking-wider text-muted-foreground">
+                          <span
+                            key={idx}
+                            className="block px-4 py-2 text-xs font-heading font-bold uppercase tracking-wider text-muted-foreground"
+                          >
                             {child.label}
                           </span>
                         ) : (child as any).isDivider ? (
@@ -112,7 +135,7 @@ const Navbar = () => {
                           >
                             {child.label}
                           </Link>
-                        )
+                        ),
                       )}
                     </div>
                   </div>
@@ -149,7 +172,9 @@ const Navbar = () => {
                       to={item.href}
                       onClick={() => setIsOpen(false)}
                       className={`block px-3 py-2.5 text-sm font-medium font-heading transition-colors ${
-                        isActive(item.href) ? "text-primary" : "text-foreground/80 hover:text-primary"
+                        isActive(item.href)
+                          ? "text-primary"
+                          : "text-foreground/80 hover:text-primary"
                       }`}
                     >
                       {item.label}
@@ -159,7 +184,10 @@ const Navbar = () => {
                     <div className="pl-6 space-y-1">
                       {item.children.map((child, idx) =>
                         (child as any).isHeader ? (
-                          <span key={idx} className="block px-3 py-2 text-xs font-heading font-bold uppercase tracking-wider text-muted-foreground">
+                          <span
+                            key={idx}
+                            className="block px-3 py-2 text-xs font-heading font-bold uppercase tracking-wider text-muted-foreground"
+                          >
                             {child.label}
                           </span>
                         ) : (child as any).isDivider ? (
@@ -177,7 +205,7 @@ const Navbar = () => {
                           >
                             {child.label}
                           </Link>
-                        )
+                        ),
                       )}
                     </div>
                   )}

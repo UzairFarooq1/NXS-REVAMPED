@@ -1,10 +1,10 @@
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import { motion } from "framer-motion";
-import shimadzuLogo from "@/assets/partners/shimadzu.jpg";
+import shimadzuLogo from "@/assets/partners/shimadzu.png";
 import baxterGambroLogo from "@/assets/partners/baxter-gambro.png";
 import geHealthcareLogo from "@/assets/partners/ge-healthcare.png";
-import trumpfLogo from "@/assets/partners/trumpf.png";
+import hillrom from "@/assets/partners/baxter-hillrom.png";
 import leicaLogo from "@/assets/partners/leica.png";
 import olympuslogo from "@/assets/partners/olympus.png";
 import eskayLogo from "@/assets/partners/eskay.jpg";
@@ -42,8 +42,8 @@ const partners = [
       "GE HealthCare is a global medical technology and diagnostics company headquartered in the United States specializing in medical imaging, patient monitoring, diagnostics, and digital health solutions.",
   },
   {
-    name: "Trumpf Medical",
-    logo: trumpfLogo,
+    name: "Baxter",
+    logo: hillrom,
     specialty: "Operating Theatre Solutions",
     description:
       "A company that develops and manufactures medical equipment for operating rooms, intensive care units, and related clinical areas that provide the best-possible support for hospital staff and the efficient and safe care of patients.",
@@ -68,13 +68,6 @@ const partners = [
     specialty: "Contrast Media & Speciality Chemicals",
     description:
       "Eskay Speciality Chemicals, established in 2006, is located in the Special Economic Zone at Sachin, Surat, Gujarat. As an Export Oriented Unit (EOU) with a USFDA NDC number for all its products, the company is committed to maintaining high-quality standards.",
-  },
-  {
-    name: "Baxter Gambro",
-    logo: baxterGambroLogo,
-    specialty: "Renal Care & Critical Care",
-    description:
-      "A world leading health care company which primarily focuses on products to treat hemophilia, kidney disease, immune disorders and other chronic and acute medical conditions.",
   },
 ];
 

@@ -24,6 +24,7 @@ import OperatingTheatre from "./pages/solutions/OperatingTheatre";
 import ICU from "./pages/solutions/ICU";
 import Cardiology from "./pages/solutions/Cardiology";
 import RenalCare from "./pages/solutions/RenalCare";
+import Cochlear from "./pages/solutions/Cochlear";
 import Microscopy from "./pages/solutions/Microscopy";
 import Consumables from "./pages/solutions/Consumables";
 import SonyPrinters from "./pages/solutions/SonyPrinters";
@@ -47,25 +48,50 @@ const App = () => (
           <Route path="/csr" element={<CSR />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/news" element={<News />} />
-          <Route path="/news/cochlear-switch-on-56-recipients" element={<CochlearSwitchOn />} />
-          <Route path="/news/endoscopy-training-society-of-kenya-2026" element={<EndoscopyTraining2026 />} />
-          <Route path="/news/bronchoscopy-ebus-training-knh-2025" element={<BronchoscopyTrainingKNH2025 />} />
-          <Route path="/news/spiration-valve-first-recipient-africa" element={<SpirationValveAfrica />} />
-          <Route path="/news/cochlear-nucleus-nexa-system" element={<CochlearNexaSystem />} />
+          <Route
+            path="/news/cochlear-switch-on-56-recipients"
+            element={<CochlearSwitchOn />}
+          />
+          <Route
+            path="/news/endoscopy-training-society-of-kenya-2026"
+            element={<EndoscopyTraining2026 />}
+          />
+          <Route
+            path="/news/bronchoscopy-ebus-training-knh-2025"
+            element={<BronchoscopyTrainingKNH2025 />}
+          />
+          <Route
+            path="/news/spiration-valve-first-recipient-africa"
+            element={<SpirationValveAfrica />}
+          />
+          <Route
+            path="/news/cochlear-nucleus-nexa-system"
+            element={<CochlearNexaSystem />}
+          />
           <Route path="/news/wego-kracon-2025" element={<WegoKracon2025 />} />
-          <Route path="/news/ccsk-ge-monitoring-2025" element={<CcskGeMonitoring2025 />} />
+          <Route
+            path="/news/ccsk-ge-monitoring-2025"
+            element={<CcskGeMonitoring2025 />}
+          />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/solutions/radiology" element={<Radiology />} />
           <Route path="/solutions/endoscopy" element={<Endoscopy />} />
-          <Route path="/solutions/operating-theatre" element={<OperatingTheatre />} />
+          <Route
+            path="/solutions/operating-theatre"
+            element={<OperatingTheatre />}
+          />
           <Route path="/solutions/icu" element={<ICU />} />
           <Route path="/solutions/cardiology" element={<Cardiology />} />
           <Route path="/solutions/renal-care" element={<RenalCare />} />
+          <Route path="/solutions/cochlear" element={<Cochlear />} />
           <Route path="/solutions/microscopy" element={<Microscopy />} />
           <Route path="/solutions/consumables" element={<Consumables />} />
           <Route path="/solutions/sony-printers" element={<SonyPrinters />} />
           <Route path="/solutions/contrast-media" element={<ContrastMedia />} />
-          <Route path="/solutions/maternal-infant-care" element={<MaternalInfantCare />} />
+          <Route
+            path="/solutions/maternal-infant-care"
+            element={<MaternalInfantCare />}
+          />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

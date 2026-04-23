@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 import logo from "@/assets/logo_main.png";
 
-const solutions = [
-  { label: "Radiology / X-Ray", href: "/solutions/radiology" },
-  { label: "Endoscopy", href: "/solutions/endoscopy" },
-  { label: "Operating Theatre", href: "/solutions/operating-theatre" },
-  { label: "ICU Monitoring", href: "/solutions/icu" },
-  { label: "Renal Care", href: "/solutions/renal-care" },
-  { label: "Operating Microscopy", href: "/solutions/microscopy" },
-];
+// const solutions = [
+//   { label: "Radiology / X-Ray", href: "/solutions/radiology" },
+//   { label: "Endoscopy", href: "/solutions/endoscopy" },
+//   { label: "Operating Theatre", href: "/solutions/operating-theatre" },
+//   { label: "ICU Monitoring", href: "/solutions/icu" },
+//   { label: "Renal Care", href: "/solutions/renal-care" },
+//   { label: "Operating Microscopy", href: "/solutions/microscopy" },
+// ];
 
 const company = [
   { label: "About Us", href: "/about" },
@@ -31,12 +31,12 @@ const Footer = () => {
             </div>
             <p className="text-sm leading-relaxed text-background/60">
               Premier distributor of medical equipment in East Africa since
-              1980. A subsidiary of The Vanguard Group.
+              1980. A part of The Vanguard Group.
             </p>
           </div>
 
           {/* Solutions */}
-          <div>
+          {/* <div>
             <h4 className="font-heading font-semibold text-background mb-4">
               Solutions
             </h4>
@@ -52,7 +52,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Company */}
           <div>
@@ -92,7 +92,8 @@ const Footer = () => {
                   className="flex items-center gap-2.5 hover:text-background transition-colors"
                 >
                   <Phone className="h-4 w-4 flex-shrink-0" />
-                  +254 (0) 733 512 802
+                  +254 (0) 703 700 766
+                  
                 </a>
               </li>
               <li>
@@ -101,7 +102,7 @@ const Footer = () => {
                   className="flex items-center gap-2.5 hover:text-background transition-colors"
                 >
                   <Phone className="h-4 w-4 flex-shrink-0" />
-                  +254 (0) 703 700 766
+                  +254 (0) 733 512 802
                 </a>
               </li>
               <li>
