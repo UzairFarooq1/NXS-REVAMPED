@@ -132,7 +132,7 @@ const Partners = () => {
       <section className="py-16 bg-muted/50">
         <div className="container text-center">
           <p className="text-sm font-heading font-semibold tracking-widest uppercase text-muted-foreground mb-4">
-            A Subsidiary Of
+            A Part Of
           </p>
           <img
             src={vanguardLogo}
@@ -140,7 +140,7 @@ const Partners = () => {
             className="h-16 w-auto mx-auto mb-6"
           />
           <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            NXS operates as a subsidiary of The Vanguard Group, one of East
+            NXS operates as a part of The Vanguard Group, one of East
             Africa's leading conglomerates with interests spanning healthcare,
             technology, and industrial solutions. With over 85 years of
             heritage, The Vanguard Group provides the foundation for NXS's
