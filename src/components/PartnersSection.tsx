@@ -26,7 +26,7 @@ const partners = [
 
   {
     name: "GE Healthcare",
-    specialty: "Medical Imaging & Diagnostics",
+    specialty: "Patient Care Solutions",
     logo: geHealthcareLogo,
   },
   {

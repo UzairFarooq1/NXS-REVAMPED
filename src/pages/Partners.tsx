@@ -37,9 +37,9 @@ const partners = [
   {
     name: "GE Healthcare",
     logo: geHealthcareLogo,
-    specialty: "Medical Imaging & Diagnostics",
+    specialty: "Patient Care Solutions",
     description:
-      "GE HealthCare is a global medical technology and diagnostics company headquartered in the United States specializing in medical imaging, patient monitoring, diagnostics, and digital health solutions.",
+      "GE HealthCare is a global medical technology and diagnostics company headquartered in the United States.",
   },
   {
     name: "Baxter",
@@ -140,8 +140,8 @@ const Partners = () => {
             className="h-16 w-auto mx-auto mb-6"
           />
           <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            NXS operates as a part of The Vanguard Group, one of East
-            Africa's leading conglomerates with interests spanning healthcare,
+            NXS operates as a part of The Vanguard Group, one of East Africa's
+            leading conglomerates with interests spanning healthcare,
             technology, and industrial solutions. With over 85 years of
             heritage, The Vanguard Group provides the foundation for NXS's
             commitment to excellence and reliability.

@@ -45,14 +45,14 @@ const categories: Category[] = [
         description:
           "From delivery to discharge, the Giraffe OmniBed Carestation is designed to address the changing and complex demands of the NICU by utilizing advanced technology to provide supportive, family-centered care solutions, consistently-controlled thermal environments, warmth during transport, improved patient access and visibility, and reliable clinical performance.",
         image: giraffeOmnibed,
-        link: "https://www.gehealthcare.com/products/maternal-infant-care/giraffe-omnibed-carestation",
+        link: "https://www.gehealthcare.com/products/maternal-infant-care",
       },
       {
         name: "Giraffe Incubator Carestation",
         description:
           "Small but Mighty – Empowering Babies' NICU Journey. Combining innovative technology with exceptional thermal performance, the Giraffe Incubator Carestation is a state-of-the-art neonatal environment that promotes natural, peaceful healing, while fostering a close bond between families and their babies—allowing them to be present for every step of the journey.",
         image: giraffeIncubator,
-        link: "https://www.gehealthcare.com/products/maternal-infant-care/giraffe-incubator-carestation",
+        link: "https://www.gehealthcare.com/products/maternal-infant-care",
       },
     ],
   },
@@ -67,21 +67,21 @@ const categories: Category[] = [
         description:
           "The Panda Warmer helps you focus on caring for your patients. With simple and easy-to-use features such as hands-free alarm silence, full-color display, and an integrated scale, your caregivers can focus on the most critical aspects of their job—caring for newborns and their families.",
         image: pandaWarmer,
-        link: "https://www.gehealthcare.com/products/maternal-infant-care/warmers/panda-warmer",
+        link: "https://www.gehealthcare.com/products/maternal-infant-care",
       },
       {
         name: "Giraffe Warmer",
         description:
           "The Giraffe Warmer provides easy access to newborns with its innovative recessed heater design, allowing caregivers to work efficiently in tight spaces while ensuring optimal warmth. Its advanced pre-warming feature allows the bed to be heated in advance without triggering alarms, ensuring a ready environment for the infant.",
         image: giraffeWarmer,
-        link: "https://www.gehealthcare.com/products/maternal-infant-care/warmers",
+        link: "https://www.gehealthcare.com/products/maternal-infant-care",
       },
       {
         name: "Lullaby Warmer",
         description:
           'The Lullaby Warmer is designed to provide a stress-free newborn arrival with 66% faster warm-up and uniform heat distribution, ensuring optimal positioning and even warmth via the GelHood heater. Its "Walls of Warmth" prevent heat loss, creating a stable environment for neonatal care.',
         image: lullabyWarmer,
-        link: "https://www.gehealthcare.com/products/maternal-infant-care/warmers",
+        link: "https://www.gehealthcare.com/products/maternal-infant-care",
       },
     ],
   },
@@ -96,21 +96,21 @@ const categories: Category[] = [
         description:
           "The right touch—and blue light—can make all the difference for infants with jaundice. GE Healthcare's BiliSoft 2.0 Phototherapy System meets or exceeds the American Academy of Pediatrics (AAP) guidelines for intensive phototherapy to effectively treat hyperbilirubinemia and support even the tiniest patients with more comfort, better bonding, and higher quality developmental care.",
         image: bilisoft2,
-        link: "https://www.gehealthcare.com/products/maternal-infant-care/phototherapy/bilisoft-2-phototherapy-system",
+        link: "https://www.gehealthcare.com/products/maternal-infant-care",
       },
       {
         name: "Giraffe Blue Spot PT Lite Phototherapy System",
         description:
           "The Giraffe™ Blue Spot PT Lite is a advanced, patient-friendly solution for treating hyperbilirubinemia, a condition affecting 60% of full-term and 80% of preterm infants. With high-intensity light output and a large spot size, it ensures effective dosage and prompt results while supporting developmental care by minimizing heat, noise, and bulky overhead equipment.",
         image: giraffeBlueSpot,
-        link: "https://www.gehealthcare.com/products/maternal-infant-care/phototherapy",
+        link: "https://www.gehealthcare.com/products/maternal-infant-care",
       },
       {
         name: "Lullaby LED Phototherapy System",
         description:
           "The Lullaby™ LED Phototherapy System is a compact, efficient, and user-friendly solution for treating neonatal jaundice with optimal wavelength and uniform light distribution for effective bilirubin breakdown. Its adjustable irradiance settings allow customized treatment, while its long-lasting LEDs provide up to 50,000 hours of operation, ensuring cost-effectiveness.",
         image: lullabyLed,
-        link: "https://www.gehealthcare.com/products/maternal-infant-care/phototherapy",
+        link: "https://www.gehealthcare.com/products/maternal-infant-care",
       },
     ],
   },
@@ -125,14 +125,14 @@ const categories: Category[] = [
         description:
           "The Corometrics™ M250cx Series maternal/fetal monitoring system is a full antepartum/intrapartum fetal monitor that includes innovative features that helps you deliver a high quality birthing experience and enhanced patient care. It monitors uterine and fetal activity including fetal heart rate, and has enhanced maternal monitoring features including temperature, oxygen saturation, ECG and non-invasive blood pressure.",
         image: corometrics250cx,
-        link: "https://www.gehealthcare.com/products/maternal-infant-care/fetal-monitors/corometrics-250cx",
+        link: "https://www.gehealthcare.com/products/maternal-infant-care",
       },
       {
         name: "Corometrics 170",
         description:
           "The Corometrics 170 maternal monitor non-invasively tracks a baby's heart rate for non-stress tests to deliver accurate information. Compact, lightweight, and designed for antepartum applications in offices or hospitals, it's readily available when mothers need it most—helping create a better birthing experience for mother and baby.",
         image: corometrics170,
-        link: "https://www.gehealthcare.com/products/maternal-infant-care/fetal-monitors",
+        link: "https://www.gehealthcare.com/products/maternal-infant-care",
       },
     ],
   },
@@ -146,7 +146,7 @@ const categories: Category[] = [
         name: "Giraffe Stand-alone Infant Resuscitation System",
         description:
           "The Giraffe Stand-alone Infant Resuscitation System provides you with access to critical equipment you need for safe, effective resuscitation of the newborns in your care. And it's so portable that you can set it up anywhere you need it, from Labor and Delivery to NICU to well-baby nursery.",
-        link: "https://www.gehealthcare.com/products/maternal-infant-care/giraffe-stand",
+        link: "https://www.gehealthcare.com/products/maternal-infant-care",
       },
       {
         name: "Lullaby Resus Plus",

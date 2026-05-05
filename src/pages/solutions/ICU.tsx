@@ -33,42 +33,49 @@ const categories: Category[] = [
   {
     id: "patient-monitors",
     label: "Patient Monitors",
-    intro: "Informed decisions start with accurate data. From ambulatory patients to the most critical cases, GE Healthcare's monitoring technologies deliver clinical information you can trust. With world-class algorithms for arrhythmia, temperature, NIBP, SpO2, and more, our solutions deliver insights to help you identify, anticipate, and treat patient needs to the best of your ability, across the continuum of care.",
+    intro:
+      "Informed decisions start with accurate data. From ambulatory patients to the most critical cases, GE Healthcare's monitoring technologies deliver clinical information you can trust. With world-class algorithms for arrhythmia, temperature, NIBP, SpO2, and more, our solutions deliver insights to help you identify, anticipate, and treat patient needs to the best of your ability, across the continuum of care.",
     products: [
       {
         name: "CARESCAPE Canvas™ Monitoring Platform",
-        description: "CARESCAPE Canvas is a unified monitoring approach for your entire hospital ecosystem. It offers individualized monitoring of patients and bed-specific scalable levels of acuity while retaining the same intuitive user experience everywhere.",
+        description:
+          "CARESCAPE Canvas is a unified monitoring approach for your entire hospital ecosystem. It offers individualized monitoring of patients and bed-specific scalable levels of acuity while retaining the same intuitive user experience everywhere.",
         image: carescapeCanvas,
         link: "https://www.gehealthcare.com/products/patient-monitoring",
       },
       {
         name: "CARESCAPE™ ONE Monitor — All in ONE",
-        description: "The CARESCAPE ONE monitor helps make patient transport almost effortless. A large screen highlights a slim, lightweight unit that travels on a simple bed mount. Parameters are easily added through miniaturized plug-and-play micro-modules. World-class GE Healthcare algorithms provide precision, accuracy, and specificity.",
+        description:
+          "The CARESCAPE ONE monitor helps make patient transport almost effortless. A large screen highlights a slim, lightweight unit that travels on a simple bed mount. Parameters are easily added through miniaturized plug-and-play micro-modules. World-class GE Healthcare algorithms provide precision, accuracy, and specificity.",
         image: carescapeOne,
-        link: "https://www.gehealthcare.com/products/patient-monitoring/patient-monitors/carescape-one",
+        link: "https://www.gehealthcare.com/products/patient-monitoring",
       },
       {
         name: "B1X5M Patient Monitor Systems",
-        description: "The B1x5M range of patient monitors deliver excellent performance for inpatient monitoring while providing exceptional value. It provides accurate and timely medical data, powering enhanced care for patients across care areas.",
+        description:
+          "The B1x5M range of patient monitors deliver excellent performance for inpatient monitoring while providing exceptional value. It provides accurate and timely medical data, powering enhanced care for patients across care areas.",
         image: b1x5mMonitor,
-        link: "https://www.gehealthcare.com/products/patient-monitoring/patient-monitors/b1x5m-patient-monitors",
+        link: "https://www.gehealthcare.com/products/patient-monitoring",
       },
       {
         name: "Portrait™ VSM Vital Signs Monitor",
-        description: "Building on the trusted DINAMAP legacy with innovative and future-focused capabilities, the Portrait VSM vital signs monitor provides measurements you can count on while increasing patient comfort and efficiency. Automated workflow and customization options simplify your patient admissions, routine spot checks and observations — giving you more time with patients.",
+        description:
+          "Building on the trusted DINAMAP legacy with innovative and future-focused capabilities, the Portrait VSM vital signs monitor provides measurements you can count on while increasing patient comfort and efficiency. Automated workflow and customization options simplify your patient admissions, routine spot checks and observations — giving you more time with patients.",
         image: portraitVsm,
-        link: "https://www.gehealthcare.com/products/patient-monitoring/portrait-vsm",
+        link: "https://www.gehealthcare.com/products/patient-monitoring",
       },
     ],
   },
   {
     id: "central-station",
     label: "Central Station",
-    intro: "Designed for space optimization and workflow efficiency, the CARESCAPE™ Central Station transforms an ordinary centralization into a clinician-centric workstation. By integrating monitoring and historical data from multiple sources, it helps you make fast, confident decisions, all in an efficient, space-saving package.",
+    intro:
+      "Designed for space optimization and workflow efficiency, the CARESCAPE™ Central Station transforms an ordinary centralization into a clinician-centric workstation. By integrating monitoring and historical data from multiple sources, it helps you make fast, confident decisions, all in an efficient, space-saving package.",
     products: [
       {
         name: "CARESCAPE Central Station with Integrated CPU, Dual Display",
-        description: "CARESCAPE Central Station is designed to make the most out of limited spaces. Its all-in-one drive and fanless design with embedded processor require fewer cables — making it compact and efficient. Central monitoring technicians will appreciate the alarm notification display and flashing title bar, making it easy to identify and drill down to an individual patient in an alarm state. The ability to share a single mouse and keyboard across up to four central stations further streamlines workflow.",
+        description:
+          "CARESCAPE Central Station is designed to make the most out of limited spaces. Its all-in-one drive and fanless design with embedded processor require fewer cables — making it compact and efficient. Central monitoring technicians will appreciate the alarm notification display and flashing title bar, making it easy to identify and drill down to an individual patient in an alarm state. The ability to share a single mouse and keyboard across up to four central stations further streamlines workflow.",
         image: centralStation,
         link: "https://www.gehealthcare.com/products/patient-monitoring",
       },

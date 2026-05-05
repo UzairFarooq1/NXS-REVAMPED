@@ -58,21 +58,21 @@ const categories: Category[] = [
         description:
           "The Carestation 750 anesthesia workstation enhances perioperative care with advanced clinical tools for individualized therapy, including low-flow anesthesia and lung protective ventilation. Its intuitive interface provides easy access to key functions like Lung Recruitment, Maneuver and Pause Gas Flow, reducing stress in busy settings. A modular, ergonomic design streamlines workflows with self-guided checkout, simplifying case management and maintenance.",
         image: carestation750,
-        link: "https://www.gehealthcare.com/products/anesthesia-solutions/carestation-750",
+        link: "https://www.gehealthcare.com/products/anesthesia-solutions",
       },
       {
         name: "Carestation 600 Series Anesthesia Delivery Systems",
         description:
           "The Carestation™ 600 Series (620/650/650c) is a compact, versatile, and easy-to-use anesthesia platform designed to tackle modern challenges with a sleek, space-saving design, intuitive interface for enhanced workflows, and scalable technology for diverse patient needs.",
         image: carestation600,
-        link: "https://www.gehealthcare.com/products/anesthesia-solutions/carestation-600-series",
+        link: "https://www.gehealthcare.com/products/anesthesia-solutions",
       },
       {
         name: "9100c NXT Anesthesia Workstation",
         description:
           "The anesthesia workstation that gives you peace of mind. 9100c NXT is a precise anesthesia solution that gives you peace of mind by supporting an easy and trustful anesthesia delivery experience. It features reliable ventilation modes and comprehensive gas monitoring for safe patient care.",
         image: nxt9100c,
-        link: "https://www.gehealthcare.in/products/anesthesia-delivery/9100c-nxt",
+        link: "https://www.gehealthcare.in/products/anesthesia-delivery",
       },
     ],
   },
@@ -89,21 +89,21 @@ const categories: Category[] = [
         description:
           "The Trumpf TruLight 3000 is a high-performance surgical light designed for various medical environments, including emergency rooms, trauma centres, ambulatory care, and intensive care units. It offers adaptive lighting, high efficiency, and durability while being highly adjustable to meet different surgical needs. Additionally, it supports needs-based communication, enhancing usability in complex medical settings.",
         image: trulight3000,
-        link: "https://www.hillrom.com/en/products/trulight_-3000-surgical-light/",
+        link: "https://www.hillrom.com/en/products/",
       },
       {
         name: "Trumpf TruLight 5000 Operating Theatre Lights",
         description:
           "The TruLight 5000 series combines comfort and power, delivering precision without compromise through advanced surgical LED lighting. Designed with innovation and user needs in mind, it offers high efficiency, flexibility, and energy savings while enhancing the surgical environment. Featuring Adaptive Light Control Plus technology, it ensures optimal illumination with a brightness of up to 160,000 lux, sterile control of lighting functions, and superior light distribution.",
         image: trulight5000,
-        link: "https://www.hillrom.com/en/products/trulight_-5000-surgical-light/",
+        link: "https://www.hillrom.com/en/products",
       },
       {
         name: "Helux Pro Surgical Lights",
         description:
           "The Helux Pro Surgical Light is designed to provide consistent illumination with advanced features such as shadow elimination, deep cavity lighting, and a non-imbedded laminar airflow system to maintain high-quality operating conditions. It seamlessly integrates with ORI systems, allowing real-time image routing via third-party equipment. The sterile light control helps reduce cross-contamination, while an intensity indicator alerts the surgical team to overlapping light fields, enhancing patient safety.",
         image: heluxPro,
-        link: "https://www.hillrom.com/en/products/helux-pro-surgical-light/",
+        link: "https://www.hillrom.com/en/products",
       },
     ],
   },
@@ -160,14 +160,14 @@ const categories: Category[] = [
         description:
           "Ceiling-mounted supply units providing organized access to medical gases, electrical power, and data connections. Modular design allows customization for specific department needs with smooth 360° rotation and easy-to-clean surfaces for optimal hygiene.",
         image: truportBoom,
-        link: "https://www.hillrom.com/en/products/truport-supply-unit/",
+        link: "https://www.hillrom.com/en/products",
       },
       {
         name: "FCS Equipment Boom Systems",
         description:
           "Heavy-duty boom systems designed to support monitors, ventilators, and other critical equipment. Spring-assisted arms allow effortless positioning while maintaining stability, keeping the surgical field clear and organized for efficient workflow.",
         image: fcsBoom,
-        link: "https://www.hillrom.com/en/products/fcs-boom/",
+        link: "https://www.hillrom.com/en/products",
       },
     ],
   },
