@@ -41,14 +41,14 @@ const categories: Category[] = [
         description:
           "The Sony UP-27MD is a compact, high-quality medical printer designed to deliver precise imaging outputs for a wide range of medical applications. It offers excellent image quality with high resolution, making it ideal for producing clear and detailed prints of diagnostic images. The printer features advanced connectivity and reliable performance, ensuring quick and efficient printing.",
         image: sonyUp27md,
-        link: "https://pro.sony/en_AO/products/medical-printers/up-27md",
+        link: "https://pro.sony/en_AO/products/medical-printers",
       },
       {
         name: "UP-D898MD Digital Black and White Thermal Printer",
         description:
           "The UP-D898MD is a compact A6 medical grade black and white digital printer. It's designed to be integrated into a wide range of compatible medical imaging environments such as digital ultrasound systems, mobile C-arms or cardiac catheterisation laboratory.",
         image: sonyUpD898md,
-        link: "https://pro.sony/en_SG/products/medical-printers/up-d898md",
+        link: "https://pro.sony/en_SG/products/medical-printers",
       },
     ],
   },
@@ -57,22 +57,21 @@ const categories: Category[] = [
     label: "Sony Printing Paper",
     intro:
       "Sony offers high-quality medical printing paper in both color and black & white formats, designed for use with its range of medical printers. The color printing paper provides vibrant and precise image reproduction, ideal for applications requiring detailed visualization, such as ultrasound and endoscopy.",
-    moreLink:
-      "https://pro.sony/en_CY/products/medical-colour-print-media/upc-21l",
+    moreLink: "https://pro.sony/en_CY/products/medical-colour-print-media",
     products: [
       {
         name: "UPC Color Print Pack",
         description:
           "The UPC21L color print pack is designed for use with a range of Sony medical printers, including the UP-27MD, UP-D25MD, UP-25MD, UP-D23MD, UP-21MD, and UP-20. It offers high-quality color printing, ensuring vibrant and accurate image reproduction essential for medical imaging applications.",
         image: sonyUpc21l,
-        link: "https://pro.sony/en_CY/products/medical-colour-print-media/upc-21l",
+        link: "https://pro.sony/en_CY/products/medical-colour-print-media",
       },
       {
         name: "UPP-110HG Black and White high glossy print media",
         description:
           "The UPP-110HG is a high-glossy, black-and-white thermal print media designed for Sony medical printers. Ideal for ultrasound and other medical imaging applications, this premium print media helps maintain sharpness, contrast, and smooth tonal gradations while reducing the risk of print curling. It is specifically compatible with Sony printers like UP-X898MD, D898MD, D898DC, 897MD, and D897.",
         image: sonyUpp110hg,
-        link: "https://pro.sony/en_ME/products/black-and-white-thermal-print-media/upp-110hg",
+        link: "https://pro.sony/en_ME/products/black-and-white-thermal-print-media",
       },
     ],
   },
