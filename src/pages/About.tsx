@@ -25,7 +25,7 @@ const values = [
   "Expert installation, training & after-sales support",
   "Partnerships with world-leading manufacturers",
   "Comprehensive coverage across East Africa",
-  "Continuous innovation in medical technology",
+  "Ensure access to the latest innovations in medical technology in our region",
   "Commitment to healthcare excellence",
 ];
 
@@ -70,9 +70,9 @@ const About = () => {
                 Nairobi X-Ray Supplies Ltd
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                A part of The Vanguard Group, Nairobi X-Ray Supplies Ltd
-                (NXS) has been a premier distributor of medical equipment in
-                East Africa since 1980. We specialize in providing comprehensive
+                A part of The Vanguard Group, Nairobi X-Ray Supplies Ltd (NXS)
+                has been a premier distributor of medical equipment in East
+                Africa since 1980. We specialize in providing comprehensive
                 healthcare solutions across radiology, surgical, critical care,
                 and diagnostic domains.
               </p>
@@ -84,10 +84,10 @@ const About = () => {
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 With partnerships spanning world-renowned manufacturers
-                including GE Healthcare, Trumpf Medical, Nihon Kohden, Leica
-                Microsystems, Sony Medical, and Nipro, we deliver cutting-edge
-                technology and expert support to healthcare facilities across
-                the region.
+                including Shimadzu, Olympus, Leica, Cochlear, Wego( Dialysis),
+                GE Healthcare, Baxter (OT Lights, Tables & Pendants), Eskay etc,
+                we deliver cutting-edge technology and expert support to
+                healthcare facilities across the region.
               </p>
             </motion.div>
           </div>
@@ -132,8 +132,8 @@ const About = () => {
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 To be the leading and most trusted partner for healthcare
-                technology solutions in Sub-Saharan Africa, driving innovation
-                and accessibility in medical care.
+                technology solutions in Sub-Saharan Africa, delivering access to
+                innovation and accessibility in medical care.
               </p>
             </motion.div>
           </div>

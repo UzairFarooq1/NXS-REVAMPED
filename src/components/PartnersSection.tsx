@@ -9,6 +9,7 @@ import eskayLogo from "@/assets/partners/eskay.jpg";
 import wegoLogo from "@/assets/partners/wego.png";
 import olympuslogo from "@/assets/partners/olympus.png";
 import cochlearlogo from "@/assets/partners/cochlear.jpeg";
+import HillromLogo from "@/assets/partners/baxter-hillrom.png";
 
 const partners = [
   {
@@ -29,9 +30,9 @@ const partners = [
     logo: geHealthcareLogo,
   },
   {
-    name: "Trumpf Medical",
+    name: "Baxter",
     specialty: "Operating Theatre Solutions",
-    logo: trumpfLogo,
+    logo: HillromLogo,
   },
   {
     name: "Cochlear",
@@ -44,15 +45,12 @@ const partners = [
     specialty: "Contrast Media & Chemicals",
     logo: eskayLogo,
   },
-  {
-    name: "Baxter",
-    specialty: "Renal Care & Critical Care",
-    logo: baxterGambroLogo,
-  },
 ];
 
 const hasWhiteLogoBackground = (name: string) =>
-  ["WEGO", "GE Healthcare", "Leica", "Shimadzu", "Olympus"].includes(name);
+  ["WEGO", "GE Healthcare", "Leica", "Shimadzu", "Olympus", "Baxter"].includes(
+    name,
+  );
 
 const PartnersSection = () => {
   return (
@@ -80,14 +78,26 @@ const PartnersSection = () => {
               key={partner.name}
               className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/10 rounded-xl p-6 flex flex-col items-center justify-center gap-4 hover:bg-primary-foreground/15 transition-colors"
             >
-              <div className="h-12 flex items-center justify-center">
+              <div
+                className={`flex items-center justify-center ${
+                  partner.name === "Olympus" || partner.name === "Shimadzu"
+                    ? "h-24"
+                    : "h-16"
+                }`}
+              >
                 {partner.logo ? (
                   <img
                     src={partner.logo}
                     alt={`${partner.name} logo`}
-                    className={`max-h-12 w-auto object-contain ${
+                    className={`w-auto object-contain ${
+                      partner.name === "Olympus"
+                        ? "max-h-20"
+                        : partner.name === "Shimadzu"
+                          ? "max-h-20"
+                          : "max-h-12"
+                    } ${
                       hasWhiteLogoBackground(partner.name)
-                        ? "bg-white rounded-md p-1"
+                        ? "bg-white rounded-md p-2"
                         : ""
                     }`}
                   />
