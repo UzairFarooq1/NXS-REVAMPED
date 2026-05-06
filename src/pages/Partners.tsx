@@ -96,23 +96,33 @@ const Partners = () => {
                 transition={{ delay: i * 0.08 }}
                 className="bg-card border rounded-2xl p-8 text-center hover:shadow-lg transition-shadow"
               >
-                <div className="h-16 flex items-center justify-center mb-6">
-                  {partner.logo ? (
-                    <img
-                      src={partner.logo}
-                      alt={`${partner.name} logo`}
-                      className={`max-h-16 w-auto object-contain ${
-                        hasWhiteLogoBackground(partner.name)
-                          ? "bg-white rounded-md p-1"
-                          : ""
-                      }`}
-                    />
-                  ) : (
-                    <span className="text-2xl font-heading font-bold text-primary">
-                      {partner.name}
-                    </span>
-                  )}
-                </div>
+<div
+  className={`flex items-center justify-center mb-6 ${
+    partner.name === "Olympus" || partner.name === "Shimadzu"
+      ? "h-28"
+      : "h-16"
+  }`}
+>
+  {partner.logo ? (
+    <img
+      src={partner.logo}
+      alt={`${partner.name} logo`}
+      className={`w-auto object-contain ${
+        partner.name === "Olympus" || partner.name === "Shimadzu"
+          ? "max-h-26"
+          : "max-h-16"
+      } ${
+        hasWhiteLogoBackground(partner.name)
+          ? "bg-white rounded-md p-2"
+          : ""
+      }`}
+    />
+  ) : (
+    <span className="text-2xl font-heading font-bold text-primary">
+      {partner.name}
+    </span>
+  )}
+</div>
                 <h3 className="text-lg font-heading font-bold text-foreground mb-1">
                   {partner.name}
                 </h3>
