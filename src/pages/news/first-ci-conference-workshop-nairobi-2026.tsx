@@ -51,9 +51,9 @@ const FirstCIConferenceWorkshopNairobi2026 = () => {
 
               <p className="text-lg leading-8 text-muted-foreground mt-6">
                 The conference brought together surgeons, audiologists, speech
-                therapists, engineers and clinical specialists for high-level
-                discussions and hands-on experience focused on advancing
-                cochlear implant care across the region.
+                therapists and clinical specialists for high-level discussions
+                and hands-on experience focused on advancing cochlear implant
+                care across the region.
               </p>
             </div>
           </motion.div>
@@ -91,10 +91,10 @@ const FirstCIConferenceWorkshopNairobi2026 = () => {
               </p>
 
               <p className="text-muted-foreground leading-8">
-                NXS engineers and product specialists engaged participants
-                through technical support sessions, product showcases and
-                collaborative learning opportunities aimed at strengthening the
-                regional cochlear implant ecosystem.
+                NXS and Cochlear team members engaged in discussions with
+                participants through technical support sessions, product
+                showcases and collaborative learning opportunities aimed at
+                strengthening the regional cochlear implant ecosystem.
               </p>
             </div>
           </motion.div>
