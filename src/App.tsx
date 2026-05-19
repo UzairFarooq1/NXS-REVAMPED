@@ -15,6 +15,7 @@ import EndoscopyTraining2026 from "./pages/news/EndoscopyTraining2026";
 import BronchoscopyTrainingKNH2025 from "./pages/news/BronchoscopyTrainingKNH2025";
 import SpirationValveAfrica from "./pages/news/SpirationValveAfrica";
 import CochlearNexaSystem from "./pages/news/CochlearNexaSystem";
+import FirstCIConferenceWorkshopNairobi2026 from "./pages/news/first-ci-conference-workshop-nairobi-2026"
 import WegoKracon2025 from "./pages/news/WegoKracon2025";
 import CcskGeMonitoring2025 from "./pages/news/CcskGeMonitoring2025";
 import Solutions from "./pages/Solutions";
@@ -52,6 +53,10 @@ const App = () => (
             path="/news/cochlear-switch-on-56-recipients"
             element={<CochlearSwitchOn />}
           />
+          <Route
+  path="/news/first-ci-conference-workshop-nairobi-2026"
+  element={<FirstCIConferenceWorkshopNairobi2026 />}
+/>
           <Route
             path="/news/endoscopy-training-society-of-kenya-2026"
             element={<EndoscopyTraining2026 />}

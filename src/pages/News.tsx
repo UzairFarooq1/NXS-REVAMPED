@@ -7,6 +7,15 @@ import news from "@/assets/news.jpg";
 
 const newsItems = [
   {
+    date: "2026-05-10",
+    title:
+      "First CI Conference and Temporal Bone Workshop Held in Nairobi",
+    excerpt:
+      "NXS partnered with Cochlear during the inaugural Cochlear Implant Conference and Workshop hosted alongside CIGOK and KENTS in Nairobi, Kenya. The workshop featured advanced temporal bone simulation sessions running alongside in-depth discussions for surgeons, audiologists, and speech therapists, strengthening multidisciplinary collaboration in cochlear implant care.",
+    category: "Conference",
+    link: "/news/first-ci-conference-workshop-nairobi-2026",
+  },
+  {
     date: "2026-04-21",
     title: "NXS Engineers Participate in Endoscopy Skills Training",
     excerpt:
