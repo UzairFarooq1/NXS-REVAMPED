@@ -1,73 +1,47 @@
-# Welcome to your Lovable project
+# 🏥 Nairobi X-Ray Supplies Ltd
 
-## Project info
+## Who We Are
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Nairobi X-Ray Supplies Ltd (NXS), part of **The Vanguard Group**, has been a trusted distributor of medical equipment and healthcare solutions in East Africa since **1980**.
 
-## How can I edit this code?
+We provide comprehensive healthcare solutions across **radiology, surgical, critical care, dialysis, and diagnostic applications**. Our experienced team of biomedical engineers and healthcare consultants supports healthcare facilities throughout the entire process—from initial consultation and system design to installation, training, and ongoing maintenance.
 
-There are several ways of editing your application.
+Through partnerships with globally recognized manufacturers, including **Shimadzu, Olympus, Leica, Cochlear, Wego, GE Healthcare, Baxter, Eskay**, and others, we deliver advanced medical technologies backed by professional technical support across the region.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🎯 Our Mission
 
-Changes made via Lovable will be committed automatically to this repo.
+> To provide world-class medical equipment and healthcare solutions that empower healthcare facilities across East Africa to deliver exceptional patient care.
 
-**Use your preferred IDE**
+## 🔭 Our Vision
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+> To be the leading and most trusted partner for healthcare technology solutions in Sub-Saharan Africa, expanding access to innovation and improving the delivery of medical care.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 📊 At a Glance
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+|               |                              |
+| ------------- | ---------------------------: |
+| **45+ Years** |                   Of Service |
+| **1,000+**    |          Solutions Delivered |
+| **500+**      | Healthcare Facilities Served |
+| **15+**       |              Global Partners |
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## ⭐ Why Choose NXS?
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+* 🤝 **Customer-Centric Solutions** — Tailored healthcare solutions designed around each facility's unique needs.
+* 🛠️ **Expert Technical Support** — Professional installation, training, maintenance, and after-sales support.
+* 🌍 **Global Partnerships** — Access to innovative technologies from world-leading medical equipment manufacturers.
+* 📍 **Regional Coverage** — Comprehensive support for healthcare facilities across East Africa.
+* 💡 **Latest Medical Innovations** — Helping healthcare providers access advanced and emerging medical technologies.
+* ❤️ **Commitment to Healthcare Excellence** — Dedicated to supporting better healthcare outcomes through reliable solutions and service.
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### 🌐 Part of The Vanguard Group
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+**Nairobi X-Ray Supplies Ltd** combines decades of industry experience, strong global partnerships, and local technical expertise to help healthcare facilities access reliable, innovative, and high-quality medical technology solutions.
