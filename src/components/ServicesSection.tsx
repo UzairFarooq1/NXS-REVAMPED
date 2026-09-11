@@ -12,6 +12,7 @@ import microscopyImg from "@/assets/microscopy.webp";
 import csrImg from "@/assets/maternal.avif";
 import renal from "@/assets/wego.jfif";
 import cochlear from "@/assets/cochlearkid.png";
+import neurologyImg from "@/assets/neurology.jpg";
 
 const services = [
   {
@@ -79,6 +80,12 @@ const services = [
     description: "Cochlear Implants and Processors",
     image: cochlear,
     href: "/solutions/cochlear",
+  },
+  {
+    title: "Neurology",
+    description: "EMG, nerve conduction, evoked potential and EEG systems.",
+    image: neurologyImg,
+    href: "/solutions/neurology",
   },
   {
     title: "Operating Microscopy",

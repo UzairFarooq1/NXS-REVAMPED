@@ -10,6 +10,7 @@ import wegoLogo from "@/assets/partners/wego.png";
 import olympuslogo from "@/assets/partners/olympus.png";
 import cochlearlogo from "@/assets/partners/cochlear.jpeg";
 import HillromLogo from "@/assets/partners/baxter-hillrom.png";
+import natusLogo from "@/assets/partners/Natus_logo.jpg";
 
 const partners = [
   {
@@ -39,6 +40,11 @@ const partners = [
     specialty: "Hearing Implant Solutions",
     logo: cochlearlogo,
   },
+  {
+    name: "Natus",
+    specialty: "Neurodiagnostics & EEG",
+    logo: natusLogo,
+  },
   { name: "Leica", specialty: "Precision Optics & Imaging", logo: leicaLogo },
   {
     name: "Eskay Fine Chemicals",
@@ -48,9 +54,15 @@ const partners = [
 ];
 
 const hasWhiteLogoBackground = (name: string) =>
-  ["WEGO", "GE Healthcare", "Leica", "Shimadzu", "Olympus", "Baxter"].includes(
-    name,
-  );
+  [
+    "WEGO",
+    "GE Healthcare",
+    "Leica",
+    "Shimadzu",
+    "Olympus",
+    "Baxter",
+    "Natus",
+  ].includes(name);
 
 const PartnersSection = () => {
   return (
