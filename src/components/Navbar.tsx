@@ -69,12 +69,9 @@ const Navbar = () => {
               info@nxsltd.com
             </a>
           </div>
-          <div className="flex items-center gap-3">
-            <IsoCertifiedBadge className="h-6 w-6 flex-shrink-0" />
-            <span className="text-primary-foreground/70">
-              Part of The Vanguard Group
-            </span>
-          </div>
+          <span className="text-primary-foreground/70">
+            Part of The Vanguard Group
+          </span>
         </div>
       </div>
 
@@ -89,11 +86,18 @@ const Navbar = () => {
                 className="h-10 lg:h-12 w-auto"
               />
             </Link>
-            <div className="hidden sm:block w-px h-8 bg-border" />
-            <IsoCertifiedBadge
-              className="hidden sm:block h-9 lg:h-11 w-9 lg:w-11 flex-shrink-0"
-              title="ISO 13485:2016 Certified Company"
-            />
+            <div className="hidden sm:block w-px h-10 lg:h-12 bg-border" />
+            <div className="hidden sm:flex items-center gap-2">
+              <IsoCertifiedBadge
+                className="h-12 lg:h-14 w-12 lg:w-14 flex-shrink-0"
+                title="ISO 13485:2016 Certified Company"
+              />
+              <span className="text-[11px] lg:text-xs font-heading font-bold leading-tight text-foreground/80">
+                ISO 13485:2016
+                <br />
+                Certified Company
+              </span>
+            </div>
           </div>
 
           {/* Desktop nav */}
