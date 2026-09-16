@@ -1,11 +1,15 @@
+import { useState } from "react";
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Calendar, Download } from "lucide-react";
 import IsoCertifiedBadge from "@/components/IsoCertifiedBadge";
 import isoCertificateImage from "@/assets/news-events/iso-13485-2016-certificate.jpg";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 
 const IsoCertification2026 = () => {
+  const [isImageOpen, setIsImageOpen] = useState(false);
+
   return (
     <Layout>
       <PageHero
@@ -103,18 +107,17 @@ const IsoCertification2026 = () => {
 
             <div className="mt-10">
 
-              <a
-                href={isoCertificateImage}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block max-w-sm mx-auto sm:mx-0 border rounded-xl overflow-hidden bg-card"
+              <button
+                type="button"
+                onClick={() => setIsImageOpen(true)}
+                className="block max-w-sm mx-auto sm:mx-0 border rounded-xl overflow-hidden bg-card cursor-zoom-in"
               >
                 <img
                   src={isoCertificateImage}
                   alt="NXS ISO 13485:2016 Certificate of Registration"
                   className="w-full h-auto"
                 />
-              </a>
+              </button>
               <div className="mt-4">
                 <a
                   href="/documents/NXS-ISO-13485-2016-Certificate.pdf"
@@ -125,6 +128,19 @@ const IsoCertification2026 = () => {
                   Download PDF
                 </a>
               </div>
+
+              <Dialog open={isImageOpen} onOpenChange={setIsImageOpen}>
+                <DialogContent className="max-w-3xl p-2 bg-transparent border-none shadow-none">
+                  <DialogTitle className="sr-only">
+                    NXS ISO 13485:2016 Certificate of Registration
+                  </DialogTitle>
+                  <img
+                    src={isoCertificateImage}
+                    alt="NXS ISO 13485:2016 Certificate of Registration"
+                    className="w-full h-auto rounded-lg"
+                  />
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
         </div>
