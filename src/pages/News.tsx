@@ -7,6 +7,14 @@ import news from "@/assets/news.jpg";
 
 const newsItems = [
   {
+    date: "2026-09-16",
+    title: "NXS Achieves ISO 13485:2016 Certification",
+    excerpt:
+      "Nairobi X-Ray Supplies Ltd has been certified to ISO 13485:2016, the international standard for Medical Device Quality Management Systems, covering sales, distribution, installation, preventive and corrective maintenance, servicing, and technical support of medical equipment & consumables.",
+    category: "Milestone",
+    link: "/news/iso-13485-2016-certification",
+  },
+  {
     date: "2026-05-10",
     title:
       "First CI Conference and Temporal Bone Workshop Held in Nairobi",

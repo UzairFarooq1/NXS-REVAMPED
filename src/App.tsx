@@ -18,6 +18,7 @@ import CochlearNexaSystem from "./pages/news/CochlearNexaSystem";
 import FirstCIConferenceWorkshopNairobi2026 from "./pages/news/first-ci-conference-workshop-nairobi-2026"
 import WegoKracon2025 from "./pages/news/WegoKracon2025";
 import CcskGeMonitoring2025 from "./pages/news/CcskGeMonitoring2025";
+import IsoCertification2026 from "./pages/news/IsoCertification2026";
 import Solutions from "./pages/Solutions";
 import Radiology from "./pages/solutions/Radiology";
 import Endoscopy from "./pages/solutions/Endoscopy";
@@ -78,6 +79,10 @@ const App = () => (
           <Route
             path="/news/ccsk-ge-monitoring-2025"
             element={<CcskGeMonitoring2025 />}
+          />
+          <Route
+            path="/news/iso-13485-2016-certification"
+            element={<IsoCertification2026 />}
           />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/solutions/radiology" element={<Radiology />} />
