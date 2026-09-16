@@ -24,6 +24,7 @@ const navItems = [
       { label: "Cardiology", href: "/solutions/cardiology" },
       { label: "Renal Care", href: "/solutions/renal-care" },
       { label: "Hearing Solutions", href: "/solutions/cochlear" },
+      { label: "Neurology", href: "/solutions/neurology" },
       { label: "Operating Microscopy", href: "/solutions/microscopy" },
       {
         label: "Maternal & Infant Care",

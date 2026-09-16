@@ -31,6 +31,7 @@ import Consumables from "./pages/solutions/Consumables";
 import SonyPrinters from "./pages/solutions/SonyPrinters";
 import ContrastMedia from "./pages/solutions/ContrastMedia";
 import MaternalInfantCare from "./pages/solutions/MaternalInfantCare";
+import Neurology from "./pages/solutions/Neurology";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -97,6 +98,7 @@ const App = () => (
             path="/solutions/maternal-infant-care"
             element={<MaternalInfantCare />}
           />
+          <Route path="/solutions/neurology" element={<Neurology />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

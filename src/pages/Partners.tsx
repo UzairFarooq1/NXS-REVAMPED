@@ -11,6 +11,7 @@ import eskayLogo from "@/assets/partners/eskay.jpg";
 import wegoLogo from "@/assets/partners/wego.png";
 import vanguardLogo from "@/assets/vanguard-logo.png";
 import cochlearLogo from "@/assets/partners/cochlear.jpeg";
+import natusLogo from "@/assets/partners/Natus_logo.jpg";
 import partnersImg from "@/assets/partner.jpg";
 
 const partners = [
@@ -54,6 +55,13 @@ const partners = [
     specialty: "Hearing Implant Solutions",
     description:
       "A global biotechnology company that designs, manufactures and supplies the Nucleus cochlear implant, the Hybrid electro-acoustic implant and the Baha bone conduction implant.",
+  },
+  {
+    name: "Natus",
+    logo: natusLogo,
+    specialty: "Neurodiagnostics & EEG",
+    description:
+      "A global leader in neurodiagnostics, backed by over 60 years of clinical knowledge in EMG diagnostic development. Natus designs and manufactures EMG, nerve conduction and evoked potential systems alongside the NicoletOne EEG range, supporting the full spectrum of neurodiagnostic care.",
   },
   {
     name: "Leica",
