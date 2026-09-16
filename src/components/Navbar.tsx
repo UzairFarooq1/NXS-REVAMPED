@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo_main.png";
+import IsoCertifiedBadge from "@/components/IsoCertifiedBadge";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -67,22 +68,32 @@ const Navbar = () => {
               info@nxsltd.com
             </a>
           </div>
-          <span className="text-primary-foreground/70">
-            Part of The Vanguard Group
-          </span>
+          <div className="flex items-center gap-3">
+            <IsoCertifiedBadge className="h-6 w-6 flex-shrink-0" />
+            <span className="text-primary-foreground/70">
+              Part of The Vanguard Group
+            </span>
+          </div>
         </div>
       </div>
 
       {/* Main nav */}
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b shadow-sm">
         <div className="container flex items-center justify-between h-16 lg:h-20">
-          <Link to="/" className="flex-shrink-0">
-            <img
-              src={logo}
-              alt="Nairobi X-Ray Supplies Ltd"
-              className="h-10 lg:h-12 w-auto"
+          <div className="flex items-center gap-3 flex-shrink-0">
+            <Link to="/" className="flex-shrink-0">
+              <img
+                src={logo}
+                alt="Nairobi X-Ray Supplies Ltd"
+                className="h-10 lg:h-12 w-auto"
+              />
+            </Link>
+            <div className="hidden sm:block w-px h-8 bg-border" />
+            <IsoCertifiedBadge
+              className="hidden sm:block h-9 lg:h-11 w-9 lg:w-11 flex-shrink-0"
+              title="ISO 13485:2016 Certified Company"
             />
-          </Link>
+          </div>
 
           {/* Desktop nav */}
           <div className="hidden lg:flex items-center gap-1">

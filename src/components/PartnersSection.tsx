@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import vanguardLogo from "@/assets/vanguard-logo.png";
+import IsoCertifiedBadge from "@/components/IsoCertifiedBadge";
 import shimadzuLogo from "@/assets/partners/shimadzu.png";
 import baxterGambroLogo from "@/assets/partners/baxter-gambro.png";
 import geHealthcareLogo from "@/assets/partners/ge-healthcare.png";
@@ -119,12 +120,23 @@ const PartnersSection = () => {
           ))}
         </motion.div>
 
-        <div className="mt-12 flex justify-center">
+        <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-8">
           <img
             src={vanguardLogo}
             alt="Vanguard Group"
             className="h-14 md:h-16 w-auto opacity-80"
           />
+          <div className="flex items-center gap-3 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/10 rounded-xl px-5 py-3">
+            <IsoCertifiedBadge className="h-16 w-16 flex-shrink-0" />
+            <div className="text-left">
+              <p className="font-heading font-semibold text-sm">
+                ISO 13485:2016 Certified
+              </p>
+              <p className="text-xs text-primary-foreground/60">
+                Certified by MQA Certification UK Ltd.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

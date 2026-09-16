@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 import logo from "@/assets/logo_main.png";
+import IsoCertifiedBadge from "@/components/IsoCertifiedBadge";
 
 // const solutions = [
 //   { label: "Radiology / X-Ray", href: "/solutions/radiology" },
@@ -29,10 +30,18 @@ const Footer = () => {
             <div className="inline-block bg-white rounded-md px-3 py-2 mb-4">
               <img src={logo} alt="NXS Logo" className="h-10 w-auto" />
             </div>
-            <p className="text-sm leading-relaxed text-background/60">
+            <p className="text-sm leading-relaxed text-background/60 mb-4">
               Premier distributor of medical equipment in East Africa since
               1980. A part of The Vanguard Group.
             </p>
+            <div className="flex items-center gap-2.5">
+              <IsoCertifiedBadge className="h-12 w-12 flex-shrink-0" />
+              <p className="text-xs text-background/60 leading-tight">
+                ISO 13485:2016
+                <br />
+                Certified Company
+              </p>
+            </div>
           </div>
 
           {/* Solutions */}
