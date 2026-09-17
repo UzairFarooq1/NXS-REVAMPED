@@ -19,6 +19,7 @@ import FirstCIConferenceWorkshopNairobi2026 from "./pages/news/first-ci-conferen
 import WegoKracon2025 from "./pages/news/WegoKracon2025";
 import CcskGeMonitoring2025 from "./pages/news/CcskGeMonitoring2025";
 import IsoCertification2026 from "./pages/news/IsoCertification2026";
+import Ksa2026Conference from "./pages/news/Ksa2026Conference";
 import Solutions from "./pages/Solutions";
 import Radiology from "./pages/solutions/Radiology";
 import Endoscopy from "./pages/solutions/Endoscopy";
@@ -83,6 +84,10 @@ const App = () => (
           <Route
             path="/news/iso-13485-2016-certification"
             element={<IsoCertification2026 />}
+          />
+          <Route
+            path="/news/ksa-2026-conference"
+            element={<Ksa2026Conference />}
           />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/solutions/radiology" element={<Radiology />} />

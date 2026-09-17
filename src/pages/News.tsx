@@ -15,6 +15,14 @@ const newsItems = [
     link: "/news/iso-13485-2016-certification",
   },
   {
+    date: "2026-08-19",
+    title: "NXS at the 33rd KSA Annual Scientific Conference",
+    excerpt:
+      "NXS partnered with GE HealthCare to showcase critical care monitoring and anesthesia solutions at the 33rd Kenya Surgical Association Annual Scientific Conference, held at Sarova Whitesands, Mombasa.",
+    category: "Conference",
+    link: "/news/ksa-2026-conference",
+  },
+  {
     date: "2026-05-10",
     title:
       "First CI Conference and Temporal Bone Workshop Held in Nairobi",
