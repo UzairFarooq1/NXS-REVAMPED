@@ -86,13 +86,13 @@ const Navbar = () => {
                 className="h-10 lg:h-12 w-auto"
               />
             </Link>
-            <div className="hidden sm:block w-px h-10 lg:h-12 bg-border" />
-            <div className="hidden sm:flex items-center gap-2">
+            <div className="block w-px h-8 sm:h-10 lg:h-12 bg-border" />
+            <div className="flex items-center gap-1.5 sm:gap-2">
               <IsoCertifiedBadge
-                className="h-12 lg:h-14 w-12 lg:w-14 flex-shrink-0"
+                className="h-10 lg:h-12 w-10 lg:w-12 flex-shrink-0"
                 title="ISO 13485:2016 Certified Company"
               />
-              <span className="text-[11px] lg:text-xs font-heading font-bold leading-tight text-foreground/80">
+              <span className="text-[9px] sm:text-[11px] lg:text-xs font-heading font-bold leading-tight text-foreground/80">
                 ISO 13485:2016
                 <br />
                 Certified Company
