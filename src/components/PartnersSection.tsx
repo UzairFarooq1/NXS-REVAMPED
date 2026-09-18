@@ -133,11 +133,11 @@ const PartnersSection = () => {
         </motion.div>
 
         <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-8">
-          <img
+          {/* <img
             src={vanguardLogo}
             alt="Vanguard Group"
             className="h-14 md:h-16 w-auto opacity-80"
-          />
+          /> */}
           <div className="flex items-center gap-3 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/10 rounded-xl px-5 py-3">
             <IsoCertifiedBadge className="h-16 w-16 flex-shrink-0" />
             <div className="text-left">
