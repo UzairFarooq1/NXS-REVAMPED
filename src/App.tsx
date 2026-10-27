@@ -20,6 +20,7 @@ import WegoKracon2025 from "./pages/news/WegoKracon2025";
 import CcskGeMonitoring2025 from "./pages/news/CcskGeMonitoring2025";
 import IsoCertification2026 from "./pages/news/IsoCertification2026";
 import Ksa2026Conference from "./pages/news/Ksa2026Conference";
+import KnhEndoscopyDonation2026 from "./pages/news/KnhEndoscopyDonation2026";
 import Solutions from "./pages/Solutions";
 import Radiology from "./pages/solutions/Radiology";
 import Endoscopy from "./pages/solutions/Endoscopy";
@@ -88,6 +89,10 @@ const App = () => (
           <Route
             path="/news/ksa-2026-conference"
             element={<Ksa2026Conference />}
+          />
+          <Route
+            path="/news/knh-endoscopy-donation-2026"
+            element={<KnhEndoscopyDonation2026 />}
           />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/solutions/radiology" element={<Radiology />} />

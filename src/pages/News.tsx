@@ -7,6 +7,14 @@ import news from "@/assets/news.jpg";
 
 const newsItems = [
   {
+    date: "2026-10-23",
+    title: "NXS Donates Endoscopy Equipment to Kenyatta National Hospital",
+    excerpt:
+      "Through the Olympus Emerging Markets Initiative, NXS donated endoscopy equipment worth USD 130,000 to Kenyatta National Hospital, backed by a 3-year comprehensive service contract to keep the training centre's equipment reliably operational for patient care and endoscopy training.",
+    category: "Milestone",
+    link: "/news/knh-endoscopy-donation-2026",
+  },
+  {
     date: "2026-09-16",
     title: "NXS Achieves ISO 13485:2016 Certification",
     excerpt:
