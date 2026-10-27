@@ -40,11 +40,13 @@ const KnhEndoscopyDonation2026 = () => {
 
             <div className="space-y-5 text-muted-foreground leading-relaxed">
               <p>
-                Nairobi X-Ray Supplies Ltd (NXS), the distributor for Olympus
-                Endoscopic and Surgical equipment in Kenya since 2004, has
-                donated endoscopy equipment to Kenyatta National Hospital
-                (KNH) in a ceremony marked by a ribbon-cutting at the
-                hospital's endoscopy unit.
+                Nairobi X-Ray Supplies Ltd (NXS) has proudly served as the
+                distributor of Olympus endoscopic and surgical equipment in
+                Kenya since 2004. As part of our commitment to advancing
+                healthcare, we donated Olympus endoscopy equipment to
+                Kenyatta National Hospital (KNH), through the "Emerging
+                Markets Initiative" launched by Olympus, during a ceremony
+                marked by a ribbon-cutting at the hospital's Endoscopy Unit.
               </p>
               <p>
                 KNH has long served as a training ground for endoscopists in
@@ -55,9 +57,10 @@ const KnhEndoscopyDonation2026 = () => {
                 world-renowned endoscopists to train local doctors.
               </p>
               <p>
-                NXS and Olympus have partnered with KNH for over 20 years in
-                supporting high-end endoscopic training. This donation draws
-                on Olympus' "Emerging Markets Initiative," launched to
+                We, together with Olympus, have partnered with KNH for over
+                20 years in supporting high-end endoscopic training. This
+                donation draws on Olympus' "Emerging Markets Initiative,"
+                launched to
                 address a common challenge across Sub-Saharan Africa: donated
                 or procured equipment that falls out of service due to
                 limited funding for repairs and maintenance, disrupting both
@@ -65,7 +68,7 @@ const KnhEndoscopyDonation2026 = () => {
               </p>
               <p>
                 To address this directly, the donated equipment is tied to a
-                3-year comprehensive service contract between NXS and
+                3-year comprehensive service contract between us and
                 Olympus, valued approximately KSh 18 million
                 in total equipment value. This ensures high uptime and
                 reliability, minimizing downtime so that patients continue to
@@ -73,8 +76,8 @@ const KnhEndoscopyDonation2026 = () => {
                 continues uninterrupted.
               </p>
               <p>
-                As long-term partners with Kenyatta National Hospital, NXS
-                remains proud to continue supporting the institution's role
+                As long-term partners with Kenyatta National Hospital, we
+                remain proud to continue supporting the institution's role
                 in advancing endoscopy skills and standards across the
                 region.
               </p>
