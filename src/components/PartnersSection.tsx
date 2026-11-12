@@ -67,8 +67,20 @@ const hasWhiteLogoBackground = (name: string) =>
 
 const PartnersSection = () => {
   return (
-    <section className="py-20 bg-primary text-primary-foreground">
-      <div className="container">
+    <section className="relative overflow-hidden py-20 bg-primary text-primary-foreground">
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute -top-24 -right-24 h-80 w-80 rounded-full bg-primary-foreground/10 blur-3xl"
+        animate={{ scale: [1, 1.2, 1], opacity: [0.6, 1, 0.6] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-secondary/25 blur-3xl"
+        animate={{ scale: [1.1, 0.9, 1.1] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <div className="container relative">
         <div className="text-center mb-14">
           <p className="text-sm font-heading font-semibold tracking-widest uppercase text-primary-foreground/70 mb-2">
             World-Class Partnerships
@@ -76,20 +88,34 @@ const PartnersSection = () => {
           <h2 className="text-3xl md:text-4xl font-heading font-bold">
             Our Partners
           </h2>
-          <div className="w-16 h-1 bg-secondary mx-auto mt-4" />
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="w-16 h-1 bg-secondary mx-auto mt-4"
+          />
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-60px" }}
+          variants={{ hidden: {}, show: { transition: { staggerChildren: 0.08 } } }}
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6"
         >
           {partners.map((partner) => (
-            <div
+            <motion.div
               key={partner.name}
-              className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/10 rounded-xl p-6 flex flex-col items-center justify-center gap-4 hover:bg-primary-foreground/15 transition-colors"
+              variants={{
+                hidden: { opacity: 0, y: 30, scale: 0.95 },
+                show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5 } },
+              }}
+            >
+            <motion.div
+              whileHover={{ y: -6, scale: 1.03 }}
+              transition={{ type: "spring", stiffness: 300, damping: 18 }}
+              className="group h-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/10 rounded-xl p-6 flex flex-col items-center justify-center gap-4 hover:bg-primary-foreground/15 hover:border-primary-foreground/30 hover:shadow-2xl hover:shadow-black/20 transition-colors"
             >
               <div
                 className={`flex items-center justify-center ${
@@ -102,7 +128,7 @@ const PartnersSection = () => {
                   <img
                     src={partner.logo}
                     alt={`${partner.name} logo`}
-                    className={`w-auto object-contain ${
+                    className={`w-auto object-contain transition-transform duration-500 group-hover:scale-110 ${
                       partner.name === "Olympus"
                         ? "max-h-20"
                         : partner.name === "Shimadzu"
@@ -128,7 +154,8 @@ const PartnersSection = () => {
                   {partner.specialty}
                 </p>
               </div>
-            </div>
+            </motion.div>
+            </motion.div>
           ))}
         </motion.div>
 
@@ -138,8 +165,20 @@ const PartnersSection = () => {
             alt="Vanguard Group"
             className="h-14 md:h-16 w-auto opacity-80"
           /> */}
-          <div className="flex items-center gap-3 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/10 rounded-xl px-5 py-3">
-            <IsoCertifiedBadge className="h-16 w-16 flex-shrink-0" />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="flex items-center gap-3 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/10 rounded-xl px-5 py-3"
+          >
+            <motion.div
+              animate={{ rotate: [0, -6, 6, 0] }}
+              transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+              className="flex-shrink-0"
+            >
+              <IsoCertifiedBadge className="h-16 w-16 flex-shrink-0" />
+            </motion.div>
             <div className="text-left">
               <p className="font-heading font-semibold text-sm">
                 ISO 13485:2016 Certified
@@ -148,7 +187,7 @@ const PartnersSection = () => {
                 Certified by MQA Certification UK Ltd.
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

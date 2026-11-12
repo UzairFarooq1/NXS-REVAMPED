@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+import AnimatedIcon from "@/components/AnimatedIcon";
+import { solutionByHref } from "@/data/solutions";
 import radiologyImg from "@/assets/products/radiology.jpg";
 import operatingTheatreImg from "@/assets/products/trulight-5000.png";
 import endoscopyImg from "@/assets/endoscopyTower.jpg";
@@ -123,7 +126,13 @@ const ServicesSection = () => {
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
             Our Solutions
           </h2>
-          <div className="w-16 h-1 bg-secondary mx-auto mt-4" />
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="w-16 h-1 bg-secondary mx-auto mt-4 origin-center"
+          />
         </div>
 
         <motion.div
@@ -133,32 +142,64 @@ const ServicesSection = () => {
           viewport={{ once: true, margin: "-50px" }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
         >
-          {services.map((service) => (
-            <motion.div key={service.title} variants={item}>
-              <Link
-                to={service.href}
-                className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 block"
+          {services.map((service) => {
+            const meta = solutionByHref(service.href);
+            return (
+              <motion.div
+                key={service.title}
+                variants={item}
+                className="h-full"
               >
-                <div className="aspect-[4/3] overflow-hidden relative">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-5 text-primary-foreground">
-                    <h3 className="font-heading font-semibold text-base mb-0.5">
-                      {service.title}
-                    </h3>
-                    <p className="text-xs text-primary-foreground/75 leading-snug">
-                      {service.description}
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            </motion.div>
-          ))}
+                <motion.div
+                  whileHover="hover"
+                  variants={{ hover: { y: -6 } }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  className="h-full"
+                >
+                  <Link
+                    to={service.href}
+                    className="group relative block overflow-hidden rounded-xl shadow-sm hover:shadow-2xl hover:shadow-primary/20 transition-shadow duration-300"
+                  >
+                    <div className="aspect-[4/3] overflow-hidden relative">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/25 to-transparent transition-opacity duration-300 group-hover:from-primary/90" />
+
+                      {/* light sweep */}
+                      <span className="pointer-events-none absolute inset-y-0 -left-full w-1/2 skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/25 to-transparent transition-all duration-700 group-hover:left-[150%]" />
+
+                      {meta && (
+                        <span className="absolute left-4 top-4 flex h-10 w-10 items-center justify-center rounded-lg bg-background/90 text-primary shadow-md backdrop-blur-sm transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
+                          <AnimatedIcon
+                            icon={meta.icon}
+                            motion={meta.motion}
+                            className="h-5 w-5"
+                          />
+                        </span>
+                      )}
+
+                      <div className="absolute bottom-0 left-0 right-0 p-5 text-primary-foreground">
+                        <h3 className="font-heading font-semibold text-base mb-0.5">
+                          {service.title}
+                        </h3>
+                        <p className="text-xs text-primary-foreground/75 leading-snug">
+                          {service.description}
+                        </p>
+                        <span className="mt-2 inline-flex max-h-0 items-center gap-1 overflow-hidden text-xs font-heading font-semibold opacity-0 transition-all duration-300 group-hover:max-h-6 group-hover:opacity-100">
+                          Explore
+                          <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </section>

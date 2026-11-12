@@ -61,7 +61,8 @@ const SolutionPage = ({ data }: SolutionPageProps) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="bg-card border rounded-xl p-6"
+                whileHover={{ y: -6 }}
+                className="bg-card border rounded-xl p-6 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10 transition-[border-color,box-shadow]"
               >
                 <h3 className="font-heading font-semibold text-foreground mb-2">{product.name}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{product.description}</p>
@@ -88,7 +89,15 @@ const SolutionPage = ({ data }: SolutionPageProps) => {
                   transition={{ delay: i * 0.05 }}
                   className="flex items-start gap-3 p-4 rounded-xl bg-accent/50"
                 >
-                  <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                  <motion.span
+                    initial={{ scale: 0, rotate: -90 }}
+                    whileInView={{ scale: 1, rotate: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ type: "spring", stiffness: 260, damping: 14, delay: 0.1 + i * 0.05 }}
+                    className="mt-0.5 inline-flex flex-shrink-0"
+                  >
+                    <CheckCircle className="h-5 w-5 text-secondary" />
+                  </motion.span>
                   <span className="text-sm text-foreground">{feature}</span>
                 </motion.div>
               ))}

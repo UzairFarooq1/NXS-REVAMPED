@@ -12,6 +12,11 @@ import {
 } from "lucide-react";
 import csrImg from "@/assets/future.jpg";
 import operatingTheatreImg from "@/assets/NXS.webp";
+import AnimatedIcon from "@/components/AnimatedIcon";
+import type { IconMotion } from "@/components/AnimatedIcon";
+import CountUp from "@/components/CountUp";
+
+const statMotion: IconMotion[] = ["swing", "beat", "bounce", "pop"];
 
 const stats = [
   { icon: Award, value: "45", label: "Years of Service" },
@@ -105,7 +110,7 @@ const About = () => {
               className="bg-card p-8 rounded-2xl border shadow-sm"
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
-                <Target className="h-6 w-6 text-primary" />
+                <AnimatedIcon icon={Target} motion="pulse" trigger="loop" repeatDelay={1.5} className="h-6 w-6 text-primary" />
               </div>
               <h3 className="text-xl font-heading font-bold text-foreground mb-3">
                 Our Mission
@@ -125,7 +130,7 @@ const About = () => {
               className="bg-card p-8 rounded-2xl border shadow-sm"
             >
               <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mb-5">
-                <Eye className="h-6 w-6 text-secondary" />
+                <AnimatedIcon icon={Eye} motion="pop" trigger="loop" repeatDelay={2.5} className="h-6 w-6 text-secondary" />
               </div>
               <h3 className="text-xl font-heading font-bold text-foreground mb-3">
                 Our Vision
@@ -151,13 +156,20 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="text-center p-6 rounded-2xl bg-accent/50 border"
+                whileHover={{ y: -6 }}
+                className="text-center p-6 rounded-2xl bg-accent/50 border hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10 transition-[border-color,box-shadow]"
               >
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="h-6 w-6 text-primary" />
+                  <AnimatedIcon
+                    icon={stat.icon}
+                    motion={statMotion[i % statMotion.length]}
+                    trigger="loop"
+                    repeatDelay={2.5 + i * 0.7}
+                    className="h-6 w-6 text-primary"
+                  />
                 </div>
                 <p className="text-3xl font-heading font-bold text-foreground">
-                  {stat.value}
+                  <CountUp value={stat.value} />
                 </p>
                 <p className="text-sm text-muted-foreground mt-1">
                   {stat.label}
@@ -185,9 +197,18 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="flex items-start gap-3 bg-primary-foreground/10 rounded-xl p-5"
+                whileHover={{ scale: 1.03 }}
+                className="flex items-start gap-3 bg-primary-foreground/10 hover:bg-primary-foreground/15 transition-colors rounded-xl p-5"
               >
-                <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                <motion.span
+                  initial={{ scale: 0, rotate: -90 }}
+                  whileInView={{ scale: 1, rotate: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ type: "spring", stiffness: 260, damping: 14, delay: 0.15 + i * 0.08 }}
+                  className="mt-0.5 inline-flex flex-shrink-0"
+                >
+                  <CheckCircle className="h-5 w-5 text-secondary" />
+                </motion.span>
                 <span className="text-sm leading-relaxed">{value}</span>
               </motion.div>
             ))}

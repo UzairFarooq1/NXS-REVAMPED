@@ -8,6 +8,16 @@ import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import contactus from "@/assets/contact.jpg";
+import AnimatedIcon from "@/components/AnimatedIcon";
+import type { IconMotion } from "@/components/AnimatedIcon";
+
+const contactMotion: Record<string, IconMotion> = {
+  Address: "bounce",
+  "Phone (Line 1)": "ring",
+  "Phone (Line 2)": "ring",
+  Email: "wiggle",
+  Hours: "spin",
+};
 
 const contactInfo = [
   {
@@ -84,10 +94,21 @@ const Contact = () => {
                 consultation, our team is ready to assist you.
               </p>
               <div className="space-y-6">
-                {contactInfo.map((item) => (
-                  <div key={item.label} className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <item.icon className="h-5 w-5 text-primary" />
+                {contactInfo.map((item, i) => (
+                  <motion.div
+                    key={item.label}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.08 }}
+                  >
+                  <motion.div whileHover="hover" className="group flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 transition-colors duration-300 group-hover:bg-primary">
+                      <AnimatedIcon
+                        icon={item.icon}
+                        motion={contactMotion[item.label] ?? "pulse"}
+                        className="h-5 w-5 text-primary transition-colors duration-300 group-hover:text-primary-foreground"
+                      />
                     </div>
                     <div>
                       <p className="text-sm font-heading font-semibold text-foreground">
@@ -111,7 +132,8 @@ const Contact = () => {
                         </p>
                       ) : null}
                     </div>
-                  </div>
+                  </motion.div>
+                  </motion.div>
                 ))}
               </div>
             </div>

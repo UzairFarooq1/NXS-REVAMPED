@@ -3,6 +3,10 @@ import PageHero from "@/components/PageHero";
 import { motion } from "framer-motion";
 import { Heart, GraduationCap, Leaf, Users, Globe } from "lucide-react";
 import csrImg from "@/assets/csr.jfif";
+import AnimatedIcon from "@/components/AnimatedIcon";
+import type { IconMotion } from "@/components/AnimatedIcon";
+
+const initiativeMotion: IconMotion[] = ["beat", "bounce", "swing", "pop"];
 
 const initiatives = [
   {
@@ -65,10 +69,18 @@ const CSR = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-card border rounded-2xl p-8"
               >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
-                  <item.icon className="h-6 w-6 text-primary" />
+              <motion.div
+                whileHover="hover"
+                variants={{ hover: { y: -6 } }}
+                className="group h-full bg-card border rounded-2xl p-8 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10 transition-[border-color,box-shadow]"
+              >
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5 transition-colors duration-300 group-hover:bg-primary">
+                  <AnimatedIcon
+                    icon={item.icon}
+                    motion={initiativeMotion[i % initiativeMotion.length]}
+                    className="h-6 w-6 text-primary transition-colors duration-300 group-hover:text-primary-foreground"
+                  />
                 </div>
                 <h3 className="text-lg font-heading font-bold text-foreground mb-2">
                   {item.title}
@@ -76,6 +88,7 @@ const CSR = () => {
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {item.description}
                 </p>
+              </motion.div>
               </motion.div>
             ))}
           </div>
@@ -88,7 +101,7 @@ const CSR = () => {
           <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <Globe className="h-6 w-6 text-primary" />
+                <AnimatedIcon icon={Globe} motion="spin" trigger="loop" repeatDelay={2} className="h-6 w-6 text-primary" />
                 <h2 className="text-3xl font-heading font-bold text-foreground">
                   Partnership with Global FICCS
                 </h2>
