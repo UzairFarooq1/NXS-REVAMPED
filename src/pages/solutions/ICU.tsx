@@ -10,6 +10,7 @@ import geLogo from "@/assets/partners/ge-healthcare.png";
 // Product images
 import carescapeCanvas from "@/assets/products/carescape-canvas.jpg";
 import carescapeOne from "@/assets/products/carescape-one.png";
+import carevance from "@/assets/products/carevance.jpg";
 import b1x5mMonitor from "@/assets/products/b1x5m-monitor.png";
 import portraitVsm from "@/assets/products/portrait-vsm.png";
 import centralStation from "@/assets/products/carescape-central-station.jpg";
@@ -49,6 +50,13 @@ const categories: Category[] = [
           "The CARESCAPE ONE monitor helps make patient transport almost effortless. A large screen highlights a slim, lightweight unit that travels on a simple bed mount. Parameters are easily added through miniaturized plug-and-play micro-modules. World-class GE Healthcare algorithms provide precision, accuracy, and specificity.",
         image: carescapeOne,
         link: "https://www.gehealthcare.com/products/patient-monitoring",
+      },
+      {
+        name: "Carevance™ Patient Monitor",
+        description:
+          "Excellence that fits your reality. Carevance is built for acute care across the ED, ICU, transport and the OR, with scalable monitors and interchangeable docks that move with the patient. It helps reduce false alarms, offers an intuitive interface, and provides on-demand Cardiac Output Insights through an existing arterial line.",
+        image: carevance,
+        link: "https://www.gehealthcare.com/en-gb/products/patient-monitoring/patient-monitors/carevance",
       },
       {
         name: "B1X5M Patient Monitor Systems",

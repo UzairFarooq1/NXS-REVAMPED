@@ -12,6 +12,7 @@ import wegoLogo from "@/assets/partners/wego.png";
 import vanguardLogo from "@/assets/vanguard-logo.png";
 import cochlearLogo from "@/assets/partners/cochlear.jpeg";
 import natusLogo from "@/assets/partners/Natus_logo.jpg";
+import zittronLogo from "@/assets/partners/zittron-wordmark.png";
 import partnersImg from "@/assets/partner.jpg";
 
 const partners = [
@@ -24,7 +25,7 @@ const partners = [
   {
     name: "Shimadzu",
     logo: shimadzuLogo,
-    specialty: "Precision & Medical Instruments",
+    specialty: "Medical Systems",
     description:
       "A Japanese public company, manufacturing precision instruments, measuring instruments and medical equipment, based in Kyoto, Japan.",
   },
@@ -76,6 +77,13 @@ const partners = [
     specialty: "Contrast Media & Speciality Chemicals",
     description:
       "Eskay Speciality Chemicals, established in 2006, is located in the Special Economic Zone at Sachin, Surat, Gujarat. As an Export Oriented Unit (EOU) with a USFDA NDC number for all its products, the company is committed to maintaining high-quality standards.",
+  },
+  {
+    name: "Zittron",
+    logo: zittronLogo,
+    specialty: "Radiation Protection",
+    description:
+      "Zittron makes radiation protection wear for medical, industrial and research use, from lead aprons and coats to protective eyewear tested to IEC 61331-1:2014. It also introduced the first reversible apron, designed to be more hygienic and longer-lasting.",
   },
 ];
 

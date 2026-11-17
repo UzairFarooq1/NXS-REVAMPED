@@ -7,6 +7,7 @@ import cochlear from "@/assets/partners/cochlear.jpeg";
 import natus from "@/assets/partners/Natus_logo.jpg";
 import leica from "@/assets/partners/leica.png";
 import eskay from "@/assets/partners/eskay.jpg";
+import zittron from "@/assets/partners/zittron-wordmark.png";
 
 const logos: { name: string; src: string; large?: boolean }[] = [
   { name: "Olympus", src: olympus, large: true },
@@ -18,6 +19,7 @@ const logos: { name: string; src: string; large?: boolean }[] = [
   { name: "Leica", src: leica },
   { name: "Natus", src: natus },
   { name: "Eskay Fine Chemicals", src: eskay },
+  { name: "Zittron", src: zittron },
 ];
 
 /** A slim, endlessly scrolling strip of partner logos. Pauses on hover. */
